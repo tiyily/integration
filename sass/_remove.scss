@@ -1,0 +1,67 @@
+.contact{
+	height: 100px;
+	background-color: $greenDark;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		width: calc((100% - #{$contentMax}) / 2);
+		height: 100px;
+
+		background-color: $coralDark;
+	}
+}
+
+.related{
+	height: 200px;
+	background-color: $pink;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		width: calc((100% - #{$contentMax}) / 2);
+		height: 200px;
+
+		background-color: $white;
+	}
+}
+
+
+/* COLORS */
+.green {color:$green;}
+.greenDark {color:$greenDark;}
+.white {color:$white;}
+.greyLight {color:$greyLight;}
+.greyMedium {color:$greyMedium;}
+.grey {color:$grey;}
+.greyDark {color:$greyDark;}
+.black {color:$black;}
+
+/* Secondary Colors */
+.coral {color:$coral;}
+.coralDark {color:$coralDark;}
+.turquoise {color:$turquoise;}
+.turquoiseDark {color:$turquoiseDark;}
+.purple {color:$purple;}
+.purpleDark {color:$purpleDark;}
+
+/* Business Unit Colors */
+.orange {color:$orange;}
+.pink {color:$pink;}
+.blueberry {color:$blueberry;}
+
+/* Graph Colors */
+.turquoise80 {color:$turquoise80;}
+.mint {color:$mint;}
+.purple60 {color:$purple60;}
+.blueSky {color:$blueSky;}
+.blue {color:$blue;}
+
+/* Font */
+
+.fontFirstBold {@include fontFamily('1','b');}
+.fontFirst {@include fontFamily('1');}
+.fontFirstItalic {@include fontFamily('1','i');}
+.fontSecondBold {@include fontFamily('2','b');}
+.fontSecond {@include fontFamily('2');}
+.fontSecondItalic {@include fontFamily('2','i');}

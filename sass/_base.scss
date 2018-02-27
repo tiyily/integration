@@ -1,0 +1,148 @@
+body{
+	background-color: $white;
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+h1{
+	margin-bottom: 30px;
+
+	text-align: center;
+	@include fontFamily('1','b');
+	font-size: $h1;
+	line-height: 42px;
+	color: $black;
+
+	@media screen and (max-width: $mediaq-mobile-max){
+		margin-bottom: 40px;
+
+		text-align: center;
+		font-size: $h1Mobile;
+	}
+}
+
+h2{
+	margin: 0 auto 40px; 	
+
+	text-align: center;
+	@include fontFamily('1');
+	font-size: $h2;
+	line-height: 28px;
+	color: $black;
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		font-size: $h2Mobile;
+		line-height: 36px;		
+	}
+}
+
+
+
+h3{
+	@include h3();
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		font-size: $h3Mobile;
+		line-height: 36px;		
+	}
+}
+
+p{
+	margin-bottom: 30px;
+
+	text-align: left;
+	@include fontFamily('2');
+	font-size: $p;
+	line-height: 25px;
+	color: $black;
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		font-size: $pMobile;
+		line-height: 36px;		
+	}
+}
+
+strong{
+	font-weight: 700;
+}
+
+a{
+	text-decoration: underline;
+	@include fontFamily('2');
+	font-size: $p;
+	line-height: 25px;
+	color: $black;
+
+	&:hover{
+		color: $green;
+	}
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		font-size: $pMobile;
+		line-height: 36px;		
+	}
+}
+
+label{
+	display: block;
+
+	@include fontFamily('2');
+	font-size: $p;
+	line-height: 25px;
+	color: $black;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+
+		font-weight: 700;
+		font-size: $pMobile;
+		line-height: 40px;
+	}	
+}
+
+input,
+textarea,
+select{
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding-left: 10px;
+
+	border: none;
+
+	background-color: $greyLight;
+
+	@include fontFamily('2');
+	font-size: $p;
+	line-height: 30px;
+	color: $greyDark;
+
+	&:focus{
+		outline: none;
+	}
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin-bottom: 40px;
+
+		font-size: $pMobile;
+		line-height: 60px;
+	}	
+}
+
+input[type="submit"]{
+	border: none;
+}
+
+select{
+	padding: 6px 0 6px 10px;
+}
+
+legend{
+	margin-bottom: 15px;
+
+	@include fontFamily('2','b');
+	font-size: calc(#{$p} + 3px);
+	line-height: 26px;
+	color: $black;		
+}

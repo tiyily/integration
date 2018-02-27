@@ -1,0 +1,111 @@
+.btn{
+	@include inline-block();
+	height: 40px;
+
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	@include fontFamily('1','b');
+	font-size: $button;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		display: block;
+		height: 80px;
+
+		font-size: 34px;
+		line-height: 80px!important;
+	}
+}
+
+// Full colored button
+.btn-full{
+	padding: 0 40px;
+
+	line-height: 40px;
+	color: $white;
+
+	&.cta{
+		background: $green;
+
+		&:hover{
+			background: $greenDark;
+		}
+	}
+
+	&.cancel{
+		background: $grey;
+		&:hover{
+			background: rgba($greyDark, 0.7);
+		}
+	}
+
+	&.promotion{
+		background: $coral;
+
+		&:hover{
+			background: $coralDark;
+		}
+	}
+
+	&.is-inactive{
+		background: rgba($grey, 0.7);
+
+		&:hover{
+			cursor: default;
+		}	
+	}
+}
+
+
+// Bordered button
+.btn-bordered{	
+	padding: 1px 40px 0;
+	border: solid 3px;
+	line-height: 36px;	
+
+	&:hover{
+		padding: 0 39px;
+		border: solid 4px;
+	}
+
+	&.other-light{
+		border-color: $greyDark;
+		color: $greyDark;
+	}
+
+	&.other-dark{
+		border-color: $black;
+		color: $black;
+	}
+
+	&.medium-light{
+		border-color: $green;
+		color: $green;
+
+		&:hover{
+			border-color: $greenDark;
+			color: $greenDark;
+		}
+	}
+
+	&.medium-dark{
+		border-color: $white;
+		color: $white;
+
+		&:hover{
+			background: rgba($white,0.5);
+		}
+	}
+
+	&.search{
+		border-color: $green;
+		background: $white;
+		color: $green;
+
+		&:hover{
+			border-color: $greenDark;
+			color: $greenDark;
+		}
+	}
+}
+

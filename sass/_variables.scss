@@ -1,0 +1,60 @@
+$mediaq-mobile-min : 320px;
+$mediaq-mobile-max: 768px;
+$mediaq-tablet-min: 769px;
+$mediaq-tablet-max : 1179px;
+$mediaq-desktop : 1180px;
+
+/* COLORS */
+// Main Colors
+$green : #72BF44;
+$greenDark : #4FAE3E;
+$white : #FFFFFF;
+$greyLight : #EEEEEE;
+$greyMedium : #DFE0E1;
+$grey : #C8C8C8;
+$greyDark : #505050;
+$black : #000000;
+
+// Secondary Colors
+$coral : #EA5441;
+$coralDark : #DA4437;
+$turquoise : #53ABAA;
+$turquoiseDark : #3F9898;
+$purple : #7F557D;
+$purpleDark : #724A6C;
+
+// Business Unit Colors
+$orange : #F07D23;
+$pink : #E63264;
+$blueberry : #2D2D64;
+
+// Graph Colors
+$turquoise80 : rgba(83, 171, 170, 0.8);
+$mint : #B4DCB7;
+$purple60 : rgba(114, 74, 108, 0.6);
+$blueSky : #A3E7FC;
+$blue : #04BBEE;
+
+// Overlay
+$overlay : rgba($black, 0.45);
+
+// Display size
+$contentMax : 1180px;
+$sidebar : 280px;
+
+// FONTS
+// Font Size
+$h1 : 32px;
+$h2 : 24px;
+$h3 : 16px;
+$p : 16px;
+$button : 16px;
+$h1Mobile : 40px;
+$h2Mobile : 36px;
+$h3Mobile : 26px; 
+$pMobile : 24px; 
+
+// component variables
+$bannerHeight: 400px;
+$overlayMaxWidth : 530px;
+$videoHeight: 500px;

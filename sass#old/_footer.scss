@@ -1,0 +1,356 @@
+footer{
+	border-top: 1px solid $dark_grey;
+}
+
+.footerFirstPart{
+	display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+	margin-bottom: 30px;
+	padding-top: 30px;
+
+	& > div{
+		@include inline-block();
+	}
+}
+
+.footerMenu{
+	flex: 2;
+	margin-right: 5%;
+	ul{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 30px;
+		//width: 530px;
+	}
+
+	li{
+		padding-bottom: 20px;
+		border-right: 1px dotted #505050;
+	}
+
+	a{
+		font-family: $ff_verdana;
+		color: $dark_grey;
+		font-size: $text;
+
+		&:hover{
+			color: $black;
+		}
+	}
+}
+
+.selectCountry{
+	flex:1;
+	margin-right: 5%;
+	label{
+		font-family: $ff_verdana;
+		font-weight: bold;
+		color: $black;
+		font-size: $text;
+	}
+
+	select{
+		display: block;
+		@include appearance(none);
+		border: none;
+		width: 290px;
+		margin: 5px 0 0 20px;
+		padding: 6px 0 6px 20px;
+		font-weight: normal;
+		cursor: pointer;
+		background: #EEEEEE url(../img/arrow_ddown.png) 270px 8px no-repeat;
+	}
+	option{
+		font-family: $ff_verdana;
+		color: $black;
+		font-size: $text;
+	}
+}
+
+.socialMedia{
+	flex:1;
+	p{
+		font-family: $ff_verdana;
+		font-weight: bold;
+		color: $black;
+		font-size: $text;
+	}
+
+	ul{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-row-gap: 10px;
+		grid-column-gap: 15px;
+		margin-top: 5px;
+		margin-left: 15px;
+
+	}
+
+	a {
+	    display:block;
+	    width:40px;
+	    height:40px;
+	    padding:0px;
+	    border-right: none;
+	    background-image: url(../img/socials.jpg);
+	    background-repeat: no-repeat;
+	    text-decoration: none;
+	    text-indent: -9999px;
+
+	    &.facebook{
+	    	background-position: -120px 0;
+
+	    	&:hover{
+	    		background-position: -120px -40px;
+	    	}
+	    }
+
+	    &.twitter{
+	    	background-position: -40px 0;
+
+	    	&:hover{
+	    		background-position: -40px -40px;
+	    	}
+	    }
+
+	    &.google_plus{
+	    	background-position: -80px 0;
+
+	    	&:hover{
+	    		background-position: -80px -40px;
+	    	}
+	    }
+
+	    &.linkedin{
+	    	background-position: 0 0;
+
+	    	&:hover{
+	    		background-position: 0 -40px;
+	    	}
+	    }
+
+	    &.youtube{
+	    	background-position: -160px 0;
+
+	    	&:hover{
+	    		background-position: -160px -40px;
+	    	}
+	    }
+
+	    &.instagram{
+	    	background-position: -240px 0;
+
+	    	&:hover{
+	    		background-position: -240px -40px;
+	    	}
+	    }
+
+	    &.slideshare{
+	    	background-position: -200px 0;
+
+	    	&:hover{
+	    		background-position: -200px -40px;
+	    	}
+	    }
+
+	    &.pinterest{
+	    	background-position: -280px 0;
+
+	    	&:hover{
+	    		background-position: -280px -40px;
+	    	}
+	    }
+
+	    &.xing{
+	    	background-position: -360px 0;
+
+	    	&:hover{
+	    		background-position: -360px -40px;
+	    	}
+	    }
+
+	    &.viadeo{
+	    	background-position: -320px 0;
+
+	    	&:hover{
+	    		background-position: -320px -40px;
+	    	}
+	    }
+	}
+}
+
+
+@media all and (max-width: 910px) and  (min-width: 769px){
+	.socialMedia{
+		flex: 1 100%;
+		margin-top: 40px;
+		text-align: center;
+		ul{
+			width: 205px;
+			margin: 5px auto;
+		}
+	}
+}
+
+@media all and (max-width: 768px){
+
+.footerFirstPart{
+	display: block;
+
+	& > div{
+		display: block;
+		margin-bottom: 60px;
+	}
+}
+
+.footerMenu{
+	ul{
+		display: block;
+		text-align: center;
+	}
+	li{
+		@include inline-block();
+		position: relative;
+		margin-bottom: 10px;
+		padding: 0 15px;
+		border-right: none;
+
+		&:after{
+			content: '.';
+			position: absolute;
+			right: 0;
+			width: 1px;
+			font-size: $text_mobile;
+			color: $dark_grey;
+
+		}
+
+		&:last-child{
+			&:after{
+				content: '';
+			}
+		}
+	}
+	a{
+		font-size: $text_mobile;
+	}
+}
+
+.selectCountry{
+	text-align: center;
+	label{
+		font-size: $text_mobile;
+	}
+	select{
+		width: 100%;
+		height: 60px;
+		margin-top: 20px;
+		background: #eee url(../img/arrow_ddown_mobile.png) 96% 15px no-repeat;
+		font-size: $text_mobile;
+	}
+	option{
+		font-size: $text_mobile;
+	}
+}
+
+.socialMedia{
+	text-align: center;
+	p{
+		margin-bottom: 20px;
+		font-size: $text_mobile;
+	}
+
+	ul{
+		width: 400px;
+		margin: 5px auto;
+	}
+
+	a{
+		width: 80px;
+		height: 80px;
+		background-image: url(../img/socials_mobile.jpg);
+
+		&.facebook{
+    		background-position: -240px 0;
+
+	    	&:hover{
+	    		background-position: -240px -80px;
+	    	}
+	    }
+
+	    &.twitter{
+	    	background-position: -80px 0;
+
+	    	&:hover{
+	    		background-position: -80px -80px;
+	    	}
+	    }
+
+	    &.google{
+	    	background-position: -160px 0;
+
+	    	&:hover{
+	    		background-position: -160px -80px;
+	    	}
+	    }
+
+	    &.linkedin{
+	    	background-position: 0 0;
+
+	    	&:hover{
+	    		background-position: 0 -80px;
+	    	}
+	    }
+
+	    &.youtube{
+	    	background-position: -320px 0;
+
+	    	&:hover{
+	    		background-position: -320px -80px;
+	    	}
+	    }
+
+	    &.instagram{
+	    	background-position: -480px 0;
+
+	    	&:hover{
+	    		background-position: -480px -80px;
+	    	}
+	    }
+
+	    &.slideshare{
+	    	background-position: -400px 0;
+
+	    	&:hover{
+	    		background-position: -400px -80px;
+	    	}
+	    }
+
+	    &.pinterest{
+	    	background-position: -560px 0;
+
+	    	&:hover{
+	    		background-position: -560px -80px;
+	    	}
+	    }
+
+	    &.xing{
+	    	background-position: -720px 0;
+
+	    	&:hover{
+	    		background-position: -720px -80px;
+	    	}
+	    }
+
+	    &.viadeo{
+	    	background-position: -640px 0;
+
+	    	&:hover{
+	    		background-position: -640px -80px;
+	    	}
+	    }
+	}
+}
+
+}

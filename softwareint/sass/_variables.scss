@@ -1,0 +1,31 @@
+/* ---------- Import Roboto --------- */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300italic);
+/* font-family: 'Roboto', sans-serif; */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+/* font-family: 'Roboto Condensed', sans-serif; */
+
+//All colors authorized
+
+$green : #72BF44;
+$dark_green : #4FAE3E;
+$black : #000000;
+$white : #FFFFFF;
+$grey : #C8C8C8;
+$dark_grey : #505050;
+$medium_grey : #DFE0E1;
+$light_grey : #EEEEEE;
+$grey_form : #939393;
+$coral : #EA5441;
+
+//Font-family
+$ff_roboto_cds : 'Roboto Condensed';
+$ff_verdana : 'Verdana';
+
+//Font-size
+
+$text : 14px;
+
+//Largeur d'écran
+
+$desktop : 1180px;
+$mobile : cs(560);

@@ -1,0 +1,45 @@
+.related{
+	padding-right: 20px;
+	background-color: $greyLight;
+
+	.h2-title{
+		padding-top: 40px;
+	}
+
+	img{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	a{
+		display: block;
+		margin-bottom: 15px;
+		font-weight: 700;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background-color: $greyLight;
+
+		z-index: -1;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			display: none;
+		}
+
+	}
+
+	@media screen and (max-width:$mediaq-tablet-max) {
+		padding: 0 20px;		
+	}
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin-bottom: 60px;
+		padding: 0 40px;
+	}	
+}

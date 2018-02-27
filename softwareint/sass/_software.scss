@@ -1,0 +1,449 @@
+.node-type-software{
+	header{
+		text-align: center;
+	}
+
+	footer {
+		margin-top: 60px;
+		text-align: center;
+	}
+
+	h1{
+		@include h1();
+	}
+
+	h2 {
+		@include h2();
+	}
+
+	strong{
+		font-weight: bold;
+	}
+
+	.content{
+		padding-top: 30px;
+		& > section{
+			width: 1180px;
+			margin: 60px auto 0;
+			font-size: 0;
+
+			&.trust, 
+			&.trial,
+			&.list{
+				width: auto;
+				margin: 60px 0 0;
+				background-color: $light_grey;
+			}
+		}
+	}
+
+	
+
+	.cCenter{
+		width: 1180px;
+		margin: 0 auto;
+	}
+
+	.carousel{
+		@include inline-block();
+		width: 715px;
+	}
+
+	.owl-dots{
+		margin-top: 5px;
+		text-align: center;
+		.owl-dot{
+			@include inline-block;
+
+			span {
+				@include border-radius(50%);
+				display: block;
+				content: " ";
+				width: 10px;
+				height: 10px;
+				margin-right: 15px;
+				font-size: 10px;
+				background-color: $grey;
+			}
+
+			&.active{
+				span {
+					background-color: $green;
+				}
+			}
+		}
+	}
+
+	.carouselText{
+		@include inline-block();
+		width: 430px;
+		margin-left: 35px;
+		font-family: $ff_verdana;
+		font-size: 15px;
+		line-height: 22px;
+		color: $black;
+	}
+
+	.ctaButton{
+		display: block;
+		width: 430px;
+		margin-top: 40px;
+		padding: 15px 0;
+		text-align: center;
+		background-color: $green;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: $ff_roboto_cds;
+		font-size: 22px;
+		font-weight: bold;
+		color: $white;
+	}
+
+	.secondCtaButton{
+		@include inline-block();
+		margin-top: 30px;
+		padding: 15px 50px;
+		text-align: center;
+		border: $green 3px solid;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: $ff_roboto_cds;
+		font-size: 22px;
+		font-weight: bold;
+		color: $green;
+	}
+
+	.anchor{
+		margin-top: 15px;
+		text-align: center;
+		font-family: $ff_verdana;
+		font-size: 15px;
+		line-height: 22px;
+		color: $dark_grey;
+		a{
+			text-decoration: underline;
+			font-family: $ff_verdana;
+			font-size: 15px;
+			line-height: 22px;
+			color: $dark_grey;	
+		}
+
+	}
+	
+	nav#secondNav{
+		margin-top: 60px;
+		padding: 15px 0;
+		background-color: $light_grey;
+
+		ul{
+			display: flex;
+			align-items: center;
+			height: 30px;
+		}
+
+		li{
+			flex: 1 100%;
+			padding: 5px 0;
+			border-left: 1px solid $black;
+			text-align: center;
+		}
+
+		.logo{
+			width: 260px;
+			float: left;
+			text-align: left;
+
+			img {
+				max-height: 30px;
+			}
+		}
+
+		a{
+			font-family: $ff_roboto_cds;
+			font-size: 18px;
+			font-weight: bold;
+			color: $black;
+			text-decoration: none;
+
+			&.active{
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.benefits{
+		text-align: center;
+
+		h2{
+			padding: 0;
+			margin-bottom: 30px;
+		}
+
+		ul{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 40px;
+		}
+		li{
+			text-align: center;
+
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+
+		img{
+			width: 80px;
+			height: 80px;
+		}
+
+		h3{
+			margin-top: 30px;
+			font-family: $ff_roboto_cds;
+			font-size: 24px;
+			line-height: 29px;
+			font-weight: bold;
+			color: $black;
+		}
+
+		p{
+			margin-top: 20px;
+			font-family: $ff_verdana;
+			font-size: 15px;
+			line-height: 22px;
+			color: $black;
+		}
+	}
+
+	.trust{
+		padding-bottom: 30px;
+		ul{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, 204px);
+			grid-gap: 40px;
+			align-items: center;
+  			justify-items: start;
+			justify-content: center;
+  			margin-top: 30px;
+		}
+
+		img{
+			max-width: 100%;
+		}
+	}
+
+	.tabs{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+
+		li{
+			padding-bottom: 5px;
+			text-align: center;
+			border-bottom: 3px solid $medium_grey;
+
+			&.ui-state-active{
+				border-bottom-color: $green;
+			}
+		}
+
+		a{
+			font-family: $ff_roboto_cds;
+			font-size: 20px;
+			line-height: 24px;
+			color: $black;
+			text-decoration: none;
+		}
+
+	}
+
+	#features{
+		article{
+			margin-top: 30px;
+			section{
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 40px;
+				
+				&.odd{
+					img{
+						justify-self : end;
+					}
+				}
+
+				&.even{
+					margin-top: 40px;
+
+					.featureText{
+						grid-column: 2 / 3;
+						grid-row : 1 / 2;
+						text-align: right;
+						
+					}
+					img{
+						grid-column: 1 / 2;
+						grid-row: 1 / 2;
+
+					}
+				}
+
+			}
+		}
+	}
+
+	.featureText{
+		p{
+			margin-bottom: 30px;
+			font-family: $ff_verdana;
+			font-size: 15px;
+			line-height: 22px;
+			color: $black;
+		}
+
+		.title{
+			margin-bottom: 40px;
+			font-family: $ff_roboto_cds;
+			font-size: 24px;
+			line-height: 28px;
+			color: $black;
+		}
+	}
+
+	.trial{
+		padding-bottom: 30px;
+		.ctaButton{
+			margin: 40px auto 0;
+		}
+	}
+
+	.testimonials{
+
+		ul{
+			margin-top: 30px;
+		}
+
+		li {
+			display: grid;
+			grid-template-columns: 320px auto;
+			grid-gap: 30px;
+			text-align: center;
+
+			& > *{
+				font-family: $ff_verdana;
+				font-size: 20px;
+				line-height: 30px;
+				color : $black;
+			}
+		}
+
+		.testimonialContent{
+			margin-top: 30px;
+			padding: 0 150px 0 50px;
+			background: transparent url(../img/testimonial.png) no-repeat;
+		}
+
+		img{
+			padding: 7px;
+			border-radius: 50%;
+			border: 3px solid $green;
+		}
+
+		.author{
+			font-weight: bold;
+		}
+
+		.position{
+			margin-bottom: 30px;
+			font-style: italic;
+			color: $grey;
+		}
+
+		a{
+
+			@include inline-block();
+			margin-top: 30px;
+			color: $grey;
+		}
+
+		.owl-dots{
+			margin-top: 20px;
+		}
+
+	}
+
+	.demo{
+		h2{
+			padding: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	.list{
+		padding-bottom: 10px;
+
+		ul{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			width: 1180px;
+			margin: 30px auto 0;
+			font-family: $ff_verdana;
+			font-size: 15px;
+			line-height: 22px;
+			color : $black;
+
+		}
+
+		li{
+			margin-bottom: 20px;
+			padding-left: 40px;
+			background: transparent url(../img/check.png) no-repeat;
+			
+		}
+	}
+
+	.related{
+
+		ul{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(auto, 280px));
+			justify-content: space-around;
+			margin-top: 30px;
+		}
+
+		.imgLink{
+			display: block;
+			text-align: center;
+
+		}
+
+		h4{
+			margin-top: 10px;
+			text-align: center;
+			a{
+				font-family: $ff_roboto_cds;
+				font-size: 21px;
+				line-height: 26px;
+				color : $black;
+			}
+		}
+
+		p{
+			margin-top: 15px;
+			font-family: $ff_verdana;
+			font-size: 15px;
+			line-height: 22px;
+			color : $black;
+		}
+
+		.readmore{
+			display: block;
+			margin-top: 20px;
+			text-align: center;
+			font-family: $ff_verdana;
+			font-size: 15px;
+			line-height: 22px;
+			color : $grey;
+			text-decoration: underline;
+		}
+	}
+}

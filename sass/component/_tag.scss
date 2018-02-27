@@ -1,0 +1,34 @@
+.tag{
+	ul{
+		text-align: center;
+	}
+
+	li{
+		@include inline-block();
+
+	}
+
+	a{
+		display: block;
+		padding: 0 10px;
+		
+		background-color: $greyLight;
+
+		text-decoration: none;
+
+		&:hover{
+			background-color: $grey;
+			color: initial;
+		}
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			margin-right: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+			margin-bottom: 40px;
+			padding: 0 40px;
+	}
+}

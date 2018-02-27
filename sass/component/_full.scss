@@ -1,0 +1,61 @@
+.full{
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	z-index: -1;
+}
+
+.full-color{
+	height: 100%;
+	background-color: $white;
+}
+
+.full-img{
+	height: $bannerHeight;
+
+	@include background-size(cover);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-image:url('../img/1400x400.jpg');
+}
+
+
+.grid{
+	.full{
+		width: calc(100% - ((100% - #{$contentMax}) / 2) - #{$sidebar});
+
+		@media all and (max-width: $mediaq-tablet-max){
+			width: 100%;
+		}
+	}
+}
+
+
+.banner{
+	.full{
+		width: 100%;
+		left: 0;
+	}
+}
+
+.banner-full{
+	.full-img{
+		@media screen and (max-width: $mediaq-tablet-max) {
+			height: 100%;
+		}
+	}	
+}
+
+.video{
+	.full-img{
+		height: $videoHeight;
+
+		@media screen and (max-width: $mediaq-tablet-max) {
+			position: relative;
+			width: 100%;
+			max-height: 330px;
+		}
+	}	
+}

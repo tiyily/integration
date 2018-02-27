@@ -1,0 +1,36 @@
+@supports (-ms-ime-align:auto) {
+/* Edge specific styles go here */
+ .grid{  
+	display: block;
+	overflow: auto;
+	zoom: 1;
+
+	aside{
+		float:left;
+		max-width: $sidebar;
+	}
+
+	.content{
+		float: left;
+	}
+}
+
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+/* IE10+ specific styles go here */  
+.grid{  
+	display: block;
+	overflow: auto;
+	zoom: 1;
+
+	aside{
+		float:left;
+		max-width: $sidebar;
+	}
+
+	.content{
+		float: left;
+	}
+}
+}

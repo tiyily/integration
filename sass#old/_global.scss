@@ -1,0 +1,176 @@
+h2{
+	font-size: $h2;
+}
+
+p{
+	font-size: $text;
+	line-height: $lh_text;
+}
+
+.banner{
+	position: relative;
+	height: 400px;
+	margin:0;
+	padding:0;
+	background: url(../img/1400x400.jpg) no-repeat; 
+	@include background-size(cover);
+	background-position: 50% 0;
+
+	.cCenter{
+		height: 100%;
+		
+	}
+
+	.textBanner{
+		width: 415px;
+		height: 100%;
+		padding-top: 20px;
+		padding-right: 10px;
+		background-color: rgba(0,0,0,0.45);
+	}
+
+	h1{
+		@include h1banner();
+		margin-bottom: 20px;
+	}
+
+	p{
+		margin-bottom: 20px;
+		font-size: 15px;
+		line-height: 27px;
+		font-family: $ff_verdana;
+		color: $white;
+	}
+
+	a{
+		@include secondary-white-button();
+	}
+}
+
+.filter{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc((100% - 1180px) / 2);
+	height: 100%;
+	background-color: rgba(0,0,0,0.45);
+}
+
+.secondaryButton{
+	@include secondary-button();
+}
+
+.owl-dots{
+	margin-top: 5px;
+	text-align: center;
+	.owl-dot{
+		@include inline-block;
+
+		span {
+			@include border-radius(50%);
+			display: block;
+			content: " ";
+			width: 10px;
+			height: 10px;
+			margin-right: 15px;
+			font-size: 10px;
+			background-color: $grey;
+		}
+
+		&.active{
+			span {
+				background-color: $green;
+			}
+		}
+	}
+}
+
+
+@media all and (min-width: 769px) and (max-width: 1179px) {
+.cCenter{
+	width: auto;
+}
+
+#banner{
+	.textBanner{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+}
+
+@media all and (min-width: 769px) and (max-width: 805px) {
+
+#banner{
+	.textBanner{
+		width: 100%;
+		padding: 60px 30px 0;
+		text-align: center;
+	}
+}
+}
+
+@media all and (max-width: 768px){
+
+h1{
+	font-size: cs(40);
+	line-height: cs(44);
+}
+
+h2{
+	font-size: cs(36);
+	line-height: cs(44);
+	span{
+		background: url(../img/grn-h2.png) no-repeat left 25px;
+	}
+}
+
+p{
+	font-size: $text_mobile;
+	line-height: $lh_text_mobile;
+}
+
+.cCenter{
+	width: $mobile;
+	margin: 0 auto;
+}
+
+.banner{
+	height: cs(640);
+
+	h1{
+		font-size: cs(40);
+		line-height: cs(44);
+	}
+	p{
+		margin-bottom: cs(50);
+		font-size: cs(24);
+		line-height: cs(36);
+	}
+
+	a{
+		width: 100%;
+		max-height: cs(80);
+		font-size: cs(34);
+		line-height: cs(41);
+	}
+}
+
+#banner{
+	.cCenter{
+		position: relative;
+		width: $mobile;
+	}
+
+	.filter{
+		width: 100%;
+	}
+
+	.textBanner{
+		width: 100%;
+		padding: cs(80) 0;
+		background: none;
+		text-align: center;
+	}
+}
+}

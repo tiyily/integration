@@ -1,0 +1,51 @@
+@import "mixins";
+
+/* ---------- Import Roboto --------- */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300italic);
+/* font-family: 'Roboto', sans-serif; */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+/* font-family: 'Roboto Condensed', sans-serif; */
+
+//All colors authorized
+
+$green : #72BF44;
+$dark_green : #4FAE3E;
+$black : #000000;
+$white : #FFFFFF;
+$grey : #C8C8C8;
+$dark_grey : #505050;
+$dark_grey_op70 : rgba(80, 80, 80, 0.7);
+$dark_grey_op85 : rgba(80, 80, 80, 0.85);
+$medium_grey : #DFE0E1;
+$light_grey : #EEEEEE;
+$grey_form : #939393;
+$coral : #EA5441;
+
+//Font-family
+$ff_roboto_cds : 'Roboto Condensed';
+$ff_verdana : 'Verdana';
+
+//Font-size
+
+$text : 16px;
+$lh_text : 24px;
+$text_mobile : cs(24);
+$lh_text_mobile : cs(36);
+$h1 : 24px;
+$h2 : 24px;
+
+//Largeur d'écran
+
+$desktop : 1180px;
+$mobile : cs(560);
+
+//Breakpoint
+/*	$1180 : 1180px;
+	$1100 : 1160px;
+	$1015 : 1075px;
+	$940  : 970px;
+	$875  : 935px;
+	$805  : 805px;
+	$768  : 768px;
+	$640  : 640px;
+*/

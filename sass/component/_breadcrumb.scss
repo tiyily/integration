@@ -1,0 +1,44 @@
+.breadcrumb{
+	margin-bottom: 40px;
+	
+	li{
+		@include inline-block();
+
+		&:last-child{
+			a{
+				text-decoration: none;
+				font-weight: 700;
+
+				&:hover{
+					color: initial;
+				}
+
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+
+	a{
+		position: relative;
+		padding-right: 10px;
+
+		@include fontFamily('1');
+
+		&:after{
+			content: '>';
+			position: absolute;
+			top: -2px;
+			right: -1px;
+		}
+	}
+
+	@media screen and (max-width: $mediaq-tablet-max){
+		padding-left: 30px;
+	}
+
+	@media screen and (max-width: $mediaq-mobile-max){
+		display: none;
+	}
+}
