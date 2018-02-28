@@ -74,7 +74,7 @@
 	padding-left: 50px;
 	padding-right: 20px;
 
-	background:transparent url('../img/phone.png') left center no-repeat;
+	background:transparent url('../img/phone.svg') left center no-repeat;
 
 	@include fontFamily('2','b');
 	font-size: 20px;
@@ -86,8 +86,41 @@
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		display: none;
+		margin-bottom: 40px;
+		padding-left: 80px;	
+
+		font-size: 32px;
+		line-height: 60px;
 	}	
+}
+
+.form-file{
+	position: relative;
+}
+
+.form-file-label{
+	position: relative;
+
+	background-color: $white;
+
+	z-index: 1;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin-bottom: 40px;
+	}
+}
+
+.form-checkbox, 
+.form-radio{
+	display: block;
+
+	label{
+		@include inline-block();
+		@media screen and (max-width: $mediaq-mobile-max) {
+   			max-width: calc(100% - 110px);
+   		}
+
+	}
 }
 
 .form-sidebar{
@@ -114,7 +147,7 @@
 	form{
 		padding-right: 20px;
 
-			@media screen and (max-width:$mediaq-tablet-max) {
+			@media screen and (max-width: $mediaq-tablet-max) {
 				padding-left: 20px;		
 			}
 
@@ -128,29 +161,82 @@
 
 		resize: none;
 	}
+
+	 select{
+		padding: 6px 0 6px 10px;
+	}
 }
 
 .form-full{
+	text-align: center;
+
 	form{
+		text-align: left;
 		max-width: 730px;
 		margin: 0 auto;
+		@media screen and (max-width: $mediaq-mobile-max) {
+			max-width: 100%;
+			padding: 0 40px;
+		}
 	}
 
 	fieldset{
 		& > div{
 			@include inline-block();
-			max-width: 350px;
+			width: 350px;
 
 			&:nth-child(2n){
 				margin-right: 26px;
 			}
 
+			@media screen and (max-width: $mediaq-mobile-max) {
+				display: block;
+				width: 100%;
+			}
+
 		}
 	}
 
-	input,
+	input[type=text],
+	input[type=email],
+	input[type=tel],
 	select{
 		width: 350px;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 100%;
+		}
+	}
+
+	.phone{
+		@include inline-block();
+	}
+
+	.form-checkbox,
+	.form-radio{
+		&:nth-child(2n){
+			padding-left: 40px;
+		}
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding-left: 40px;
+		}
+	}
+
+	textarea{
+		height: 115px;
+	}
+
+	input[type="submit"]{
+		display: block;
+		width: auto;
+		min-width: 260px;
+		margin: 0 auto 20px;
+
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 100%;
+		}
 	}
 }
 
@@ -159,5 +245,12 @@
 		@include fontFamily('2');
 		font-size: $p;
 		line-height: 25px;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			text-align: left;
+			font-weight: 700;
+			font-size: $pMobile;
+			line-height: 40px;
+		}
 	}
 }

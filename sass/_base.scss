@@ -107,7 +107,7 @@ select{
 	display: block;
 	width: 100%;
 	margin-bottom: 20px;
-	padding-left: 10px;
+	padding: 0 0 0 10px;
 
 	border: none;
 
@@ -118,8 +118,13 @@ select{
 	line-height: 30px;
 	color: $greyDark;
 
+
+	-moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+
 	&:focus{
-		outline: none;
+		outline: $green 1px solid;
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
@@ -130,12 +135,25 @@ select{
 	}	
 }
 
+input[type="file"]{
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    margin-bottom: 0;
+
+    background: none;
+}
+
 input[type="submit"]{
 	border: none;
 }
 
 select{
-	padding: 6px 0 6px 10px;
+    background: $greyLight url('../img/arrow_ddown.png') 330px center no-repeat;
+
+    @media screen and (max-width: $mediaq-mobile-max) {
+    	background: $greyLight url('../img/arrow_ddown_mobile.png') calc(100% - 28px) center no-repeat;
+    }
 }
 
 legend{
@@ -144,5 +162,67 @@ legend{
 	@include fontFamily('2','b');
 	font-size: calc(#{$p} + 3px);
 	line-height: 26px;
-	color: $black;		
+	color: $black;	
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin-bottom: 30px;
+
+		text-align: center;
+
+		font-size: 30px;
+		line-height: 36px;
+	}	
+}
+
+input[type=checkbox],
+input[type=radio]{
+	position: relative;
+	@include inline-block();
+	width: 20px;
+	height: 20px;
+	
+	border: 1px solid $greyDark;
+
+	background-color: $white;
+
+	-moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+
+    &:checked{
+		&:after{
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			display: block;
+			width: 14px;
+			height: 14px;
+			background-color: $greyDark;
+		}
+    }
+
+    @media screen and (max-width: $mediaq-mobile-max) {
+    	width: 40px;
+    	height: 40px;
+    	margin-right: 30px;
+
+    	&:checked{
+			&:after{
+				width: 30px;
+				height: 30px;
+				top: 4px;
+				left: 4px;
+			}
+		}
+    }
+}
+
+input[type=radio]{
+	@include border-radius(50%);
+    &:checked{
+		&:after{
+			@include border-radius(50%);
+		}
+    }
 }

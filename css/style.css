@@ -201,7 +201,7 @@ select {
   display: block;
   width: 100%;
   margin-bottom: 20px;
-  padding-left: 10px;
+  padding: 0 0 0 10px;
   border: none;
   background-color: #EEEEEE;
   font-family: "Verdana", sans-serif;
@@ -209,12 +209,15 @@ select {
   font-size: 16px;
   line-height: 30px;
   color: #505050;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
-/* line 121, ../sass/_base.scss */
+/* line 126, ../sass/_base.scss */
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none;
+  outline: #72BF44 1px solid;
 }
 @media screen and (max-width: 768px) {
   /* line 104, ../sass/_base.scss */
@@ -227,17 +230,32 @@ select:focus {
   }
 }
 
-/* line 133, ../sass/_base.scss */
+/* line 138, ../sass/_base.scss */
+input[type="file"] {
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  margin-bottom: 0;
+  background: none;
+}
+
+/* line 147, ../sass/_base.scss */
 input[type="submit"] {
   border: none;
 }
 
-/* line 137, ../sass/_base.scss */
+/* line 151, ../sass/_base.scss */
 select {
-  padding: 6px 0 6px 10px;
+  background: #EEEEEE url("../img/arrow_ddown.png") 330px center no-repeat;
+}
+@media screen and (max-width: 768px) {
+  /* line 151, ../sass/_base.scss */
+  select {
+    background: #EEEEEE url("../img/arrow_ddown_mobile.png") calc(100% - 28px) center no-repeat;
+  }
 }
 
-/* line 141, ../sass/_base.scss */
+/* line 159, ../sass/_base.scss */
 legend {
   margin-bottom: 15px;
   font-family: "Verdana", sans-serif;
@@ -245,6 +263,75 @@ legend {
   font-size: calc(16px + 3px);
   line-height: 26px;
   color: #000000;
+}
+@media screen and (max-width: 768px) {
+  /* line 159, ../sass/_base.scss */
+  legend {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+/* line 177, ../sass/_base.scss */
+input[type=checkbox],
+input[type=radio] {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #505050;
+  background-color: #FFFFFF;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* line 193, ../sass/_base.scss */
+input[type=checkbox]:checked:after,
+input[type=radio]:checked:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #505050;
+}
+@media screen and (max-width: 768px) {
+  /* line 177, ../sass/_base.scss */
+  input[type=checkbox],
+  input[type=radio] {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+  }
+  /* line 211, ../sass/_base.scss */
+  input[type=checkbox]:checked:after,
+  input[type=radio]:checked:after {
+    width: 30px;
+    height: 30px;
+    top: 4px;
+    left: 4px;
+  }
+}
+
+/* line 221, ../sass/_base.scss */
+input[type=radio] {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 224, ../sass/_base.scss */
+input[type=radio]:checked:after {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* line 1, ../sass/layout/_grid.scss */
@@ -337,11 +424,11 @@ footer {
 
 /* line 16, ../sass/component/_banner.scss */
 .overlay {
+  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
+  vertical-align: top;
   max-width: 530px;
   height: 100%;
   padding: 40px;
@@ -384,7 +471,7 @@ footer {
 .banner-full .overlay > div {
   position: absolute;
   right: 0;
-  max-width: 530px;
+  width: 530px;
 }
 @media screen and (max-width: 1179px) {
   /* line 46, ../sass/component/_banner.scss */
@@ -393,9 +480,10 @@ footer {
   }
   /* line 60, ../sass/component/_banner.scss */
   .banner-full .overlay > div {
+    width: 100%;
     padding-left: 30px;
   }
-  /* line 64, ../sass/component/_banner.scss */
+  /* line 65, ../sass/component/_banner.scss */
   .banner-full .overlay p {
     text-align: left;
   }
@@ -406,10 +494,9 @@ footer {
     max-width: 100%;
     text-align: center;
   }
-  /* line 74, ../sass/component/_banner.scss */
+  /* line 75, ../sass/component/_banner.scss */
   .banner-full .overlay > div {
     position: relative;
-    max-width: 100%;
     padding: 0;
   }
   /* line 80, ../sass/component/_banner.scss */
@@ -432,11 +519,11 @@ footer {
 }
 /* line 4, ../sass/component/_breadcrumb.scss */
 .breadcrumb li {
+  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
+  vertical-align: top;
 }
 /* line 8, ../sass/component/_breadcrumb.scss */
 .breadcrumb li:last-child a {
@@ -480,11 +567,11 @@ footer {
 
 /* line 1, ../sass/component/_btn.scss */
 .btn {
+  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
+  vertical-align: top;
   height: 40px;
   text-align: center;
   text-decoration: none;
@@ -678,7 +765,7 @@ footer {
 .phone {
   padding-left: 50px;
   padding-right: 20px;
-  background: transparent url("../img/phone.png") left center no-repeat;
+  background: transparent url("../img/phone.svg") left center no-repeat;
   font-family: "Verdana", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -693,16 +780,59 @@ footer {
 @media screen and (max-width: 768px) {
   /* line 73, ../sass/component/_form.scss */
   .phone {
-    display: none;
+    margin-bottom: 40px;
+    padding-left: 80px;
+    font-size: 32px;
+    line-height: 60px;
   }
 }
 
-/* line 93, ../sass/component/_form.scss */
+/* line 97, ../sass/component/_form.scss */
+.form-file {
+  position: relative;
+}
+
+/* line 101, ../sass/component/_form.scss */
+.form-file-label {
+  position: relative;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  /* line 101, ../sass/component/_form.scss */
+  .form-file-label {
+    margin-bottom: 40px;
+  }
+}
+
+/* line 113, ../sass/component/_form.scss */
+.form-checkbox,
+.form-radio {
+  display: block;
+}
+/* line 117, ../sass/component/_form.scss */
+.form-checkbox label,
+.form-radio label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  /* line 117, ../sass/component/_form.scss */
+  .form-checkbox label,
+  .form-radio label {
+    max-width: calc(100% - 110px);
+  }
+}
+
+/* line 126, ../sass/component/_form.scss */
 .form-sidebar {
   padding-bottom: 40px;
   border-right: 2px solid #72BF44;
 }
-/* line 98, ../sass/component/_form.scss */
+/* line 131, ../sass/component/_form.scss */
 .form-sidebar:before {
   content: '';
   position: absolute;
@@ -713,63 +843,143 @@ footer {
   z-index: -1;
 }
 @media screen and (max-width: 768px) {
-  /* line 98, ../sass/component/_form.scss */
+  /* line 131, ../sass/component/_form.scss */
   .form-sidebar:before {
     display: none;
   }
 }
-/* line 114, ../sass/component/_form.scss */
+/* line 147, ../sass/component/_form.scss */
 .form-sidebar form {
   padding-right: 20px;
 }
 @media screen and (max-width: 1179px) {
-  /* line 114, ../sass/component/_form.scss */
+  /* line 147, ../sass/component/_form.scss */
   .form-sidebar form {
     padding-left: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 114, ../sass/component/_form.scss */
+  /* line 147, ../sass/component/_form.scss */
   .form-sidebar form {
     padding: 0 40px;
   }
 }
-/* line 126, ../sass/component/_form.scss */
+/* line 159, ../sass/component/_form.scss */
 .form-sidebar textarea {
   height: 115px;
   resize: none;
 }
+/* line 165, ../sass/component/_form.scss */
+.form-sidebar select {
+  padding: 6px 0 6px 10px;
+}
 
-/* line 134, ../sass/component/_form.scss */
+/* line 170, ../sass/component/_form.scss */
+.form-full {
+  text-align: center;
+}
+/* line 173, ../sass/component/_form.scss */
 .form-full form {
+  text-align: left;
   max-width: 730px;
   margin: 0 auto;
 }
-/* line 140, ../sass/component/_form.scss */
-.form-full fieldset > div {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  max-width: 350px;
+@media screen and (max-width: 768px) {
+  /* line 173, ../sass/component/_form.scss */
+  .form-full form {
+    max-width: 100%;
+    padding: 0 40px;
+  }
 }
-/* line 144, ../sass/component/_form.scss */
+/* line 184, ../sass/component/_form.scss */
+.form-full fieldset > div {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  width: 350px;
+}
+/* line 188, ../sass/component/_form.scss */
 .form-full fieldset > div:nth-child(2n) {
   margin-right: 26px;
 }
-/* line 151, ../sass/component/_form.scss */
-.form-full input,
+@media screen and (max-width: 768px) {
+  /* line 184, ../sass/component/_form.scss */
+  .form-full fieldset > div {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 200, ../sass/component/_form.scss */
+.form-full input[type=text],
+.form-full input[type=email],
+.form-full input[type=tel],
 .form-full select {
   width: 350px;
 }
+@media screen and (max-width: 768px) {
+  /* line 200, ../sass/component/_form.scss */
+  .form-full input[type=text],
+  .form-full input[type=email],
+  .form-full input[type=tel],
+  .form-full select {
+    width: 100%;
+  }
+}
+/* line 211, ../sass/component/_form.scss */
+.form-full .phone {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+/* line 217, ../sass/component/_form.scss */
+.form-full .form-checkbox:nth-child(2n),
+.form-full .form-radio:nth-child(2n) {
+  padding-left: 40px;
+}
+@media screen and (max-width: 768px) {
+  /* line 215, ../sass/component/_form.scss */
+  .form-full .form-checkbox,
+  .form-full .form-radio {
+    padding-left: 40px;
+  }
+}
+/* line 226, ../sass/component/_form.scss */
+.form-full textarea {
+  height: 115px;
+}
+/* line 230, ../sass/component/_form.scss */
+.form-full input[type="submit"] {
+  display: block;
+  width: auto;
+  min-width: 260px;
+  margin: 0 auto 20px;
+}
+@media screen and (max-width: 768px) {
+  /* line 230, ../sass/component/_form.scss */
+  .form-full input[type="submit"] {
+    width: 100%;
+  }
+}
 
-/* line 158, ../sass/component/_form.scss */
+/* line 244, ../sass/component/_form.scss */
 .form-fieldset-second legend {
   font-family: "Verdana", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
+}
+@media screen and (max-width: 768px) {
+  /* line 244, ../sass/component/_form.scss */
+  .form-fieldset-second legend {
+    text-align: left;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
 
 /* line 1, ../sass/component/_full.scss */
@@ -892,11 +1102,11 @@ footer {
 }
 /* line 6, ../sass/component/_tag.scss */
 .tag li {
+  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
+  vertical-align: top;
 }
 /* line 11, ../sass/component/_tag.scss */
 .tag a {
@@ -1063,11 +1273,11 @@ footer {
   position: relative;
   top: calc((100% - 133px) / 2);
   left: calc((100%  - 133px) / 2);
+  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
+  vertical-align: top;
   width: 133px;
   height: 133px;
   background-image: url("../img/video-play.png");

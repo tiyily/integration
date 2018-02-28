@@ -51,3 +51,12 @@
 	font-size: $mP;
 	line-height: 36px;
 }
+
+@mixin inline-block(){
+	display: -moz-inline-stack;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: top;
+	
+}

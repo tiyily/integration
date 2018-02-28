@@ -51,13 +51,14 @@
 		& > div{
 			position: absolute;
 			right: 0;
-			max-width: $overlayMaxWidth;
+			width: $overlayMaxWidth;
 		}
 
 		@media screen and (max-width: $mediaq-tablet-max) {
 			text-align: left;
 
 			& > div{
+				width: 100%;
 				padding-left: 30px;	
 			}
 
@@ -73,7 +74,6 @@
 
 			& > div{
 				position: relative;
-				max-width: 100%;
 				padding: 0;
 			}
 

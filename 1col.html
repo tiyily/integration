@@ -96,8 +96,9 @@
 									</select>
 								</div>
 
-								<div>
-									<label for="form-send-a-file">Send a file</label>
+								<div class="form-file">
+									<label>Send a file</label>
+									<label for="form-send-a-file" class="form-file-label btn btn-bordered other-light">Choose file</label>
 									<input type="file" id="form-send-a-file" name="form-send-a-file">
 								</div>
 
@@ -109,32 +110,51 @@
 								<fieldset class="form-fieldset-second">
 									<legend>What do you need ?</legend>
 
-									<label for="form-machine-a-affranchir">Machine à afranchir</label>
-									<input type="checkbox" id="form-machine-a-affranchir" name="form-machine-a-affranchir" value="machine-a-affranchir"/>
-									<label for="form-systeme-d-adressage">Systeme d'adressage</label>
-									<input type="checkbox" id="form-systeme-d-adressage" name="form-systeme-d-adressage" value="systeme-d-adressage"/>
-									<label for="form-logiciel">Logiciel</label>
-									<input type="checkbox" id="form-logiciel" name="form-logiciel" value="logiciel"/>
-									<label for="form-divers">Divers</label>
-									<input type="checkbox" id="form-divers" name="form-divers" value="divers"/>
-									<label for="form-autres">Autres</label>
-									<input type="checkbox" id="form-autres" name="form-autres" value="autres"/>
+									<div class="form-checkbox">
+										<input type="checkbox" id="form-machine-a-affranchir" name="your-need" value="machine-a-affranchir"/>
+										<label for="form-machine-a-affranchir">Machine à afranchir</label>
+									</div>
+									<div class="form-checkbox">
+										<input type="checkbox" id="form-systeme-d-adressage" name="your-need" value="systeme-d-adressage"/>
+										<label for="form-systeme-d-adressage">Systeme d'adressage</label>
+									</div>
+									<div class="form-checkbox">
+										<input type="checkbox" id="form-logiciel" name="your-need" value="logiciel"/>
+										<label for="form-logiciel">Logiciel</label>
+									</div>
+									<div class="form-checkbox">
+										<input type="checkbox" id="form-divers" name="your-need" value="divers"/>
+										<label for="form-divers">Divers</label>
+									</div>
+									<div class="form-checkbox">
+										<input type="checkbox" id="form-autres" name="your-need" value="autres"/>
+										<label for="form-autres">Autres</label>
+									</div>
 								</fieldset>
 
-								<fieldset>
+								<fieldset class="form-fieldset-second">
 									<legend>Yes I will be here on :</legend>
 
-									<label for="form-180223">23/02/2018</label><!--
-									--><input type="radio" id="form-180223" name="form-180223" value="180223"/>
-									<label for="form-180224">24/02/2018</label><!--
-									--><input type="radio" id="form-180224" name="form-180224" value="180224"/>
-									<label for="form-180225">25/02/2018</label><!--
-									--><input type="radio" id="form-180225" name="form-180225" value="180225"/>
-									<label for="form-180226">26/02/2018</label><!--
-									--><input type="radio" id="form-180226" name="form-180226" value="180226"/>
-									<label for="form-180227">27/02/2018</label><!--
-									--><input type="radio" id="form-180227" name="form-180227" value="180227"/>
-									
+									<div class="form-radio">
+										<input type="radio" id="form-180223" name="be-here-on" value="180223"/>
+										<label for="form-180223">23/02/2018</label>
+									</div>
+									<div class="form-radio">
+										<input type="radio" id="form-180224" name="be-here-on" value="180224"/>
+										<label for="form-180224">24/02/2018</label>
+									</div>
+									<div class="form-radio">
+										<input type="radio" id="form-180225" name="be-here-on" value="180225"/>
+										<label for="form-180225">25/02/2018</label>
+									</div>
+									<div class="form-radio">
+										<input type="radio" id="form-180226" name="be-here-on" value="180226"/>
+										<label for="form-180226">26/02/2018</label>
+									</div>
+									<div class="form-radio">
+										<input type="radio" id="form-180227" name="be-here-on" value="180227"/>
+										<label for="form-180227">27/02/2018</label>
+									</div>
 								</fieldset>	
 
 							</fieldset>
