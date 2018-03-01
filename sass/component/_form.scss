@@ -9,11 +9,6 @@
 	background-color: $green;
 
 	text-align: center;
-	text-transform: uppercase;
-	@include fontFamily('1','b');
-	font-size: 24px;
-	line-height: 60px;
-	color: $white;
 
 	&:before{
 		content: '';
@@ -27,26 +22,35 @@
 		z-index: -1;
 	}
 
-	&:after{
-	  content:'';
-	  position: absolute;
-	  top: 60px;
-	  left: calc(((100% - #{$contentMax}) / 2) + 100px);
-	  width: 0; 
-	  height: 0; 
+	span{
+		position: relative;
+		text-transform: uppercase;
+		@include fontFamily('1','b');
+		font-size: 24px;
+		line-height: 60px;
+		color: $white;
 
-	  border-left: 40px solid transparent;
-	  border-right: 40px solid transparent;
-	  border-top: 25px solid $green;
+		&:after{
+		  content:'';
+		  position: absolute;
+		  bottom: -40px;
+		  left: 99px;
+		  width: 0; 
+		  height: 0; 
 
-	  @media screen and (max-width: $mediaq-tablet-max) {
-		left: 100px;
-	  }
+		  border-left: 40px solid transparent;
+		  border-right: 40px solid transparent;
+		  border-top: 25px solid $green;
 
-	  @media screen and (max-width: $mediaq-mobile-max) {
-	  	top: 80px;
-		left: calc((100% - 80px) / 2);
-	  }
+		  @media screen and (max-width: $mediaq-tablet-max) {
+			left: 100px;
+		  }
+
+		  @media screen and (max-width: $mediaq-mobile-max) {
+		  	top: 80px;
+			left: calc((100% - 80px) / 2);
+		  }
+		}
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {

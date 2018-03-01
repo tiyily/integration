@@ -9,162 +9,196 @@
 
 		<header></header>
 
-		<div id="top">
-			<div class="banner banner-full">
-				<div class="overlay">
-					<div>
-						<h1>Case Studies</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet lobortis urna. Nam quis mauris semper, vehicula sem non, elementum felis.</p>
-						<a href="#form" class="btn btn-bordered medium-dark">Link to form</a>
+		<main>
+			<div id="top">
+				<div class="banner banner-full">
+					<div class="overlay">
+						<div>
+							<h1>Case Studies</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet lobortis urna. Nam quis mauris semper, vehicula sem non, elementum felis.</p>
+							<a href="#form" class="btn btn-bordered medium-dark">Link to form</a>
+						</div>
 					</div>
+					<div class="full full-img"></div>
+					<div class="video-play"></div>
+					<iframe class="video-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 				</div>
-				<div class="full full-img"></div>
-				<div class="video-play"></div>
-				<iframe class="video-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+
+				<div class="center breadcrumb">
+					<ol>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">About us</a>
+						</li>
+						<li>
+							<a href="#">Corporate Social Responsibility</a>
+						</li>
+				    </ol>
+				</div>
 			</div>
 
-			<div class="center breadcrumb">
-				<ol>
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li>
-						<a href="#">About us</a>
-					</li>
-					<li>
-						<a href="#">Corporate Social Responsibility</a>
-					</li>
-			    </ol>
-			</div>
-		</div>
+			<div id="middle">
+				<div class="center grid grid-2">
+					<aside class="grid">
+						<div class="filter-sidebar">
+							<fieldset>
+								<legend class="is-open">Filter by Topics</legend>
+								<div>
+									<div class="form-radio">
+										<label for="form-any">Any</label>
+										<input type="radio" id="form-any" name="filter-by-topics" value="any" checked/>
+									</div>
+									<div class="form-radio">
+										<label for="form-folder-inserter">Folder Inserter</label>
+										<input type="radio" id="form-folder-inserter" name="filter-by-topics" value="folder-inserter"/>
+									</div>
+									<div class="form-radio">
+										<label for="form-letter-opener">Letter Opener</label>
+										<input type="radio" id="form-letter-opener" name="filter-by-topics" value="letter-opener"/>
+									</div>
+									<div class="form-radio">
+										<label for="form-output-management">Output Management</label>
+										<input type="radio" id="form-output-management" name="filter-by-topics" value="output-management"/>
+									</div>
+									<div class="form-radio">
+										<label for="form-shipping-solution">Shipping Solution</label>
+										<input type="radio" id="form-shipping-solution" name="filter-by-topics" value="shipping-solution"/>
+									</div>
+								</div>	
+							</fieldset>
+						</div>
+						<div class="form form-sidebar">
+							<p class="form-title"><span>Get a free quote today!</span></p>
+							<p class="form-body">Fill in the form and your local Neopost account manager will be back to you with a quote in no time!</p>
+							<p class="phone">+33 102 030 405</p>
+							<form action="#" id="form">
+								<label for="form-name" class="is-required">Name</label>
+								<input type="text" id="form-name" name="form-name" value="" required>
 
-		<div id="middle">
-			<div class="center grid grid-2">
-				<aside class="grid">
-					<div class="form form-sidebar">
-						<p class="form-title">Get a free quote today!</p>
-						<p class="form-body">Fill in the form and your local Neopost account manager will be back to you with a quote in no time!</p>
-						<p class="phone">+33 102 030 405</p>
-						<form action="#" id="form">
-							<label for="form-name" class="is-required">Name</label>
-							<input type="text" id="form-name" name="form-name" value="" required>
+								<label for="form-email" class="is-required">Email</label>
+								<input type="email" id="form-email" name="form-email" value="" required>
 
-							<label for="form-email" class="is-required">Email</label>
-							<input type="email" id="form-email" name="form-email" value="" required>
+								<label for="form-tel" class="is-required">Phone</label>
+								<input type="tel" id="form-tel" name="form-tel" value="" required>
 
-							<label for="form-tel" class="is-required">Phone</label>
-							<input type="tel" id="form-tel" name="form-tel" value="" required>
+								<label for="form-company">Company</label>
+								<input type="text" id="form-company" name="form-company" value="">
 
-							<label for="form-company">Company</label>
-							<input type="text" id="form-company" name="form-company" value="">
+								<label for="form-postal-code">Postal Code</label>
+								<input type="text" id="form-postal-code" name="form-postal-code" value="">
 
-							<label for="form-postal-code">Postal Code</label>
-							<input type="text" id="form-postal-code" name="form-postal-code" value="">
+								<label for="form-country">Country</label>
+								<input type="text" id="form-country" name="form-country" value="">
 
-							<label for="form-country">Country</label>
-							<input type="text" id="form-country" name="form-country" value="">
+								<label for="form-textarea" class="is-required">Comment</label>
+								<textarea id="form-textarea" name="form-textarea"></textarea>
 
-							<label for="form-textarea" class="is-required">Comment</label>
-							<textarea id="form-textarea" name="form-textarea"></textarea>
+								<input type="submit" value="Send now" class="btn btn-full cta">
 
-							<input type="submit" value="Send now" class="btn btn-full cta">
+							</form>
+						</div>
+						<div class="related related-menu">
+							<p class="h2-title">Newsroom Content</p>
+							<ul>
+								<li>
+									<a href="#">Blog</a>
+								</li>
+								<li>
+									<a href="#" class="is-active">Case Studies</a>
+								</li>
+								<li>
+									<a href="#">White Papers</a>
+								</li>
+								<li>
+									<a href="#">Product Press Releases</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
 
-						</form>
-					</div>
-					<div class="related related-menu">
-						<p class="h2-title">Newsroom Content</p>
-						<ul>
+					<div class="content">
+						<div class="full full-color full-grey"></div>
+
+						<div class="filter-date">
+							<p>All Case Studies</p>
+							<a href="#" title="Trier par date"><span class="element-invisible">Trier par date</span><img src="img/calendar.svg" alt="Trier par date - Image"></a>			
+						</div>
+
+						<ul class="card card-no-btn">
 							<li>
-								<a href="#">Blog</a>
+								<img src="img/560x560.jpg" alt="Who we are">
+								<h2><a href="#">Ontario Government Organization Boosts Mail Productivity with Neopost</a></h2>
+								<p class="card-date">July 26, 2016</p>
+								<ul class="tag">
+									<li>
+										<a href="#">Output Management</a>
+									</li>
+									<li>
+										<a href="#">Lorem ipsum Dolor</a>
+									</li>
+									<li>
+										<a href="#">Vitae Sit</a>
+									</li>
+								</ul>
 							</li>
 							<li>
-								<a href="#" class="is-active">Case Studies</a>
+								<img src="img/560x560.jpg" alt="Neopost Worldwide">
+								<h2><a href="#">Mailing Company Boosts Productivity with Output Management Software</a></h2>
+								<p class="card-date">July 26, 2016</p>
+								<ul class="tag">
+									<li>
+										<a href="#">Output Management</a>
+									</li>
+									<li>
+										<a href="#">Lorem ipsum Dolor</a>
+									</li>
+									<li>
+										<a href="#">Vitae Sit</a>
+									</li>
+								</ul>
 							</li>
 							<li>
-								<a href="#">White Papers</a>
+								<img src="img/560x560.jpg" alt="Careers">
+								<h2><a href="#">ProShip Accelerates Business for Fifth Gear</a></h2>
+								<p class="card-date">July 26, 2016</p>
+								<ul class="tag">
+									<li>
+										<a href="#">Output Management</a>
+									</li>
+									<li>
+										<a href="#">Lorem ipsum Dolor</a>
+									</li>
+									<li>
+										<a href="#">Vitae Sit</a>
+									</li>
+								</ul>
 							</li>
 							<li>
-								<a href="#">Product Press Releases</a>
+								<img src="img/560x560.jpg" alt="Who we are">
+								<h2><a href="#">Management & Board</a></h2>
+								<p class="card-date">July 26, 2016</p>
+								<ul class="tag">
+									<li>
+										<a href="#">Output Management</a>
+									</li>
+									<li>
+										<a href="#">Lorem ipsum Dolor</a>
+									</li>
+									<li>
+										<a href="#">Vitae Sit</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
-				</aside>
-
-				<div class="content">
-					<div class="full full-color full-grey"></div>
-
-					<ul class="card card-no-btn">
-						<li>
-							<img src="img/560x560.jpg" alt="Who we are">
-							<h2><a href="#">Ontario Government Organization Boosts Mail Productivity with Neopost</a></h2>
-							<p class="card-date">July 26, 2016</p>
-							<ul class="tag">
-								<li>
-									<a href="#">Output Management</a>
-								</li>
-								<li>
-									<a href="#">Lorem ipsum Dolor</a>
-								</li>
-								<li>
-									<a href="#">Vitae Sit</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<img src="img/560x560.jpg" alt="Neopost Worldwide">
-							<h2><a href="#">Mailing Company Boosts Productivity with Output Management Software</a></h2>
-							<p class="card-date">July 26, 2016</p>
-							<ul class="tag">
-								<li>
-									<a href="#">Output Management</a>
-								</li>
-								<li>
-									<a href="#">Lorem ipsum Dolor</a>
-								</li>
-								<li>
-									<a href="#">Vitae Sit</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<img src="img/560x560.jpg" alt="Careers">
-							<h2><a href="#">ProShip Accelerates Business for Fifth Gear</a></h2>
-							<p class="card-date">July 26, 2016</p>
-							<ul class="tag">
-								<li>
-									<a href="#">Output Management</a>
-								</li>
-								<li>
-									<a href="#">Lorem ipsum Dolor</a>
-								</li>
-								<li>
-									<a href="#">Vitae Sit</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<img src="img/560x560.jpg" alt="Who we are">
-							<h2><a href="#">Management & Board</a></h2>
-							<p class="card-date">July 26, 2016</p>
-							<ul class="tag">
-								<li>
-									<a href="#">Output Management</a>
-								</li>
-								<li>
-									<a href="#">Lorem ipsum Dolor</a>
-								</li>
-								<li>
-									<a href="#">Vitae Sit</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
 				</div>
 			</div>
-		</div>
 
-		<div id="bottom">
-		</div>
+			<div id="bottom">
+			</div>
+		</main>
 		
 		<footer></footer>
 
