@@ -1,7 +1,5 @@
 .tag{
-	ul{
-		text-align: center;
-	}
+	text-align: center;
 
 	li{
 		@include inline-block();
@@ -30,5 +28,16 @@
 	@media screen and (max-width:$mediaq-mobile-max) {
 			margin-bottom: 40px;
 			padding: 0 40px;
+	}
+}
+
+
+.card{
+	.tag{
+		padding: 0 15px;
+		text-align: left;
+		li{
+			margin-bottom: 7px;
+		}
 	}
 }

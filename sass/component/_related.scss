@@ -1,6 +1,5 @@
 .related{
 	padding-right: 20px;
-	background-color: $greyLight;
 
 	.h2-title{
 		padding-top: 40px;
@@ -22,9 +21,7 @@
 		position: absolute;
 		left: 0;
 		width: 100%;
-		height: 100%;
-
-		background-color: $greyLight;
+		height: 100%;	
 
 		z-index: -1;
 
@@ -42,4 +39,30 @@
 		margin-bottom: 60px;
 		padding: 0 40px;
 	}	
+}
+
+.related-content{
+	background-color: $greyLight;
+
+	&:before{
+		background-color: $greyLight;
+	}
+}
+
+.related-menu{
+	border-right: 2px solid $white;
+	background-color: $greyMedium;
+	&:before{
+		background-color: $greyMedium;
+	}
+
+	a{
+		text-decoration: none;
+		font-weight: normal;
+
+		&.is-active{
+			text-decoration: underline;
+			font-weight: 700;
+		}
+	}
 }

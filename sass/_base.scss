@@ -23,7 +23,8 @@ h1{
 	}
 }
 
-h2{
+h2,
+h2 a{
 	margin: 0 auto 40px; 	
 
 	text-align: center;
@@ -124,7 +125,7 @@ select{
     appearance:none;
 
 	&:focus{
-		outline: $green 1px solid;
+		outline: $green 3px solid;
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
