@@ -1,6 +1,5 @@
 .filter-date{
 	position: relative;
-	width: 675px;
 	margin: 0 105px;
 	padding: 40px 0 0;
 
@@ -48,13 +47,14 @@
 
 	fieldset{
 		position: relative;
+		margin-top: 40px;
+		margin-bottom: 20px;
 	}
 
 	legend{
+		position: relative;
+		width: 100%;
 		margin-bottom: 20px;
-		padding-top: 40px;
-
-		
 
 		text-align: center;
 		@include fontFamily('1');
@@ -66,24 +66,25 @@
 			display: none;
 		}
 
-		&:after{
-			content: '';
+		a{
 			position: absolute;
-			top: 43px;
+			top: calc((100% - 20px) / 2);
 			right: 0;
 			width: 20px;
 			height: 20px;
 			background:transparent url('../img/plus.svg') right center no-repeat;
+
+			text-indent: -9999px;
 		}
 
 		&.is-open{
 
-			&:after{
+			a{
 				background-image: url('../img/minus.svg');
 			}
 
 			& + div{
-				display: block;
+				//display: block;
 			}
 		}
 	}
@@ -115,5 +116,4 @@
 		}
 
 	}
-
 }

@@ -2,8 +2,6 @@
 	margin-bottom: 30px;
 	padding: 40px 0 0;
 
-	text-align: center;
-
 	@media screen and (max-width: $mediaq-tablet-max){
 		margin-bottom: 30px;
 		padding: 40px 30px 0;
@@ -13,6 +11,10 @@
 		padding: 0 40px;	
 		margin-bottom: 60px;	
 	}
+}
+
+.text-center{
+	text-align: center;
 }
 
 .grid-2{
@@ -96,7 +98,7 @@
 .center{
 	&.text{
 		p{
-			text-align: center;
+			//text-align: center;
 		}
 	}
 }

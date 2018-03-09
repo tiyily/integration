@@ -59,6 +59,20 @@ $(document).ready(function(){
 
   });
 
+  /*Filter Sidebar opening animation*/
+  $(".filter-sidebar legend a").click(function(e){
+    e.preventDefault();
+    $legend = $(".filter-sidebar legend");
+    if($legend.hasClass("is-open")){
+      $legend.removeClass("is-open");
+      $(".filter-sidebar legend + div").hide(2000);
+    }
+    else{
+      $legend.addClass("is-open");
+      $(".filter-sidebar legend + div").show(2000);
+    }
+  });
+
 
 });
 
@@ -72,7 +86,6 @@ function content_banner(){
   if ($('.grid-2 .full-img').length) {
 
     $windowWidth = $(window).width();
-    console.log($windowWidth);
 
     if($windowWidth > 1180){
       $fullWidth = $('body').width() - $('aside').width() - (($('body').width() - 1180) / 2);

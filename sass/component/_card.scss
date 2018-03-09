@@ -43,6 +43,14 @@
 		}
 	}
 
+	.card-place,
+	.card-duration{
+		padding: 0 40px;
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding: 0 80px;
+		}
+	}
+
 	.btn{
 		position: absolute;
 		left: 40px;
@@ -75,7 +83,154 @@
 	}
 }
 
+.card-range{
+	padding-top: 0;
+
+	& > li{
+		width: 420px;
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 100%;
+		}
+	}
+
+	img{
+		width: 420px;
+		height: 290px;
+		border-bottom: 1px solid $grey;
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	h3{
+		margin: 10px 0 20px;
+		padding: 0 15px;
+
+		font-size: $p;
+		line-height: 17px;
+		font-weight: normal;
+		color: $grey;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			font-size: $pMobile;
+			line-height: 36px;
+		}
+	}
+
+	h4{
+		margin-bottom: 10px;
+		padding: 0 15px;
+		@include fontFamily('2','b');
+		font-size: $h3;
+		line-height: 27px;
+		color: $black;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			font-size: $h3Mobile;
+			line-height: 36px;
+		}
+	}
+
+	.btn{
+		left: 110px;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			left: 0;
+		}
+	}
+}
+
 .card-date{
 	text-align: center;
 	color: $grey;
+}
+
+.card-place{
+	position: relative;
+
+	text-align: center;
+
+	strong{
+		display: block;
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: calc((100% - 20px) / 2);
+		left: 10px;
+
+		width: 14px;
+		height: 20px;
+
+		background:transparent url('../img/geolocation.svg') left center no-repeat;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			top: calc((100% - 40px) / 2);
+			left: 30px;
+			width: 28px;
+			height: 40px;
+		}
+	}	
+}
+
+.card-duration{
+	position: relative;
+	margin-bottom: 0;
+
+	text-align: center;
+
+	@include fontFamily('1','b');
+	font-size: 16px;
+	line-height: 25px;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin-bottom: 30px;
+
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	span{
+		@include inline-block();
+		width: 13px;
+		height: 20px;
+		margin: 0 5px;
+		
+		background:transparent url('../img/next.png') 0 0 no-repeat;
+
+		text-indent: -9999px;
+		vertical-align: text-bottom;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 19px;
+			height: 30px;
+
+			background-position: -13px 0;
+		}
+	}
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: calc((100% - 20px) / 2);
+		left: 10px;
+
+		width: 22px;
+		height: 20px;
+
+		background:transparent url('../img/calendar.svg') left center no-repeat;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			top: calc((100% - 40px) / 2);
+			left: 30px;
+			width: 44px;
+			height: 40px;
+		}
+	}
+}
+
+.card-title{
+	margin-top: 30px;
 }
