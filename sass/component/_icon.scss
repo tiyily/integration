@@ -48,10 +48,15 @@
 	img{
 		position: absolute;
 		top: 50%;
-		left: calc((100% - 80px) / 2);
+		left: calc((100% - 40px) / 2);
 		transform: translateY(-50%);
 
-		width: 80px;
+		width: 40px;
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			width: 80px;
+			left: calc((100% - 80px) / 2);
+		}
 	}
 }
 

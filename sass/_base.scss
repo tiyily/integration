@@ -65,6 +65,13 @@ p{
 	}
 }
 
+li{
+	@include fontFamily('2');
+	font-size: $p;
+	line-height: 25px;
+	color: $black;
+}
+
 strong{
 	font-weight: 700;
 }
