@@ -102,3 +102,32 @@
 		}
 	}
 }
+
+.text-alt{
+	margin-top: 60px;
+	.text{
+		margin-bottom: 0;
+		padding-bottom: 40px;
+		border-bottom: 1px solid $grey;
+	}
+
+	li{
+		&:last-child{
+			.text{
+				border-bottom: none;
+			}
+		}
+
+		&:nth-child(2n){
+			.text{
+				img{
+					grid-column: 1;
+				}
+
+				& > div{
+					grid-column : 2;
+				}
+			}
+		}
+	}
+}

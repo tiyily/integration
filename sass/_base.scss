@@ -70,6 +70,11 @@ li{
 	font-size: $p;
 	line-height: 25px;
 	color: $black;
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		font-size: $pMobile;
+		line-height: 36px;		
+	}
 }
 
 strong{

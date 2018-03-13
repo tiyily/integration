@@ -3,10 +3,20 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: 60px;
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			display: block;
+			padding: 0 40px;
+		}
 	}
 
 	li{
 		margin-right: 90px;
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			margin-bottom: 40px;
+			margin-right: 0;
+		}
 
 		&:last-child{
 			margin-right: 0;
@@ -25,6 +35,15 @@
 
 		&:hover{
 			background-color: $greyMedium;
+		}
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			padding: 20px;
+
+			border: 2px solid $greyDark;
+
+			text-align: center;
+			font-size: $pMobile;
 		}
 
 	}

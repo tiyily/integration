@@ -1,0 +1,74 @@
+.accordeon{
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+
+	@media all and (max-width: $mediaq-tablet-max){
+		padding: 30px;
+	}
+}
+
+.accordeon-item{
+	margin-bottom: 20px;
+	background-color: $white;
+
+	h2{
+		position: relative;
+		margin-bottom: 0;
+		padding: 15px;
+
+		text-align: left;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			padding-right: 113px;
+		}
+
+		span{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 33px;
+			height: 100%;
+			
+			border-left: 3px solid $greyLight;
+
+			background:transparent url('../img/accordeon.png') center center no-repeat;
+
+			text-indent: -9999px;
+
+			@media all and (max-width: $mediaq-mobile-max){
+				width: 100px;
+
+				background-image: url('../img/accordeon-mobile.png');
+			}
+		}
+
+		&.is-open{
+			span{
+				@include rotate(180deg);
+				border-left: none;
+				border-right: 3px solid $greyLight;
+			}
+		}
+	}
+
+	a{
+		&:hover{
+			color: $greyDark;
+			span{
+				background-image: url('../img/accordeon-hover.png');
+
+				@media all and (max-width: $mediaq-mobile-max){
+					background-image: url('../img/accordeon-mobile.png');
+				}
+			}
+		}
+	}
+}
+
+.accordeon-answer{
+	display: none;
+	padding: 10px 15px;
+	border-top: 3px solid $greyLight;
+}

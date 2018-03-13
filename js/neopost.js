@@ -73,6 +73,28 @@ $(document).ready(function(){
     }
   });
 
+  /*Accordeon Animation*/
+  $(".accordeon a").click(function(e){
+    e.preventDefault();
+    $h2 = $(this).parent();
+    if($h2.hasClass("is-open")){
+      $h2.removeClass("is-open");
+      $h2.next('.accordeon-answer').slideUp(500);
+    }
+    else{
+      $h2.addClass("is-open");
+       $h2.next('.accordeon-answer').slideDown(500);
+    }
+  });
+
+  $(".banner-carousel .owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true, 
+        autoplay: true,
+      }
+  );
+
 
 });
 
