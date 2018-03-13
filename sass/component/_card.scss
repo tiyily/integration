@@ -237,4 +237,8 @@
 
 .card-full{
 	padding-left: 0;
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		padding-left: 40px;
+	}
 }

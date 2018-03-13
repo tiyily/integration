@@ -11,7 +11,7 @@
 
 		@media screen and (max-width:$mediaq-4) {
 			grid-template-columns: repeat(2, 1fr);
-			grid-column-gap: 40px;
+			grid-gap: 60px 40px;
 		}
 
 		@media screen and (max-width:$mediaq-mobile-max) {
@@ -29,10 +29,18 @@
 	.icon-img{
 		margin: 0 auto 30px;
 		text-align: center;
+
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			margin-bottom: 40px;
+		}
 	}
 
 	img{
 		height: 100px;
+
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			height: 150px;
+		}
 	}
 
 	h3{
@@ -42,6 +50,12 @@
 		font-size: $p;
 		line-height: 25px;
 		color: $green;
+
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			margin-bottom: 30px;
+			font-size: 26px;
+			line-height: 30px;
+		}
 	}
 
 	a{
@@ -58,6 +72,10 @@
 
 .icon-full{
 	padding-top: 60px;
+
+	@media screen and (max-width:$mediaq-tablet-max) {
+		padding: 60px 30px 0;
+	}
 }
 
 .icon-round{
