@@ -85,38 +85,3 @@ h2{
 		margin-left: 0;
 	}
 }
-
-.owl-dots{
-	text-align: center;
-
-	.owl-dot{
-		@include inline-block;
-
-		span {
-			@include border-radius(50%);
-			display: block;
-			content: " ";
-			width: 10px;
-			height: 10px;
-			margin-right: 15px;
-
-			background-color: $grey;
-
-			font-size: 10px;
-		}
-
-		&.active{
-			span {
-				background-color: $green;
-			}
-		}
-	}
-}
-
-.banner-carousel{
-	.owl-dots{
-		position: absolute;
-		bottom: 15px;
-		width: 100%;
-	}
-}

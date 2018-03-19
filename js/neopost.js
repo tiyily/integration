@@ -1,55 +1,4 @@
 $(document).ready(function(){
-
-//Drupal Behaviour ?
-  /*var mainMenuHeight = $("#mainMenu ul").outerHeight() + 3 ;
-  $(".accountBg").css('height', mainMenuHeight);
-
-  $("#mainMenu li").hover(
-    function(){
-      $this = $(this);
-      var headerHeight = $("header").outerHeight();
-      $this.find($(".subMenuContainer")).css('top',headerHeight);
-      if($this.hasClass('account')){
-        $(".accountBg").addClass("hover");
-      }
-    },
-    function(){
-        $(".accountBg").removeClass("hover");
-    }
-  ) ; 
-
-  $("#carousel .owl-carousel").owlCarousel(
-      {
-        items: 1,
-        loop: true,
-        dotsEach: true,
-        autoplay: true,
-
-      }
-  );
-
-  // Software carousel
-  $(".carousel .owl-carousel").owlCarousel(
-      {
-        items: 1,
-        loop: true,
-        dotsEach: true,
-        autoWidth:true
-
-      }
-  );
-
-  $(".testimonials .owl-carousel").owlCarousel(
-      {
-        items: 1,
-        loop: true,
-        dotsEach: true,
-
-      }
-  );
-
-  $("#tabs").tabs({active: 0});*/
-
   content_banner();
 
   /* Play button on banner behaviour */
@@ -90,8 +39,24 @@ $(document).ready(function(){
   $(".banner-carousel .owl-carousel").owlCarousel(
       {
         items: 1,
-        loop: true, 
-        autoplay: true,
+        loop: true,
+      }
+  );
+
+  $(".carousel-image .owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true,
+        nav: true,
+        autoWidth: true,
+      }
+  );
+
+  $(".promotion .owl-carousel").owlCarousel(
+      {
+        items: 5,
+        loop: true,
+        nav: true,
       }
   );
 
