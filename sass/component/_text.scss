@@ -140,3 +140,13 @@
 		
 	}
 }
+
+.product{
+	.text{
+		padding-top: 0;
+
+		@media screen and (max-width:$mediaq-tablet-max) {	
+			padding: 0;
+		}
+	}
+}

@@ -1,9 +1,14 @@
 .array{
 	margin-bottom: 40px;
+	padding: 0 30px;
 
 	ul{
 		width: 645px;
 		margin: 0 auto;
+
+		@media all and (max-width: $mediaq-4){
+			width: 100%;
+		}
 	}
 
 	li{
@@ -13,6 +18,14 @@
 
 		&:first-child{
 			border-top: 1px solid $grey;
+		}
+
+		@media all and (max-width: $mediaq-mobile-max){
+			display: block;
+
+			&:last-child{
+				border-bottom: none;
+			}
 		}
 	}
 
@@ -26,10 +39,24 @@
 		@include fontFamily('1');
 		font-size: 18px;
 
+		@media all and (max-width: $mediaq-mobile-max){
+			padding: 25px 15px;
+
+			text-align: center;
+			font-size: 30px;
+			line-height: 36px;
+
+		}
+
 	}
 
 	p{
 		margin-bottom: 0;
 		padding: 15px;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			padding: 25px 15px;
+			text-align: center;
+		}
 	}
 }

@@ -1,6 +1,7 @@
 $(document).ready(function(){
   content_banner();
 
+
   /* Play button on banner behaviour */
   $(".video-play").click(function(){
       $this = $(this);
@@ -46,17 +47,57 @@ $(document).ready(function(){
   $(".carousel-image .owl-carousel").owlCarousel(
       {
         items: 1,
-        loop: true,
-        nav: true,
-        autoWidth: true,
+        responsiveClass:true,
+        responsive:{
+          0:{
+            nav:false,
+            loop: false
+          },
+          769:{
+              nav:true,
+              loop: true
+          }
+        }
       }
   );
 
   $(".promotion .owl-carousel").owlCarousel(
       {
-        items: 5,
-        loop: true,
         nav: true,
+        dots: false,
+
+        responsiveClass:true,
+        responsive:{
+          0:{
+            items: 1
+          },
+          769:{
+             items: 2
+          },
+          935:{
+             items: 3
+          },
+          1070:{
+             items: 4
+          },
+          1180:{
+             items: 5
+          }
+        }
+      }
+  );
+
+  if(isMobile() == 'm'){
+    $(".product-library > ul").addClass('owl-carousel');
+  }
+  else{
+    $(".product-library > ul").removeClass('owl-carousel');
+  }
+
+  $(".product .owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true,
       }
   );
 
@@ -65,7 +106,19 @@ $(document).ready(function(){
 
 $(window).resize(function(){
   content_banner();
+  isMobile();
 });
+
+function isMobile(){
+  $isMobile = "";
+  $windowSize = window.innerWidth;
+  switch(true){
+    case $windowSize >= 1180 : $isMobile = "d"; break;
+    case $windowSize < 1180 && $windowSize > 768 : $isMobile = "t"; break;
+    case $windowSize <= 768 : $isMobile = "m"; break;
+  }
+  return($isMobile);
+}
 
 
 /* Allow banner in content*/

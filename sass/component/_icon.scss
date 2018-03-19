@@ -124,14 +124,28 @@
 
 .icon-bar{
 	padding-left: 30px;
+
+	@media screen and (max-width:$mediaq-mobile-max) {
+		padding: 0 40px;	
+	}
+
 	ul{
 		display: flex;
 		flex-wrap : wrap;
 		justify-content: space-around;
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			display: block;
+		}
 	}
 
 	li{
 		width: 260px;
 		margin-bottom: 40px;
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			width: 100%;
+			margin-bottom: 60px;
+		}
 	}
 }

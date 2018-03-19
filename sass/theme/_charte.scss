@@ -85,3 +85,17 @@ h2{
 		margin-left: 0;
 	}
 }
+
+.product{
+	.pdf{
+		@media screen and (max-width:$mediaq-5) {
+			@include inline-block();
+		}	
+	}
+}
+
+.link-grey{
+	@include fontFamily('1');
+	font-size: calc($p + 2px);
+	color: $grey;
+}

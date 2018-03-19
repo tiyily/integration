@@ -561,22 +561,39 @@ footer {
 /* line 1, ../sass/component/_array.scss */
 .array {
   margin-bottom: 40px;
+  padding: 0 30px;
 }
-/* line 4, ../sass/component/_array.scss */
+/* line 5, ../sass/component/_array.scss */
 .array ul {
   width: 645px;
   margin: 0 auto;
 }
-/* line 9, ../sass/component/_array.scss */
+@media all and (max-width: 970px) {
+  /* line 5, ../sass/component/_array.scss */
+  .array ul {
+    width: 100%;
+  }
+}
+/* line 14, ../sass/component/_array.scss */
 .array li {
   grid-template-columns: 135px 1fr;
   border-bottom: 1px solid #C8C8C8;
 }
-/* line 14, ../sass/component/_array.scss */
+/* line 19, ../sass/component/_array.scss */
 .array li:first-child {
   border-top: 1px solid #C8C8C8;
 }
-/* line 19, ../sass/component/_array.scss */
+@media all and (max-width: 768px) {
+  /* line 14, ../sass/component/_array.scss */
+  .array li {
+    display: block;
+  }
+  /* line 26, ../sass/component/_array.scss */
+  .array li:last-child {
+    border-bottom: none;
+  }
+}
+/* line 32, ../sass/component/_array.scss */
 .array h3 {
   margin-bottom: 0;
   padding: 15px;
@@ -586,10 +603,26 @@ footer {
   font-weight: 400;
   font-size: 18px;
 }
-/* line 31, ../sass/component/_array.scss */
+@media all and (max-width: 768px) {
+  /* line 32, ../sass/component/_array.scss */
+  .array h3 {
+    padding: 25px 15px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+/* line 53, ../sass/component/_array.scss */
 .array p {
   margin-bottom: 0;
   padding: 15px;
+}
+@media all and (max-width: 768px) {
+  /* line 53, ../sass/component/_array.scss */
+  .array p {
+    padding: 25px 15px;
+    text-align: center;
+  }
 }
 
 /* line 1, ../sass/component/_banner.scss */
@@ -606,11 +639,12 @@ footer {
 @media screen and (max-width: 768px) {
   /* line 1, ../sass/component/_banner.scss */
   .banner {
+    height: auto;
     margin-bottom: 60px;
   }
 }
 
-/* line 16, ../sass/component/_banner.scss */
+/* line 17, ../sass/component/_banner.scss */
 .overlay {
   display: -moz-inline-stack;
   display: inline-block;
@@ -622,86 +656,86 @@ footer {
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.45);
 }
-/* line 24, ../sass/component/_banner.scss */
+/* line 25, ../sass/component/_banner.scss */
 .overlay p {
   color: #FFFFFF;
 }
 @media screen and (max-width: 1179px) {
-  /* line 16, ../sass/component/_banner.scss */
+  /* line 17, ../sass/component/_banner.scss */
   .overlay {
     max-width: 100%;
     text-align: center;
   }
-  /* line 32, ../sass/component/_banner.scss */
+  /* line 33, ../sass/component/_banner.scss */
   .overlay p {
     text-align: center;
   }
 }
 
-/* line 38, ../sass/component/_banner.scss */
+/* line 39, ../sass/component/_banner.scss */
 .banner-full {
   margin-bottom: 15px;
 }
 @media screen and (max-width: 768px) {
-  /* line 38, ../sass/component/_banner.scss */
+  /* line 39, ../sass/component/_banner.scss */
   .banner-full {
     height: auto;
     margin-bottom: 60px;
   }
 }
-/* line 46, ../sass/component/_banner.scss */
+/* line 47, ../sass/component/_banner.scss */
 .banner-full .overlay {
   display: block;
   position: relative;
   max-width: calc(((100% - 1180px) / 2) + 530px);
 }
-/* line 51, ../sass/component/_banner.scss */
+/* line 52, ../sass/component/_banner.scss */
 .banner-full .overlay > div {
   position: absolute;
   right: 0;
   width: 530px;
 }
 @media screen and (max-width: 1179px) {
-  /* line 46, ../sass/component/_banner.scss */
+  /* line 47, ../sass/component/_banner.scss */
   .banner-full .overlay {
     text-align: left;
   }
-  /* line 60, ../sass/component/_banner.scss */
+  /* line 61, ../sass/component/_banner.scss */
   .banner-full .overlay > div {
     width: 100%;
     padding-left: 30px;
   }
-  /* line 65, ../sass/component/_banner.scss */
+  /* line 66, ../sass/component/_banner.scss */
   .banner-full .overlay p {
     text-align: left;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 46, ../sass/component/_banner.scss */
+  /* line 47, ../sass/component/_banner.scss */
   .banner-full .overlay {
     max-width: 100%;
     text-align: center;
   }
-  /* line 75, ../sass/component/_banner.scss */
+  /* line 76, ../sass/component/_banner.scss */
   .banner-full .overlay > div {
     position: relative;
     padding: 0;
   }
-  /* line 80, ../sass/component/_banner.scss */
+  /* line 81, ../sass/component/_banner.scss */
   .banner-full .overlay h1 {
     text-align: center;
   }
-  /* line 84, ../sass/component/_banner.scss */
+  /* line 85, ../sass/component/_banner.scss */
   .banner-full .overlay p {
     text-align: center;
   }
 }
-/* line 93, ../sass/component/_banner.scss */
+/* line 94, ../sass/component/_banner.scss */
 .banner-full.video {
   height: 400px;
 }
 
-/* line 99, ../sass/component/_banner.scss */
+/* line 100, ../sass/component/_banner.scss */
 .content .banner-full {
   margin-bottom: 0;
 }
@@ -1321,17 +1355,29 @@ footer {
   width: 590px;
   margin: 0 auto;
 }
-/* line 9, ../sass/component/_carousel.scss */
+@media all and (max-width: 1179px) {
+  /* line 4, ../sass/component/_carousel.scss */
+  .carousel-image ul {
+    margin: auto;
+  }
+}
+/* line 13, ../sass/component/_carousel.scss */
 .carousel-image img {
   width: 590px;
   margin-bottom: 30px;
 }
+@media all and (max-width: 1179px) {
+  /* line 13, ../sass/component/_carousel.scss */
+  .carousel-image img {
+    width: 100%;
+  }
+}
 
-/* line 15, ../sass/component/_carousel.scss */
+/* line 23, ../sass/component/_carousel.scss */
 .owl-dots {
   text-align: center;
 }
-/* line 18, ../sass/component/_carousel.scss */
+/* line 26, ../sass/component/_carousel.scss */
 .owl-dots .owl-dot {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1339,7 +1385,7 @@ footer {
   *display: inline;
   vertical-align: top;
 }
-/* line 21, ../sass/component/_carousel.scss */
+/* line 29, ../sass/component/_carousel.scss */
 .owl-dots .owl-dot span {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1352,18 +1398,30 @@ footer {
   background-color: #C8C8C8;
   font-size: 10px;
 }
-/* line 35, ../sass/component/_carousel.scss */
+@media screen and (max-width: 768px) {
+  /* line 29, ../sass/component/_carousel.scss */
+  .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+    margin-right: 40px;
+  }
+}
+/* line 49, ../sass/component/_carousel.scss */
 .owl-dots .owl-dot.active span {
   background-color: #72BF44;
 }
+/* line 55, ../sass/component/_carousel.scss */
+.owl-dots .owl-dot:last-child span {
+  margin-right: 0;
+}
 
-/* line 42, ../sass/component/_carousel.scss */
+/* line 62, ../sass/component/_carousel.scss */
 .owl-nav {
   position: absolute;
   top: calc((100% - 81px) / 2);
   width: 100%;
 }
-/* line 47, ../sass/component/_carousel.scss */
+/* line 67, ../sass/component/_carousel.scss */
 .owl-nav > div {
   position: absolute;
   top: 0;
@@ -1373,11 +1431,11 @@ footer {
   background: transparent url("../img/carousel-nav.png") left center no-repeat;
   font-size: 0;
 }
-/* line 57, ../sass/component/_carousel.scss */
+/* line 77, ../sass/component/_carousel.scss */
 .owl-nav > div.owl-prev {
   left: -60px;
 }
-/* line 61, ../sass/component/_carousel.scss */
+/* line 81, ../sass/component/_carousel.scss */
 .owl-nav > div.owl-next {
   right: -60px;
   -moz-transform: scaleX(-1);
@@ -1386,24 +1444,69 @@ footer {
   transform: scaleX(-1);
 }
 
-/* line 70, ../sass/component/_carousel.scss */
+/* line 90, ../sass/component/_carousel.scss */
+.promotion .owl-carousel {
+  max-width: calc(1180px - 60px);
+}
+@media screen and (max-width: 1179px) {
+  /* line 90, ../sass/component/_carousel.scss */
+  .promotion .owl-carousel {
+    max-width: calc(100% - 60px);
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 90, ../sass/component/_carousel.scss */
+  .promotion .owl-carousel {
+    max-width: calc(100% - 80px);
+  }
+}
+/* line 102, ../sass/component/_carousel.scss */
 .promotion .owl-nav {
   top: 90px;
 }
-/* line 74, ../sass/component/_carousel.scss */
-.promotion .owl-nav > div.owl-prev {
-  left: 0;
+@media screen and (max-width: 768px) {
+  /* line 102, ../sass/component/_carousel.scss */
+  .promotion .owl-nav {
+    top: 190px;
+  }
 }
-/* line 78, ../sass/component/_carousel.scss */
+/* line 110, ../sass/component/_carousel.scss */
+.promotion .owl-nav > div.owl-prev {
+  left: -30px;
+}
+@media screen and (max-width: 768px) {
+  /* line 110, ../sass/component/_carousel.scss */
+  .promotion .owl-nav > div.owl-prev {
+    left: 0;
+  }
+}
+/* line 117, ../sass/component/_carousel.scss */
 .promotion .owl-nav > div.owl-next {
-  right: 0;
+  right: -15px;
+}
+@media screen and (max-width: 768px) {
+  /* line 117, ../sass/component/_carousel.scss */
+  .promotion .owl-nav > div.owl-next {
+    right: 0;
+  }
+}
+/* line 126, ../sass/component/_carousel.scss */
+.promotion li {
+  margin: 0 auto;
 }
 
-/* line 86, ../sass/component/_carousel.scss */
+/* line 132, ../sass/component/_carousel.scss */
 .banner-carousel .owl-dots {
   position: absolute;
   bottom: 15px;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 140, ../sass/component/_carousel.scss */
+  .product .owl-dots {
+    margin-top: 20px;
+  }
 }
 
 /* line 1, ../sass/component/_event.scss */
@@ -2177,37 +2280,43 @@ footer {
   background-position: 50% 0;
   background-image: url("../img/1400x400.jpg");
 }
+@media all and (max-width: 768px) {
+  /* line 22, ../sass/component/_full.scss */
+  .full-img {
+    height: 100%;
+  }
+}
 
-/* line 34, ../sass/component/_full.scss */
+/* line 38, ../sass/component/_full.scss */
 .grid .full {
   width: calc(100% - ((100% - 1180px) / 2) - 280px);
 }
 @media all and (max-width: 1179px) {
-  /* line 34, ../sass/component/_full.scss */
+  /* line 38, ../sass/component/_full.scss */
   .grid .full {
     width: 100%;
   }
 }
 
-/* line 45, ../sass/component/_full.scss */
+/* line 49, ../sass/component/_full.scss */
 .banner .full {
   width: 100%;
   left: 0;
 }
 
 @media screen and (max-width: 1179px) {
-  /* line 52, ../sass/component/_full.scss */
+  /* line 56, ../sass/component/_full.scss */
   .banner-full .full-img {
     height: 100%;
   }
 }
 
-/* line 60, ../sass/component/_full.scss */
+/* line 64, ../sass/component/_full.scss */
 .video .full-img {
   height: 500px;
 }
 @media screen and (max-width: 1179px) {
-  /* line 60, ../sass/component/_full.scss */
+  /* line 64, ../sass/component/_full.scss */
   .video .full-img {
     position: relative;
     width: 100%;
@@ -2359,55 +2468,200 @@ footer {
 .icon-bar {
   padding-left: 30px;
 }
-/* line 127, ../sass/component/_icon.scss */
+@media screen and (max-width: 768px) {
+  /* line 125, ../sass/component/_icon.scss */
+  .icon-bar {
+    padding: 0 40px;
+  }
+}
+/* line 132, ../sass/component/_icon.scss */
 .icon-bar ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-/* line 133, ../sass/component/_icon.scss */
+@media screen and (max-width: 768px) {
+  /* line 132, ../sass/component/_icon.scss */
+  .icon-bar ul {
+    display: block;
+  }
+}
+/* line 142, ../sass/component/_icon.scss */
 .icon-bar li {
   width: 260px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 768px) {
+  /* line 142, ../sass/component/_icon.scss */
+  .icon-bar li {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
 
 /* line 1, ../sass/component/_list.scss */
 .list {
-  padding-left: 30px;
+  padding: 0 30px;
 }
 /* line 4, ../sass/component/_list.scss */
 .list > ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
 }
-/* line 11, ../sass/component/_list.scss */
+@media all and (max-width: 1179px) {
+  /* line 11, ../sass/component/_list.scss */
+  .list > ul > li {
+    margin-bottom: 40px;
+  }
+}
+/* line 21, ../sass/component/_list.scss */
 .list h3 {
   margin-bottom: 0;
   text-align: left;
 }
 
-/* line 2, ../sass/component/_promotion.scss */
-.promotion .owl-stage {
-  padding: 0 30px;
+/* line 1, ../sass/component/_product.scss */
+.product {
+  margin-bottom: 50px;
 }
-/* line 5, ../sass/component/_promotion.scss */
+/* line 3, ../sass/component/_product.scss */
+.product .grid {
+  grid-template-columns: 1fr 590px;
+  grid-column-gap: 30px;
+}
+@media screen and (max-width: 935px) {
+  /* line 3, ../sass/component/_product.scss */
+  .product .grid {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 935px) {
+  /* line 14, ../sass/component/_product.scss */
+  .product p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1179px) {
+  /* line 1, ../sass/component/_product.scss */
+  .product {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 1, ../sass/component/_product.scss */
+  .product {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 935px) {
+  /* line 30, ../sass/component/_product.scss */
+  .product-text {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 30, ../sass/component/_product.scss */
+  .product-text {
+    padding: 0 40px;
+  }
+}
+
+/* line 41, ../sass/component/_product.scss */
+.product-library li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  margin-right: 10px;
+}
+/* line 44, ../sass/component/_product.scss */
+.product-library li:first-child {
+  display: block;
+  margin-bottom: 10px;
+}
+/* line 48, ../sass/component/_product.scss */
+.product-library li:first-child img {
+  width: 590px;
+  height: 225px;
+}
+@media screen and (max-width: 768px) {
+  /* line 48, ../sass/component/_product.scss */
+  .product-library li:first-child img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 44, ../sass/component/_product.scss */
+  .product-library li:first-child {
+    margin-bottom: 0;
+  }
+}
+/* line 63, ../sass/component/_product.scss */
+.product-library li:last-child {
+  margin-right: 0;
+}
+/* line 67, ../sass/component/_product.scss */
+.product-library li img {
+  width: 137px;
+  height: 137px;
+}
+@media screen and (max-width: 768px) {
+  /* line 67, ../sass/component/_product.scss */
+  .product-library li img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 41, ../sass/component/_product.scss */
+  .product-library li {
+    display: block;
+    margin: 0;
+  }
+}
+
+/* line 2, ../sass/component/_promotion.scss */
 .promotion li {
   width: 210px;
+}
+@media screen and (max-width: 768px) {
+  /* line 2, ../sass/component/_promotion.scss */
+  .promotion li {
+    width: 450px;
+  }
 }
 /* line 9, ../sass/component/_promotion.scss */
 .promotion h3 {
   margin-bottom: 5px;
 }
-/* line 11, ../sass/component/_promotion.scss */
+@media screen and (max-width: 768px) {
+  /* line 9, ../sass/component/_promotion.scss */
+  .promotion h3 {
+    margin: 30px 0;
+  }
+}
+/* line 14, ../sass/component/_promotion.scss */
 .promotion h3 a {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 19px;
 }
+@media screen and (max-width: 768px) {
+  /* line 14, ../sass/component/_promotion.scss */
+  .promotion h3 a {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
 
-/* line 19, ../sass/component/_promotion.scss */
+/* line 26, ../sass/component/_promotion.scss */
 .promotion-dark {
   padding: 30px 0;
   background-color: #EEEEEE;
@@ -2890,6 +3144,17 @@ footer {
   grid-column: 2;
 }
 
+/* line 145, ../sass/component/_text.scss */
+.product .text {
+  padding-top: 0;
+}
+@media screen and (max-width: 1179px) {
+  /* line 145, ../sass/component/_text.scss */
+  .product .text {
+    padding: 0;
+  }
+}
+
 /* line 4, ../sass/component/_video.scss */
 .video {
   height: 500px;
@@ -3056,6 +3321,25 @@ h2.dark, .dark.h2-title {
 /* line 84, ../sass/theme/_charte.scss */
 .center .pdf {
   margin-left: 0;
+}
+
+@media screen and (max-width: 935px) {
+  /* line 90, ../sass/theme/_charte.scss */
+  .product .pdf {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: top;
+  }
+}
+
+/* line 97, ../sass/theme/_charte.scss */
+.link-grey {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-size: calc($p + 2px);
+  color: #C8C8C8;
 }
 
 @supports (-ms-ime-align: auto) {

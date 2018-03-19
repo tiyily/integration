@@ -27,6 +27,10 @@
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	background-image:url('../img/1400x400.jpg');
+
+	@media all and (max-width: $mediaq-mobile-max){
+		height: 100%;
+	}
 }
 
 

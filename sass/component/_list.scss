@@ -1,12 +1,22 @@
 .list{
-	padding-left: 30px;
+	padding: 0 30px;
 
 	& > ul{
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 
 		margin-bottom: 40px;
+
+		& > li{
+			@media all and (max-width: $mediaq-tablet-max){
+				margin-bottom: 40px;
+			}
+		}
+
 	}
+
+	
 
 	h3{
 		margin-bottom: 0;

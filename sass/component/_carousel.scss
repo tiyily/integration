@@ -4,11 +4,19 @@
 	ul{
 		width: 590px;
 		margin: 0 auto;
+		@media all and (max-width: $mediaq-tablet-max){
+			//width: 100%;
+			margin: auto;
+		}
 	}
 
 	img{
 		width: 590px;
 		margin-bottom: 30px;
+
+		@media all and (max-width: $mediaq-tablet-max){
+			width: 100%;
+		}
 	}
 }
 
@@ -29,11 +37,23 @@
 			background-color: $grey;
 
 			font-size: 10px;
+
+			@media screen and (max-width:$mediaq-mobile-max) {	
+				width: 20px;
+				height: 20px;
+				margin-right: 40px;
+			}
 		}
 
 		&.active{
 			span {
 				background-color: $green;
+			}
+		}
+
+		&:last-child{
+			span{
+				margin-right: 0;
 			}
 		}
 	}
@@ -67,18 +87,44 @@
 }
 
 .promotion{
+	.owl-carousel{
+		max-width: calc(#{$mediaq-desktop} - 60px);
+
+		@media screen and (max-width:$mediaq-tablet-max) {	
+			max-width: calc(100% - 60px);
+		}
+
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			max-width: calc(100% - 80px);
+		}
+	}
+
 	.owl-nav{
 		top: 90px;
+
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			top: 190px;
+		}
 		
 		& > div{
 			&.owl-prev{
-				left: 0;
+				left: -30px;
+				@media screen and (max-width:$mediaq-mobile-max) {	
+					left: 0;
+				}
 			}
 
 			&.owl-next{
-				right: 0;
+				right: -15px;
+				@media screen and (max-width:$mediaq-mobile-max) {	
+					right: 0;
+				}
 			}
 		}
+	}
+
+	li{
+		margin: 0 auto;
 	}
 }
 
@@ -87,5 +133,13 @@
 		position: absolute;
 		bottom: 15px;
 		width: 100%;
+	}
+}
+
+.product{
+	.owl-dots{
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			margin-top: 20px;
+		}
 	}
 }
