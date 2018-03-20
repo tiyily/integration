@@ -143,3 +143,20 @@
 		}
 	}
 }
+
+.carousel-text{
+	grid-template-columns: 715px 1fr;
+	grid-column-gap: 30px;
+
+	margin-bottom: 60px;
+
+	.owl-dots{
+		margin-top: 10px;
+	}
+}
+
+.quote{
+	.owl-dots{
+		padding-left: 380px;
+	}
+}

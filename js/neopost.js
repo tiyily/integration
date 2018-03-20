@@ -87,6 +87,20 @@ $(document).ready(function(){
       }
   );
 
+   $(".carousel-text .owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true,
+      }
+  );
+
+   $(".quote .owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true,
+      }
+  );
+
   if(isMobile() == 'm'){
     $(".product-library > ul").addClass('owl-carousel');
   }
@@ -100,6 +114,8 @@ $(document).ready(function(){
         loop: true,
       }
   );
+
+   $("#tabs").tabs({active: 0});
 
 
 });

@@ -54,6 +54,10 @@
 			cursor: default;
 		}	
 	}
+
+	&:hover{
+		color: $white;
+	}
 }
 
 
@@ -114,3 +118,15 @@
 	}
 }
 
+
+.carousel-text{
+	.btn{
+		width: 100%;
+	}
+}
+
+.text-btn{
+	.btn{
+		min-width: 420px;
+	}
+}

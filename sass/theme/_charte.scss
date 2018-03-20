@@ -99,3 +99,24 @@ h2{
 	font-size: calc($p + 2px);
 	color: $grey;
 }
+
+.link-afd{
+	margin-top: 15px;
+
+	color: $greyDark;
+
+	a{
+		color: $greyDark;
+	}
+}
+
+.more{
+	display: block;
+
+	text-align: center;
+	color: $grey;
+
+	&:hover{
+		color: $greyDark;
+	}
+}

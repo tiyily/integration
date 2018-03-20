@@ -239,3 +239,31 @@ input[type=radio]{
 		}
     }
 }
+
+ol{
+	margin: 0 0 1.5em;
+	padding: 0;
+	counter-reset: item;
+
+	& > li{
+		margin: 0;
+		padding: 0 0 0 2em;
+
+		text-indent: -2em;
+
+		list-style-type: none;
+		counter-increment: item;
+
+		&:before{
+			  display: inline-block;
+			  width: 1em;
+			  padding-right: 0.5em;
+
+			  text-align: right;
+
+			  @include fontFamily('2','b');
+			  
+			  content: counter(item) ".";
+		}
+	}
+}
