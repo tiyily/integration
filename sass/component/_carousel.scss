@@ -129,6 +129,18 @@
 }
 
 .banner-carousel{
+
+	&.banner-side{
+		height: 440px;
+
+		.owl-carousel{
+			position: absolute;
+			left: calc( ((100% - #{$contentMax}) / 2 ) + #{$sidebar} );
+			width: calc( 100% - (((100% - #{$contentMax}) / 2 ) + #{$sidebar}));	
+		}
+	}
+
+
 	.owl-dots{
 		position: absolute;
 		bottom: 15px;
@@ -150,13 +162,61 @@
 
 	margin-bottom: 60px;
 
+	ul{
+		width: 715px;
+		height: 420px;
+
+		@media all and (max-width: $mediaq-3){
+			margin: 0 auto 50px;
+		}
+
+		@media all and (max-width: $mediaq-mobile-max){
+			width: 100%;
+			height: auto;
+		}
+
+	}
+
+	@media all and (max-width: $mediaq-tablet-max){
+		padding: 0 30px;
+	}
+
+	@media all and (max-width: $mediaq-3){
+		display: block;
+	}
+
 	.owl-dots{
 		margin-top: 10px;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			margin-top: 30px;
+		}
 	}
 }
 
 .quote{
 	.owl-dots{
 		padding-left: 380px;
+		
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding-left: 0;
+		}
+	}
+
+	.owl-carousel{
+		img{
+			@media screen and (max-width: $mediaq-mobile-max) {
+				width: 400px;
+				margin: 0 auto 30px;
+			}
+		}
+	}
+}
+
+.card{
+	&.owl-carousel{
+		li{
+			margin-bottom: 20px;
+		}
 	}
 }

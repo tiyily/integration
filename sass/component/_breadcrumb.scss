@@ -1,8 +1,19 @@
 .breadcrumb{
 	margin-bottom: 40px;
+
+	ol{
+		margin: 0;
+	}
 	
 	li{
 		@include inline-block();
+		padding: 0;
+
+		text-indent: 0;
+
+		&:before{
+			display: none;
+		}
 
 		&:last-child{
 			a{

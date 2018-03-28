@@ -1,0 +1,14 @@
+header{
+	grid-template-columns: 135px 1fr;
+	grid-column-gap: 20px;
+
+	padding-top: 30px;
+}
+
+.logo{
+	align-self: center;
+	
+	img{
+		width: 135px;
+	}
+}

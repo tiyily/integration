@@ -22,14 +22,14 @@
 
 .grid-2{
 	.text{
-		padding: 0 0 0 30px;
+		margin-left: 30px;
 
 		@media screen and (max-width:$mediaq-tablet-max) {
-			padding: 0 30px;		
+			margin-left: 0;
 		}
 
 		@media screen and (max-width:$mediaq-mobile-max) {
-			padding: 0 40px;		
+			//margin: 0 40px;		
 		}
 	}
 }
@@ -153,6 +153,6 @@
 
 .carousel-text{
 	.text{
-		padding-top: 0;
+		padding: 0;
 	}
 }

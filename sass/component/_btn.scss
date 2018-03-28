@@ -122,6 +122,11 @@
 .carousel-text{
 	.btn{
 		width: 100%;
+		@media screen and (min-width:$mediaq-tablet-min) and (max-width:$mediaq-tablet-max) {
+			display: block;	
+			max-width: 420px;
+			margin: 0 auto;
+		}
 	}
 }
 

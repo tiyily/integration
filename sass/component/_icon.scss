@@ -42,6 +42,11 @@
 			line-height: 28px;
 			color: $black;
 
+			@media screen and (max-width:$mediaq-mobile-max) {	
+				font-size: 36px;
+				line-height: 43px;
+			}
+
 		}
 	}
 
@@ -158,3 +163,4 @@
 		}
 	}
 }
+

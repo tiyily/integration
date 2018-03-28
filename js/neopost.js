@@ -3,8 +3,11 @@ $(document).ready(function(){
 
 
   /* Play button on banner behaviour */
-  $(".video-play").click(function(){
+  $(".video-play").click(function(e){
+      e.preventDefault();
       $this = $(this);
+      $this.next(".video-iframe").slideDown(1000);
+      $this.fadeOut(500);
       $this.parent().addClass("video-show");
 
   });
@@ -90,7 +93,6 @@ $(document).ready(function(){
    $(".carousel-text .owl-carousel").owlCarousel(
       {
         items: 1,
-        loop: true,
       }
   );
 
@@ -103,9 +105,11 @@ $(document).ready(function(){
 
   if(isMobile() == 'm'){
     $(".product-library > ul").addClass('owl-carousel');
+    $(".list-img ul").addClass('owl-carousel');
   }
   else{
     $(".product-library > ul").removeClass('owl-carousel');
+    $(".list-img ul").removeClass('owl-carousel');
   }
 
   $(".product .owl-carousel").owlCarousel(
@@ -115,7 +119,24 @@ $(document).ready(function(){
       }
   );
 
-   $("#tabs").tabs({active: 0});
+  $(".list-img .owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true,
+      }
+  );
+
+   $(".card.owl-carousel").owlCarousel(
+      {
+        items: 1,
+        loop: true,
+      }
+  );
+
+
+
+  $("#tabs").tabs({active: 0});
+  $("#accordion").accordion({active: false,collapsible: true});
 
 
 });

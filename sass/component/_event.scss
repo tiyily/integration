@@ -30,8 +30,13 @@
 		}
 
 		&.pdf{
+			@include inline-block();
 			margin-top: 20px;
 			color: $black;
+
+			@media all and (max-width: $mediaq-2){
+				display: block;
+			}
 
 			@media all and (max-width: $mediaq-6){
 				@include inline-block();
@@ -254,6 +259,40 @@
 	a{
 		@media all and (max-width: $mediaq-6){
 			text-align: center;
+		}
+	}
+}
+
+.event-full{
+	grid-template-columns: 1fr 1fr 1fr;
+	border: 3px solid $greyMedium;
+
+	@media all and (max-width: $mediaq-2){
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&:after{
+		display: none;
+	}
+
+	.event-1{
+		text-align: center;
+	}
+
+	.event-date{
+		padding-top: 120px;
+		text-align: center;
+
+		&:before{
+			left: calc((100% - 93px) / 2);
+
+			@media all and (max-width: $mediaq-mobile-max){
+				left: calc((100% - 150px) / 2);
+			}
+		}
+
+		@media all and (max-width: $mediaq-mobile-max){
+			padding-top: 180px;
 		}
 	}
 }

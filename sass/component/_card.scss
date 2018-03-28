@@ -242,3 +242,21 @@
 		padding-left: 40px;
 	}
 }
+
+.full-grey{
+	.card{
+		padding-left: 0;
+
+		@media screen and (max-width: $mediaq-tablet-max) {
+			padding: 40px 30px;
+		}
+	}
+
+	.card-title{
+		padding-top: 30px;
+	}
+
+	.card-range{
+		justify-content: space-around;
+	}
+}
