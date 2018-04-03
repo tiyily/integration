@@ -25,30 +25,30 @@
 	color: $white;
 
 	&.cta{
-		background: $green;
+		background-color: $green;
 
 		&:hover{
-			background: $greenDark;
+			background-color: $greenDark;
 		}
 	}
 
 	&.cancel{
-		background: $grey;
+		background-color: $grey;
 		&:hover{
-			background: rgba($greyDark, 0.7);
+			background-color: rgba($greyDark, 0.7);
 		}
 	}
 
 	&.promotion{
-		background: $coral;
+		background-color: $coral;
 
 		&:hover{
-			background: $coralDark;
+			background-color: $coralDark;
 		}
 	}
 
 	&.is-inactive{
-		background: rgba($grey, 0.7);
+		background-color: rgba($grey, 0.7);
 
 		&:hover{
 			cursor: default;
@@ -102,13 +102,13 @@
 		color: $white;
 
 		&:hover{
-			background: rgba($white,0.5);
+			background-color: rgba($white,0.5);
 		}
 	}
 
 	&.search{
 		border-color: $green;
-		background: $white;
+		background-color: $white;
 		color: $green;
 
 		&:hover{

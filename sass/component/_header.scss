@@ -1,13 +1,24 @@
 header{
-	grid-template-columns: 135px 1fr;
-	grid-column-gap: 20px;
+	position: relative;
+	& > div{
+		grid-template-columns: 135px 1fr;
+		grid-column-gap: 20px;
 
-	padding-top: 30px;
+		padding-top: 30px;
+
+		@media screen and (max-width: $mediaq-tablet-max) {
+			padding-left: 30px;
+		}	
+	}
+
+	& > .grid-3{
+		grid-template-columns: 60px 135px 1fr;
+	}
 }
 
 .logo{
 	align-self: center;
-	
+
 	img{
 		width: 135px;
 	}

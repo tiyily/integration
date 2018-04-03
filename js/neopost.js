@@ -26,7 +26,7 @@ $(document).ready(function(){
     }
   });
 
-  /*Accordeon Animation*/
+  /* Accordeon Animation */
   $(".accordeon a").click(function(e){
     e.preventDefault();
     $h2 = $(this).parent();
@@ -39,6 +39,8 @@ $(document).ready(function(){
        $h2.next('.accordeon-answer').slideDown(500);
     }
   });
+
+  /* Carousel */
 
   $(".banner-carousel .owl-carousel").owlCarousel(
       {
@@ -133,10 +135,34 @@ $(document).ready(function(){
       }
   );
 
-
-
   $("#tabs").tabs({active: 0});
   $("#accordion").accordion({active: false,collapsible: true});
+
+  /* Menu mobile behaviour */
+  /* Open mobile menu*/
+  $('.menu-mobile > a').click(function(e){
+    e.preventDefault();
+    $('.menu-mobile > ul').toggle('right');
+  });
+
+  /* Close mobile menu*/
+  $('.menu-mobile .menu-close .close').click(function(e){
+    e.preventDefault();
+    $('.menu-mobile > ul').toggle('left');
+  });
+
+  /*Navigate menu mobile*/
+  $('.menu-mobile .menu-link-container a').click(function(e){
+    e.preventDefault();
+    $(this).next('.menu-container').find('ul').toggle();
+  });
+
+ $('.menu-mobile .menu-back .back').click(function(e){
+    e.preventDefault();
+    
+  });
+
+
 
 
 });
