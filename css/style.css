@@ -443,12 +443,6 @@ aside.grid {
   background-color: #FFFFFF;
 }
 
-/* line 55, ../sass/layout/_grid.scss */
-footer {
-  height: 200px;
-  background-color: #53ABAA;
-}
-
 /* line 2, ../sass/component/_anchor.scss */
 .anchor ul {
   display: flex;
@@ -2146,6 +2140,224 @@ footer {
   /* line 103, ../sass/component/_filter.scss */
   .filter-sidebar:before {
     display: none;
+  }
+}
+
+/* line 1, ../sass/component/_footer.scss */
+footer {
+  border-top: 1px solid #505050;
+}
+
+/* line 5, ../sass/component/_footer.scss */
+.footer-top {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+@media all and (min-width: 769px) and (max-width: 1179px) {
+  /* line 5, ../sass/component/_footer.scss */
+  .footer-top {
+    padding: 30px;
+  }
+}
+@media all and (max-width: 768px) {
+  /* line 5, ../sass/component/_footer.scss */
+  .footer-top {
+    display: block;
+  }
+}
+/* line 20, ../sass/component/_footer.scss */
+.footer-top > nav, .footer-top > div {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+@media all and (max-width: 768px) {
+  /* line 20, ../sass/component/_footer.scss */
+  .footer-top > nav, .footer-top > div {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
+
+/* line 32, ../sass/component/_footer.scss */
+.footer-link {
+  flex: 2;
+  margin-right: 5%;
+}
+/* line 36, ../sass/component/_footer.scss */
+.footer-link ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 30px;
+}
+@media all and (max-width: 768px) {
+  /* line 36, ../sass/component/_footer.scss */
+  .footer-link ul {
+    display: block;
+    text-align: center;
+  }
+}
+/* line 47, ../sass/component/_footer.scss */
+.footer-link li {
+  padding-right: 10px;
+  padding-bottom: 20px;
+  border-right: 1px dotted #505050;
+}
+@media all and (max-width: 768px) {
+  /* line 47, ../sass/component/_footer.scss */
+  .footer-link li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align: top;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    border-right: none;
+  }
+}
+@media all and (max-width: 768px) {
+  /* line 60, ../sass/component/_footer.scss */
+  .footer-link li:after {
+    content: '.';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    font-size: 2.4rem;
+    color: #505050;
+  }
+}
+@media all and (max-width: 768px) {
+  /* line 72, ../sass/component/_footer.scss */
+  .footer-link li:last-child:after {
+    content: '';
+  }
+}
+/* line 80, ../sass/component/_footer.scss */
+.footer-link a {
+  color: #505050;
+}
+/* line 83, ../sass/component/_footer.scss */
+.footer-link a:hover {
+  color: #000000;
+}
+
+/* line 89, ../sass/component/_footer.scss */
+.footer-language {
+  flex: 1;
+  margin-right: 5%;
+}
+@media all and (max-width: 768px) {
+  /* line 89, ../sass/component/_footer.scss */
+  .footer-language {
+    margin: 0 40px;
+    text-align: center;
+  }
+}
+/* line 99, ../sass/component/_footer.scss */
+.footer-language label {
+  font-weight: 700;
+  color: #000000;
+}
+/* line 105, ../sass/component/_footer.scss */
+.footer-language select {
+  display: block;
+  width: 290px;
+  margin: 5px 0 0 20px;
+  border: none;
+  background: #EEEEEE url(../img/arrow_ddown.png) 270px 8px no-repeat;
+  font-weight: normal;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+@media all and (max-width: 768px) {
+  /* line 105, ../sass/component/_footer.scss */
+  .footer-language select {
+    width: 100%;
+    height: 60px;
+    margin: 20px 0 0;
+    background: #EEEEEE url(../img/arrow_ddown_mobile.png) 96% 15px no-repeat;
+  }
+}
+
+/* line 130, ../sass/component/_footer.scss */
+.footer-socials {
+  flex: 1;
+}
+@media all and (min-width: 769px) and (max-width: 970px) {
+  /* line 130, ../sass/component/_footer.scss */
+  .footer-socials {
+    flex: 1 100%;
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+/* line 141, ../sass/component/_footer.scss */
+.footer-socials p {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+@media all and (min-width: 769px) and (max-width: 970px) {
+  /* line 141, ../sass/component/_footer.scss */
+  .footer-socials p {
+    text-align: center;
+  }
+}
+@media all and (max-width: 768px) {
+  /* line 141, ../sass/component/_footer.scss */
+  .footer-socials p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+/* line 155, ../sass/component/_footer.scss */
+.footer-socials ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 15px;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+@media all and (min-width: 769px) and (max-width: 970px) {
+  /* line 155, ../sass/component/_footer.scss */
+  .footer-socials ul {
+    width: 205px;
+    margin: 5px auto;
+  }
+}
+@media all and (max-width: 768px) {
+  /* line 155, ../sass/component/_footer.scss */
+  .footer-socials ul {
+    width: 400px;
+    margin: 5px auto;
+  }
+}
+/* line 176, ../sass/component/_footer.scss */
+.footer-socials a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  border-right: none;
+  background-image: url(../img/socials.jpg);
+  background-repeat: no-repeat;
+  text-decoration: none;
+  text-indent: -9999px;
+}
+@media all and (max-width: 768px) {
+  /* line 176, ../sass/component/_footer.scss */
+  .footer-socials a {
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/socials_mobile.jpg);
   }
 }
 

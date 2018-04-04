@@ -1,0 +1,197 @@
+footer{
+	border-top: 1px solid $greyDark;
+}
+
+.footer-top{
+	display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+	margin-bottom: 30px;
+	padding-top: 30px;
+
+	@media all and (min-width: $mediaq-tablet-min) and (max-width: $mediaq-tablet-max){
+		padding: 30px;
+	}
+
+	@media all and (max-width: $mediaq-mobile-max){
+		display: block;
+	}
+
+	& > nav,
+	& > div{
+		@include inline-block();
+
+		@media all and (max-width: $mediaq-mobile-max){
+			display: block;
+			margin-bottom: 60px;
+
+		}
+	}
+}
+
+.footer-link{
+	flex: 2;
+	margin-right: 5%;
+
+	ul{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 30px;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			display: block;
+			text-align: center;
+		}
+	}
+
+	li{
+		padding-right: 10px;
+		padding-bottom: 20px;
+		border-right: 1px dotted #505050;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			@include inline-block();
+			position: relative;
+			margin-bottom: 10px;
+			padding: 0 15px;
+			border-right: none;
+		}
+
+		&:after{
+			@media all and (max-width: $mediaq-mobile-max){
+				content: '.';
+				position: absolute;
+				right: 0;
+				width: 1px;
+				font-size: $pMobile;
+				color: $greyDark
+			}
+		}
+
+		&:last-child{
+			&:after{
+				@media all and (max-width: $mediaq-mobile-max){
+					content: '';
+				}
+			}
+		}
+	}
+
+	a{
+		color: $greyDark;
+
+		&:hover{
+			color: $black;
+		}
+	}
+}
+
+.footer-language{
+	flex:1;
+
+	margin-right: 5%;
+
+	@media all and (max-width: $mediaq-mobile-max){
+		margin: 0 40px;
+		text-align: center;
+	}
+
+	label{
+		font-weight: 700;
+
+		color: $black;
+	}
+
+	select{
+		display: block;	
+		width: 290px;
+
+		margin: 5px 0 0 20px;
+
+		border: none;
+
+		background: $greyLight url(../img/arrow_ddown.png) 270px 8px no-repeat;
+
+		font-weight: normal;
+		cursor: pointer;
+		@include appearance(none);
+
+		@media all and (max-width: $mediaq-mobile-max){
+			width: 100%;
+			height: 60px;
+
+			margin: 20px 0 0;
+
+			background: $greyLight url(../img/arrow_ddown_mobile.png) 96% 15px no-repeat;
+		}
+	}
+}
+
+.footer-socials{
+	flex:1;
+
+	@media all and (min-width: $mediaq-tablet-min) and (max-width: $mediaq-4){
+		flex: 1 100%;
+
+		margin-top: 40px;
+
+		text-align: center;
+	}
+
+	p{
+		margin-bottom: 0;
+		font-weight: 700;
+
+		@media all and (min-width: $mediaq-tablet-min) and (max-width: $mediaq-4){
+			text-align: center;
+		}
+
+		@media all and (max-width: $mediaq-mobile-max){
+			margin-bottom: 20px;
+			text-align: center;
+		}
+	}
+
+	ul{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-row-gap: 10px;
+		grid-column-gap: 15px;
+
+		margin-top: 5px;
+		margin-left: 15px;
+
+		@media all and (min-width: $mediaq-tablet-min) and  (max-width: $mediaq-4){
+			width: 205px;
+
+			margin: 5px auto;
+		}
+
+		@media all and (max-width: $mediaq-mobile-max){
+			width: 400px;
+			margin: 5px auto;
+		}
+	}
+
+	a {
+	    display:block;
+	    width:40px;
+	    height:40px;
+
+	    padding:0px;
+
+	    border-right: none;
+
+	    background-image: url(../img/socials.jpg);
+	    background-repeat: no-repeat;
+
+	    text-decoration: none;
+	    text-indent: -9999px;
+
+	    @media all and (max-width: $mediaq-mobile-max){
+	    	width: 80px;
+			height: 80px;
+			background-image: url(../img/socials_mobile.jpg);
+	    }
+	}
+}
