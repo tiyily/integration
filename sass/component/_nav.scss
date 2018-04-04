@@ -1,6 +1,10 @@
 nav{
 	& > ul{
 		display: flex;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			height: 100%;
+		}
 	}
 }
 
@@ -9,6 +13,10 @@ nav{
 
 	@media screen and (max-width: $mediaq-tablet-max) {
 		padding-right: 30px;
+	}
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		display: none;
 	}
 
 	ul{
@@ -81,7 +89,13 @@ nav{
 
 	background-color: $white;
 
+	@media screen and (max-width: $mediaq-mobile-max) {
+		height: 100%;
+		border-top: none;
+	}
+
 	& > ul{
+
 		& > li{
 			flex: 1;
 			display: flex;
@@ -99,6 +113,23 @@ nav{
 			&:first-child{
 				border-left: none;
 			}
+
+			&:nth-child(n+6),
+			&:nth-child(n+5){
+				&.menu-link{
+					@media screen and (max-width: $mediaq-4) {
+						display: none;
+					}	
+				}
+			}
+
+			&:nth-child(n+4){
+				&.menu-link{
+					@media screen and (max-width: $mediaq-6) {
+						display: none;
+					}	
+				}
+			}
 		}
 	}
 	
@@ -107,6 +138,11 @@ nav{
 	}
 
 	.menu-link{
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			display: none;
+		}
+
 		& > a{
 			position: relative;
 
@@ -179,6 +215,10 @@ nav{
 			border-left: none;
 		}
 
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 100px;
+		}
+
 		a{
 			height: 40px;
 			padding: 0 40px;
@@ -193,6 +233,10 @@ nav{
 				background: $green url(../img/envelope.png) center center no-repeat;
 
 				text-indent: -9999px;
+			}
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				width: 100%;
 			}
 
 		}
@@ -242,6 +286,10 @@ nav{
 				background-color: rgba($greyDark, 0.7);
 
 				z-index: -1;
+
+				@media screen and (max-width: $mediaq-mobile-max) {
+					display: none;
+				}
 			}
 
 			&:hover{
@@ -260,6 +308,10 @@ nav{
 				text-indent: -9999px;
 				
 				font-size: 0;
+			}
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				padding-left: 100px;
 			}
 		}
 		
@@ -327,11 +379,14 @@ nav{
 	}
 }
 
-
-
 .menu-mobile{
 	
 	align-self: center;
+	display: none;
+
+	@media screen and (max-width: $mediaq-4) {
+		display: block;
+	}
 
 	ul{
 		position: absolute;
@@ -347,6 +402,11 @@ nav{
 		background-color: $white;
 
 		z-index: 2;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 100%;
+			border-top-width: 5px;
+		}
 	}
 
 	li{
@@ -362,6 +422,10 @@ nav{
 		
 		background-color: $grey;
 
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding: 10px 40px;
+		}
+
 		p{
 			margin-bottom: 0;
 			
@@ -372,6 +436,10 @@ nav{
 			font-size: 1.7rem;
 
 			color: $white;
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				font-size: 3.4rem;
+			}
 		}
 
 		svg{
@@ -382,6 +450,14 @@ nav{
 			width: 15px;
 
 			fill: $white;
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				top: 15px;
+				right: 40px;
+
+				width: 25px;
+
+			}
 		}
 
 		.back{
@@ -395,20 +471,33 @@ nav{
 		margin: 0 20px;
 		border-top: 1px solid $black;
 
+		@media screen and (max-width: $mediaq-mobile-max) {
+			margin: 0 40px;
+		}
+
 		& > a{
 			position: relative;
 
 			display: block;
 			
-			padding: 10px 0;
-
-			background:transparent url('../img/arrow-next.png') right center no-repeat;
+			padding: 10px 0;	
 
 			text-transform: uppercase;
 			text-decoration: none;
 
 			@include fontFamily('1');
 			font-size: 1.7rem;
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				padding: 20px 0;
+				font-size: 3.4rem;
+			}
+		}
+	}
+
+	.menu-link-container{
+		& > a {
+			background:transparent url('../img/arrow-next.png') right center no-repeat;
 		}
 	}
 
@@ -432,6 +521,14 @@ nav{
 
 			color: $white;
 
+			@media screen and (max-width: $mediaq-mobile-max) {
+				padding: 20px 20px 20px 80px;
+
+				background-position: 40px center;
+
+				font-size: 3.4rem;
+			}
+
 			span{
 				display: none;
 			}
@@ -440,6 +537,10 @@ nav{
 
 	.menu-contact{
 		margin: 20px;
+		
+		@media screen and (max-width: $mediaq-mobile-max) {
+			margin: 60px 40px;
+		}
 
 		a{
 			width: 100%;
@@ -452,6 +553,11 @@ nav{
 			padding: 10px 0;
 
 			border-bottom: 1px solid $black;
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				margin: 0 4rem;
+				padding: 2rem 0;
+			}
 
 			&:first-child,
 			&:last-child{
@@ -470,11 +576,18 @@ nav{
 
 				border-bottom: none;
 
+				@media screen and (max-width: $mediaq-mobile-max) {
+					padding: 20px 40px;
+				}
+
 				p{
 					text-transform: uppercase;
 
 					@include fontFamily('1');
 					font-size: 1.7rem;
+					@media screen and (max-width: $mediaq-mobile-max) {
+						font-size: 3.4rem;
+					}
 				}
 			}
 
@@ -485,11 +598,20 @@ nav{
 			a{
 				text-decoration: none;
 
+				@media screen and (max-width: $mediaq-mobile-max) {
+					margin-bottom: 3rem;
+					font-size: 3.4rem;
+				}
+
 				.menu-link-title{
 					text-transform: uppercase;
 
 					@include fontFamily('1');
 					font-size: 1.7rem;
+
+					@media screen and (max-width: $mediaq-mobile-max) {
+						font-size: 3.4rem;
+					}
 				}
 			}
 		}

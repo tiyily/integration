@@ -142,24 +142,25 @@ $(document).ready(function(){
   /* Open mobile menu*/
   $('.menu-mobile > a').click(function(e){
     e.preventDefault();
-    $('.menu-mobile > ul').toggle('right');
+    $('.menu-mobile > ul').toggle('slide');
   });
 
   /* Close mobile menu*/
   $('.menu-mobile .menu-close .close').click(function(e){
     e.preventDefault();
-    $('.menu-mobile > ul').toggle('left');
+    $('.menu-mobile > ul').toggle('slide');
+    $(this).closest('.menu-container').find('ul').toggle('slide');
   });
 
   /*Navigate menu mobile*/
   $('.menu-mobile .menu-link-container a').click(function(e){
     e.preventDefault();
-    $(this).next('.menu-container').find('ul').toggle();
+    $(this).next('.menu-container').find('ul').toggle('slide');
   });
 
  $('.menu-mobile .menu-back .back').click(function(e){
     e.preventDefault();
-    
+    $(this).closest('.menu-container').find('ul').toggle('slide');
   });
 
 
