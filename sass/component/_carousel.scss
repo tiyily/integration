@@ -126,6 +126,10 @@
 	li{
 		margin: 0 auto;
 	}
+
+	p{
+		margin-bottom: 0;
+	}
 }
 
 .banner-carousel{
@@ -159,8 +163,6 @@
 .carousel-text{
 	grid-template-columns: 715px 1fr;
 	grid-column-gap: 30px;
-
-	margin-bottom: 60px;
 
 	ul{
 		width: 715px;

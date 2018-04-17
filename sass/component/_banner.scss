@@ -1,7 +1,6 @@
 .banner{
 	position: relative;
 	height: $bannerHeight;
-	margin-bottom: 40px;
 
 	h1{
 		text-align: left;
@@ -10,7 +9,6 @@
 
 	@media screen and (max-width: $mediaq-mobile-max) {
 		height: auto;
-		margin-bottom: 60px;
 	}
 }
 
@@ -37,11 +35,9 @@
 }
 
 .banner-full{
-	margin-bottom: 15px;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
 		height: auto;
-		margin-bottom: 60px;
 	}
 
 	.overlay{
@@ -89,15 +85,7 @@
 
 	}
 
-
-
 	&.video{
 		height: $bannerHeight;
-	}
-}
-
-.content{
-	.banner-full{
-		margin-bottom: 0;
 	}
 }

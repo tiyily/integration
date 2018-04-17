@@ -1,7 +1,6 @@
 .event{
 	display: grid;
 	grid-template-columns: 210px 235px 1fr;
-	margin-bottom: 60px;
 	padding: 20px 40px;
 
 	@media all and (max-width: $mediaq-tablet-max){

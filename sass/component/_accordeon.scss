@@ -18,6 +18,10 @@
 	margin-bottom: 20px;
 	background-color: $white;
 
+	&:last-child{
+		margin-bottom: 0;
+	}
+
 	h2{
 		position: relative;
 		margin-bottom: 0;

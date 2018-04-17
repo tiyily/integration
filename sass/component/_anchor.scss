@@ -1,8 +1,8 @@
 .anchor{
+
 	ul{
 		display: flex;
 		justify-content: center;
-		margin-bottom: 60px;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
 			display: block;

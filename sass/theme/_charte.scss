@@ -11,19 +11,23 @@
 	clear: both;
 }
 
+.space-after{
+	margin-bottom: 6.0rem;
+}
+
 h2{
 	&.light{
 		position: relative;
 		display: table;
-		padding: 0 35px;
+		padding: 0 3.5rem;
 
 		&:before,
 		&:after{
 			content: '';
 			position: absolute;
-			top: 15px;
-			width: 25px;
-			height: 1px;
+			top: 1.5rem;
+			width: 2.5rem;
+			height: 0.1rem;
 			
 			background-color: $green;
 		}
@@ -92,6 +96,12 @@ h2{
 .center{
 	.pdf{
 		margin-left: 0;
+	}
+}
+
+.text-center{
+	.pdf{
+		@include inline-block();
 	}
 }
 

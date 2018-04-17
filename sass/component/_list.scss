@@ -1,5 +1,5 @@
 .list{
-	padding: 0 30px;
+	//padding: 0 30px;
 
 	& > ul{
 		display: flex;
@@ -23,9 +23,8 @@
 }
 
 .list-img{
-	margin-bottom: 60px;
-	padding: 30px 0;
-	background-color: $greyLight;
+	/*padding: 30px 0;
+	background-color: $greyLight;*/
 
 	@media all and (max-width: $mediaq-mobile-max){
 		padding: 40px;
@@ -52,7 +51,7 @@
 	}
 }
 
-.list-dark{
+/*.list-dark{
 	padding: 30px 0;
 
 	background-color: $greyLight;
@@ -60,10 +59,9 @@
 	@media screen and (max-width:$mediaq-tablet-max) {
 		padding: 30px;
 	}
-}
+}*/
 
 .list-check{
-	margin-bottom: 60px;
 	
 	ul{
 		align-items: flex-start;

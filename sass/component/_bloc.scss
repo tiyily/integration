@@ -51,7 +51,7 @@
 }
 
 .bloc-range{
-	padding-left: 40px;
+	margin-bottom: 40px;
 
 	@media all and (max-width: $mediaq-mobile-max){
 		padding-right: 40px;
@@ -81,10 +81,6 @@
 				padding: 0 0 60px;
 			}
 		}
-
-		&:last-child{
-			margin-bottom: 40px;
-		}
 	}
 
 	img{
@@ -101,6 +97,10 @@
 			height: auto;
 			margin: 0 auto 40px;
 		}
+	}
+
+	&:last-child{
+		margin-bottom: 0;
 	}
 }
 
