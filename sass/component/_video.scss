@@ -11,7 +11,7 @@ $videoPlayHeight: 133px;
 		.video-play{
 			position: absolute;
 			top: auto;
-			bottom: calc((330px - #{$videoPlayHeight}) / 2);
+			bottom: calc((33rem - #{$videoPlayHeight}) / 2);
 			left: calc((100% - #{$videoPlayWidth}) / 2);
 		}
 	}

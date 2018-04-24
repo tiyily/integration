@@ -46,22 +46,27 @@ $blue : #04BBEE;
 $overlay : rgba($black, 0.45);
 
 // Display size
-$contentMax : 1180px;
-$sidebar : 280px;
+$contentMax : 118rem;
+$sidebar : 28rem;
 
 // FONTS
 // Font Size
 $p : 1.4rem;
-$h1 : 3.2rem;
-$h2 : 2.4rem;
-$h3 : 1.6rem;
-$button : 1.6rem;
-$h1Mobile : 4rem;
-$h2Mobile : 3.6rem;
-$h3Mobile : 2.6rem; 
-$pMobile : 2.4rem; 
+$h1 : calc(#{$p} * 2.28); //32px
+$h2 : calc(#{$p} * 1.71); //24px
+$h3 : calc(#{$p} * 1.14); //16px
+$button : calc(#{$p} * 1.14); //16px
+
+$pMobile : 2.4rem;
+$h1Mobile : calc(#{$pMobile} * 1.67); //40px
+$h2Mobile : calc(#{$pMobile} * 1.5); //36px
+$h3Mobile : calc(#{$pMobile} * 1.08); //26px
+$buttonMobile : calc(#{$pMobile} * 1.42); //34px
+
+//Space between block
+$spaceAfter : 6rem;
 
 // component variables
-$bannerHeight: 400px;
-$overlayMaxWidth : 530px;
-$videoHeight: 500px;
+$bannerHeight: 40rem;
+$overlayMaxWidth : 53rem;
+$videoHeight: 50rem;

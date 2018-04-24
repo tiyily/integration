@@ -6,11 +6,11 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 
 		& > li{
 			@media all and (max-width: $mediaq-tablet-max){
-				margin-bottom: 40px;
+				margin-bottom: 4rem;
 			}
 		}
 
@@ -27,13 +27,13 @@
 	background-color: $greyLight;*/
 
 	@media all and (max-width: $mediaq-mobile-max){
-		padding: 40px;
+		padding: 4rem;
 	}
 
 	ul{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(calc(20% - 40px) , 1fr));
-		grid-gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(calc(20% - 4rem) , 1fr));
+		grid-gap: 4rem;
 
 		@media all and (max-width: $mediaq-mobile-max){
 			display: block;
@@ -76,15 +76,15 @@
 	}
 
 	li{
-		width: calc(50% - 30px);
+		width: calc(50% - 3rem);
 
-		padding-left: 40px;
+		padding-left: 4rem;
 
 		background:transparent url('../img/check.png') left center no-repeat;
 
 		@media all and (max-width: $mediaq-mobile-max){
 			width: 100%;
-			padding-left: 60px;
+			padding-left: 6rem;
 			background:transparent url('../img/check-mobile.png') left center no-repeat;
 
 		}
@@ -93,11 +93,11 @@
 	& > ul{
 		& > li{
 			@media all and (max-width: $mediaq-tablet-max){
-				margin-bottom: 20px;
+				margin-bottom: 2rem;
 			}
 
 			@media all and (max-width: $mediaq-mobile-max){
-				margin-bottom: 35px;
+				margin-bottom: 3rem;
 			}
 		}
 	}

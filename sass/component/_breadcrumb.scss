@@ -1,5 +1,5 @@
 .breadcrumb{
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 
 	ol{
 		margin: 0;
@@ -33,20 +33,20 @@
 
 	a{
 		position: relative;
-		padding-right: 10px;
+		padding-right: 1rem;
 
 		@include fontFamily('1');
 
 		&:after{
 			content: '>';
 			position: absolute;
-			top: -2px;
-			right: -1px;
+			top: -0.2rem;
+			right: -0.1rem;
 		}
 	}
 
 	@media screen and (max-width: $mediaq-tablet-max){
-		padding-left: 30px;
+		padding-left: 3rem;
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max){

@@ -1,8 +1,8 @@
 .carousel-image{
-	margin-bottom: 40px;
+	margin-bottom: 4rem;
 	
 	ul{
-		width: 590px;
+		width: 59rem;
 		margin: 0 auto;
 		@media all and (max-width: $mediaq-tablet-max){
 			//width: 100%;
@@ -11,8 +11,8 @@
 	}
 
 	img{
-		width: 590px;
-		margin-bottom: 30px;
+		width: 59rem;
+		margin-bottom: 3rem;
 
 		@media all and (max-width: $mediaq-tablet-max){
 			width: 100%;
@@ -30,18 +30,18 @@
 			@include border-radius(50%);
 			display: block;
 			content: " ";
-			width: 10px;
-			height: 10px;
-			margin-right: 15px;
+			width: 1rem;
+			height: 1rem;
+			margin-right: 1.5rem;
 
 			background-color: $grey;
 
-			font-size: 10px;
+			font-size: calc(#{$p} * 0.71); //10px
 
 			@media screen and (max-width:$mediaq-mobile-max) {	
-				width: 20px;
-				height: 20px;
-				margin-right: 40px;
+				width: 2rem;
+				height: 2rem;
+				margin-right: 4rem;
 			}
 		}
 
@@ -61,7 +61,7 @@
 
 .owl-nav{
 	position: absolute;
-	top: calc((100% - 81px) / 2);
+	top: calc((100% - 8.1rem) / 2);
 	width: 100%;
 	
 	& > div{
@@ -75,11 +75,11 @@
 		font-size: 0;
 
 		&.owl-prev{
-			left: -60px;
+			left: -6rem;
 		}
 
 		&.owl-next{
-			right: -60px;
+			right: -6rem;
 
 			@include scaleX(-1);
 		}
@@ -88,34 +88,34 @@
 
 .promotion{
 	.owl-carousel{
-		max-width: calc(#{$mediaq-desktop} - 60px);
+		max-width: calc(#{$contentMax} - 6rem);
 
 		@media screen and (max-width:$mediaq-tablet-max) {	
-			max-width: calc(100% - 60px);
+			max-width: calc(100% - 6rem);
 		}
 
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			max-width: calc(100% - 80px);
+			max-width: calc(100% - 8rem);
 		}
 	}
 
 	.owl-nav{
-		top: 90px;
+		top: 9rem;
 
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			top: 190px;
+			top: 19rem;
 		}
 		
 		& > div{
 			&.owl-prev{
-				left: -30px;
+				left: -1.5rem;
 				@media screen and (max-width:$mediaq-mobile-max) {	
 					left: 0;
 				}
 			}
 
 			&.owl-next{
-				right: -15px;
+				right: -1.5rem;
 				@media screen and (max-width:$mediaq-mobile-max) {	
 					right: 0;
 				}
@@ -135,7 +135,7 @@
 .banner-carousel{
 
 	&.banner-side{
-		height: 440px;
+		height: 44rem;
 
 		.owl-carousel{
 			position: absolute;
@@ -147,7 +147,7 @@
 
 	.owl-dots{
 		position: absolute;
-		bottom: 15px;
+		bottom: 1.5rem;
 		width: 100%;
 	}
 }
@@ -155,21 +155,21 @@
 .product{
 	.owl-dots{
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			margin-top: 20px;
+			margin-top: 2rem;
 		}
 	}
 }
 
 .carousel-text{
-	grid-template-columns: 715px 1fr;
-	grid-column-gap: 30px;
+	grid-template-columns: 71.5rem 1fr;
+	grid-column-gap: 3rem;
 
 	ul{
-		width: 715px;
-		height: 420px;
+		width: 71.5rem;
+		height: 42rem;
 
 		@media all and (max-width: $mediaq-3){
-			margin: 0 auto 50px;
+			margin: 0 auto 5rem;
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
@@ -180,7 +180,7 @@
 	}
 
 	@media all and (max-width: $mediaq-tablet-max){
-		padding: 0 30px;
+		padding: 0 3rem;
 	}
 
 	@media all and (max-width: $mediaq-3){
@@ -188,17 +188,17 @@
 	}
 
 	.owl-dots{
-		margin-top: 10px;
+		margin-top: 1rem;
 
 		@media all and (max-width: $mediaq-mobile-max){
-			margin-top: 30px;
+			margin-top: 3rem;
 		}
 	}
 }
 
 .quote{
 	.owl-dots{
-		padding-left: 380px;
+		padding-left: 38rem;
 		
 		@media screen and (max-width: $mediaq-mobile-max) {
 			padding-left: 0;
@@ -208,8 +208,8 @@
 	.owl-carousel{
 		img{
 			@media screen and (max-width: $mediaq-mobile-max) {
-				width: 400px;
-				margin: 0 auto 30px;
+				width: 40rem;
+				margin: 0 auto 3rem;
 			}
 		}
 	}
@@ -218,7 +218,7 @@
 .card{
 	&.owl-carousel{
 		li{
-			margin-bottom: 20px;
+			margin-bottom: 2rem;
 		}
 	}
 }

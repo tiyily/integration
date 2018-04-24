@@ -1,21 +1,21 @@
 .accordeon{
-	padding-top: 30px;
-	padding-left: 30px;
-	padding-bottom: 30px;
+	padding-top: 3rem;
+	padding-left: 3rem;
+	padding-bottom: 3rem;
 	&.full-grey{
 		padding-left: 0;
 		@media all and (max-width: $mediaq-tablet-max){
-			padding: 30px;
+			padding: 3rem;
 		}
 	}
 
 	@media all and (max-width: $mediaq-tablet-max){
-		padding: 30px;
+		padding: 3rem;
 	}
 }
 
 .accordeon-item{
-	margin-bottom: 20px;
+	margin-bottom: 2rem;
 	background-color: $white;
 
 	&:last-child{
@@ -25,12 +25,12 @@
 	h2{
 		position: relative;
 		margin-bottom: 0;
-		padding: 15px;
+		padding: 1.5rem;
 
 		text-align: left;
 
 		@media all and (max-width: $mediaq-mobile-max){
-			padding-right: 113px;
+			padding-right: 11.3rem;
 		}
 
 		span{
@@ -38,17 +38,17 @@
 			top: 0;
 			right: 0;
 			display: block;
-			width: 33px;
+			width: 3.3rem;
 			height: 100%;
 			
-			border-left: 3px solid $greyLight;
+			border-left: 0.3rem solid $greyLight;
 
 			background:transparent url('../img/accordeon.png') center center no-repeat;
 
 			text-indent: -9999px;
 
 			@media all and (max-width: $mediaq-mobile-max){
-				width: 100px;
+				width: 10rem;
 
 				background-image: url('../img/accordeon-mobile.png');
 			}
@@ -58,7 +58,7 @@
 			span{
 				@include rotate(180deg);
 				border-left: none;
-				border-right: 3px solid $greyLight;
+				border-right: 0.3rem solid $greyLight;
 			}
 		}
 	}
@@ -79,6 +79,6 @@
 
 .accordeon-answer{
 	display: none;
-	padding: 10px 15px;
-	border-top: 3px solid $greyLight;
+	padding: 1rem 1.5rem;
+	border-top: 0.3rem solid $greyLight;
 }

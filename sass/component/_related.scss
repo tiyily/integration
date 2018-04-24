@@ -1,18 +1,18 @@
 .related{
-	padding-right: 20px;
+	padding-right: 2rem;
 
 	.h2-title{
-		padding-top: 40px;
+		padding-top: 4rem;
 	}
 
 	img{
 		width: 100%;
-		margin-bottom: 15px;
+		margin-bottom: 1.5rem;
 	}
 
 	a{
 		display: block;
-		margin-bottom: 15px;
+		margin-bottom: 1.5rem;
 		font-weight: 700;
 	}
 
@@ -32,12 +32,12 @@
 	}
 
 	@media screen and (max-width:$mediaq-tablet-max) {
-		padding: 0 20px;		
+		padding: 0 2rem;		
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		margin-bottom: 60px;
-		padding: 0 40px;
+		margin-bottom: 6rem;
+		padding: 0 4rem;
 	}	
 }
 
@@ -50,7 +50,7 @@
 }
 
 .related-menu{
-	border-right: 2px solid $white;
+	border-right: 0.2rem solid $white;
 	background-color: $greyMedium;
 	&:before{
 		background-color: $greyMedium;

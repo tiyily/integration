@@ -1,10 +1,10 @@
 .event{
 	display: grid;
-	grid-template-columns: 210px 235px 1fr;
-	padding: 20px 40px;
+	grid-template-columns: 21rem 23.5rem 1fr;
+	padding: 2rem 4rem;
 
 	@media all and (max-width: $mediaq-tablet-max){
-		border: 3px solid $greyMedium;
+		border: 0.3rem solid $greyMedium;
 	}
 
 	@media all and (max-width: $mediaq-2){
@@ -16,7 +16,7 @@
 	}
 
 	@media all and (max-width: $mediaq-mobile-max){
-		padding: 40px;
+		padding: 4rem;
 	}
 
 	a{
@@ -24,13 +24,13 @@
 		color: $grey;
 
 		&.event-site{
-			margin-bottom: 30px;
+			margin-bottom: 3rem;
 			color: $green;
 		}
 
 		&.pdf{
 			@include inline-block();
-			margin-top: 20px;
+			margin-top: 2rem;
 			color: $black;
 
 			@media all and (max-width: $mediaq-2){
@@ -42,7 +42,7 @@
 			}
 
 			@media all and (max-width: $mediaq-mobile-max){
-				margin-top: 40px;
+				margin-top: 4rem;
 			}
 		}
 	}
@@ -52,8 +52,8 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: calc(100% - ((100% - #{$contentMax}) / 2) - #{$sidebar} - 6px);
-		height: 340px;
+		width: calc(100% - ((100% - #{$contentMax}) / 2) - #{$sidebar} - 0.6rem);
+		height: 34rem;
 
 		border: 3px solid $greyMedium;
 
@@ -70,9 +70,9 @@
 }
 
 .event-1{
-	padding-right: 30px;
+	padding-right: 3rem;
 
-	border-right: 1px solid $grey;
+	border-right: 0.1rem solid $grey;
 
 	@media all and (max-width: $mediaq-2){
 		grid-column: 1/ span 2;
@@ -92,7 +92,7 @@
 	}
 
 	img{
-		width: 180px;
+		width: 18rem;
 
 		@media all and (max-width: $mediaq-6){
 			display: block;
@@ -107,9 +107,9 @@
 
 .event-date{
 	position: relative;
-	padding: 100px 30px 0;
+	padding: 10rem 3rem 0;
 
-	border-right: 1px solid $grey;
+	border-right: 0.1rem solid $grey;
 
 	@media all and (max-width: $mediaq-2){
 		grid-column: 1;
@@ -123,8 +123,8 @@
 	}
 
 	@media all and (max-width: $mediaq-mobile-max){
-		margin-bottom: 50px;
-		padding-top: 180px;
+		margin-bottom: 5rem;
+		padding-top: 18rem;
 	}
 
 
@@ -134,42 +134,42 @@
 		position: absolute;
 		top: 0;
 		display: block;
-		width: 47px;
-		height: 47px;
-		padding: 20px;
+		width: 4.7rem;
+		height: 4.7rem;
+		padding: 2rem;
 
-		border: 3px solid $green;
+		border: 0.3rem solid $green;
 		@include border-radius(50%);
 
 		background:transparent url('../img/calendar.svg') center center no-repeat;
-		background-size: 40px 36px;
+		background-size: 4rem 3.6rem;
 
 		@media all and (max-width: $mediaq-6){
-			left: calc((100% - 87px) / 2);
+			left: calc((100% - 8.7rem) / 2);
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
-			left: calc((100% - 150px) / 2);
-			width: 90px;
-			height: 90px;
-			padding: 30px;
-			background-size: 72px 65px;
+			left: calc((100% - 15rem) / 2);
+			width: 9rem;
+			height: 9rem;
+			padding: 3rem;
+			background-size: 7.2rem 6.5rem;
 		}
 	}
 
 	p{
 		@include inline-block();
 		@include fontFamily('1','b');
-		font-size: 16px;
-		line-height: 25px;
+		font-size: calc(#{$p} * 1.14); //16px
+		line-height: 2.5rem;
 
 		@media all and (max-width: $mediaq-mobile-max){
-			font-size: 28px;
+			font-size: calc(#{$pMobile} * 1.17); //28px
 		}
 
 		span{
 			display: block;
-			padding-left: 20px;
+			padding-left: 2rem;
 			
 			background:transparent url('../img/clock.png') left center no-repeat;
 
@@ -178,27 +178,27 @@
 			color: $grey;
 
 			@media all and (max-width: $mediaq-mobile-max){
-				margin-top: 20px;
-				padding-left: 40px;
+				margin-top: 2rem;
+				padding-left: 4rem;
 
 				background-image: url('../img/clock-mobile.png');
 
-				font-size: 24px;
-				line-height: 30px;
+				font-size: calc(#{$p} * 1.71); //24px
+				line-height: 3rem;
 			}
 		}
 
 		&:nth-child(2){
 			width: 13px;
 			height: 20px;
-			margin: 2px 1px;
+			margin: 0.2rem 0.1rem;
 			background:transparent url('../img/next.png') 0 0 no-repeat;
 			text-indent: -9999px;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
 				width: 19px;
 				height: 30px;
-				margin: -2px 15px;
+				margin: -0.2rem 1.5rem;
 				background-position: -13px 0;
 			}
 		}
@@ -207,8 +207,8 @@
 
 .event-place{
 	position: relative;
-	padding-top: 100px;
-	padding-left: 30px;
+	padding-top: 10rem;
+	padding-left: 3rem;
 
 	@media all and (max-width: $mediaq-2){
 		grid-column: 2;
@@ -216,7 +216,7 @@
 	}
 
 	@media all and (max-width: $mediaq-mobile-max){
-		padding-top: 170px;
+		padding-top: 17rem;
 	}
 
 	&:before{
@@ -224,31 +224,31 @@
 		position: absolute;
 		top: 0;
 		display: block;
-		width: 47px;
-		height: 47px;
-		padding: 20px 18px;
+		width: 4.7rem;
+		height: 4.7rem;
+		padding: 2rem 1.8rem;
 
-		border: 3px solid $green;
+		border: 0.3rem solid $green;
 		@include border-radius(50%);
 
 		background:transparent url('../img/geolocation.svg') center center no-repeat;
-		background-size: 28px 40px;
+		background-size: 2.8rem 4rem;
 
 		@media all and (max-width: $mediaq-6){
-			left: calc((100% - 87px) / 2);
+			left: calc((100% - 8.7rem) / 2);
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
-			left: calc((100% - 150px) / 2);
-			width: 90px;
-			height: 90px;
-			padding: 30px;
-			background-size: 50px 72px;
+			left: calc((100% - 15rem) / 2);
+			width: 9rem;
+			height: 9rem;
+			padding: 3rem;
+			background-size: 5rem 7.2rem;
 		}
 	}
 
 	p{
-		margin-bottom: 10px;
+		margin-bottom: 1rem;
 
 		@media all and (max-width: $mediaq-6){
 			text-align: center;
@@ -264,7 +264,7 @@
 
 .event-full{
 	grid-template-columns: 1fr 1fr 1fr;
-	border: 3px solid $greyMedium;
+	border: 0.3rem solid $greyMedium;
 
 	@media all and (max-width: $mediaq-2){
 		grid-template-columns: 1fr 1fr;
@@ -279,19 +279,19 @@
 	}
 
 	.event-date{
-		padding-top: 120px;
+		padding-top: 12rem;
 		text-align: center;
 
 		&:before{
-			left: calc((100% - 93px) / 2);
+			left: calc((100% - 9.3rem) / 2);
 
 			@media all and (max-width: $mediaq-mobile-max){
-				left: calc((100% - 150px) / 2);
+				left: calc((100% - 15rem) / 2);
 			}
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
-			padding-top: 180px;
+			padding-top: 18rem;
 		}
 	}
 }

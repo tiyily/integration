@@ -9,10 +9,10 @@ nav{
 }
 
 .links{
-	margin-bottom: 25px;
+	margin-bottom: 2.5rem;
 
 	@media screen and (max-width: $mediaq-tablet-max) {
-		padding-right: 30px;
+		padding-right: 3rem;
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
@@ -25,17 +25,17 @@ nav{
 
 	li{
 		position: relative;
-		padding: 0 15px;
+		padding: 0 1.5rem;
 
 		&:after{
-			@include border-radius(1.5px, 1.5px);			
+			@include border-radius(0.15rem, 0.15rem);			
 			content: '';
 			position: absolute;	
 			top: 50%;	
 			right: 0;
 			display: inline-block;
-			width: 3px;
-			height: 3px;
+			width: 0.3rem;
+			height: 0.3rem;
 			background-color: $greyDark;
 		}
 
@@ -54,7 +54,7 @@ nav{
 
 		&:hover{
 			color: $black;
-			border-bottom: 4px solid $black;
+			border-bottom: 0.4rem solid $black;
 		}
 
 	}
@@ -62,7 +62,7 @@ nav{
 	.links-coral{
 		a{
 			&:hover{
-				border-bottom: 4px solid $coral;
+				border-bottom: 0.4rem solid $coral;
 			}
 		}
 	}
@@ -70,7 +70,7 @@ nav{
 	.links-purple{
 		a{
 			&:hover{
-				border-bottom: 4px solid $purple;
+				border-bottom: 0.4rem solid $purple;
 			}
 		}
 	}
@@ -78,14 +78,14 @@ nav{
 	.links-pink{
 		a{
 			&:hover{
-				border-bottom: 4px solid $pink;
+				border-bottom: 0.4rem solid $pink;
 			}
 		}
 	}
 }
 
 .menu{
-	border-top: 3px solid $green;
+	border-top: 0.3rem solid $green;
 
 	background-color: $white;
 
@@ -102,11 +102,11 @@ nav{
 			justify-content: center;
 			align-items: center;
 
-			min-height: 50px;
+			min-height: 5rem;
 
-			margin: 5px 0;
+			margin: 0.5rem 0;
 			
-			border-left: 1px solid $black;
+			border-left: 0.1rem solid $black;
 
 			text-align: center;
 
@@ -153,14 +153,14 @@ nav{
 			width: 100%;
 			height: 100%;
 
-			padding: 6px;
+			padding: 0.6rem;
 			
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
 
 			@include fontFamily('1');
-			font-size: 1.5rem;
+			font-size: calc(#{$p} * 1.07); //15px
 
 			&:hover{
 				color: $greyDark;
@@ -172,12 +172,12 @@ nav{
 		display: none;
 		position: absolute;
 		left: 50%;
-		bottom: -21px;
-		width: 16px;
-		height: 16px;
+		bottom: -2.1rem;
+		width: 1.6rem;
+		height: 1.6rem;
 
-		border-left: 1px solid $black;
-		border-top: 1px solid $black;
+		border-left: 0.1rem solid $black;
+		border-top: 0.1rem solid $black;
 
 		background: $white;
 
@@ -196,16 +196,29 @@ nav{
 				display: block;
 			}
 		}
+
+		& > a{
+			&:focus,
+			&:active{
+				& + .menu-container{
+					display: block;
+				}
+
+				.arrow{
+					display: block;
+				}
+			}
+		}
 	}
 
 	.menu-contact{
 		flex-basis: auto;
 		flex-grow: 0;
 
-		padding: 0 20px;
+		padding: 0 2.0rem;
 
 		@media screen and (max-width: $mediaq-1) {
-			padding: 0 10px;
+			padding: 0 1.0rem;
 		}
 
 		@media screen and (max-width: $mediaq-3) {
@@ -216,12 +229,13 @@ nav{
 		}
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			width: 100px;
+			width: 10rem;
 		}
 
 		a{
-			height: 40px;
-			padding: 0 40px;
+			width: 16.5rem;
+			height: 4.0rem;
+			padding: 0;
 
 			font-weight: 700;
 
@@ -254,12 +268,12 @@ nav{
 			display: block;
 			height: 100%;
 			
-			padding-top: 10px;
-			padding-left: 50px;
+			padding-top: 1rem;
+			padding-left: 5rem;
 
 			background-color: rgba($greyDark, 0.7);
 			background-image: url(../img/user.png);
-			background-position: 15px center;
+			background-position: 1.5rem center;
 			background-repeat: no-repeat;
 
 			text-align: left;
@@ -270,38 +284,16 @@ nav{
 			font-size: 1.8rem;
 			color: $white;
 
-			&:after{
-				content: '';
-
-				position: absolute;
-				bottom: 0;
-				right: 0;
-
-				display: block;
-				width: 50%;
-				height: 72px;
-				
-				border-top: 3px solid $green;
-
-				background-color: rgba($greyDark, 0.7);
-
-				z-index: -1;
-
-				@media screen and (max-width: $mediaq-mobile-max) {
-					display: none;
-				}
-			}
-
 			&:hover{
 				background-color: rgba($greyDark, 0.85);
 
-				&:after{
+				.menu-connect-full{
 					background-color:  rgba($greyDark, 0.85);
 				}
 			}
 
 			@media screen and (max-width: $mediaq-tablet-max) {
-				padding-left: 60px;
+				padding-left: 6rem;
 
 				background-position: center center;
 
@@ -311,7 +303,7 @@ nav{
 			}
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				padding-left: 100px;
+				padding-left: 10rem;
 			}
 		}
 		
@@ -331,6 +323,26 @@ nav{
 		}
 	}
 
+	.menu-connect-full{
+
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		width: 50%;
+		height: 7.5rem;
+		
+		border-top: 0.3rem solid $green;
+
+		background-color: rgba($greyDark, 0.7);
+
+		z-index: -1;
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			display: none;
+		}
+	}
+
 	.menu-container{
 		display: none;
 		position: absolute;
@@ -338,10 +350,10 @@ nav{
 		left: 0;
 		width: 100%;
 
-		padding: 30px 0;
+		padding: 3rem 0;
 
-		border-top: 1px solid $greyDark;
-		border-bottom: 1px solid $greyDark;
+		border-top: 0.1rem solid $greyDark;
+		border-bottom: 0.1rem solid $greyDark;
 
 		background-color: $white;
 
@@ -349,12 +361,12 @@ nav{
 
 		.grid-4{
 			grid-template-columns: repeat(4,1fr);
-			grid-gap: 30px 20px;
+			grid-gap: 3rem 2rem;
 		}
 
 		.grid-5{	
 			grid-template-columns: repeat(5,1fr);
-			grid-gap: 30px 20px;
+			grid-gap: 3rem 2rem;
 		}
 
 		li{
@@ -395,11 +407,11 @@ nav{
 		top: 0;
 		left: 0;
 
-		width: 400px;
+		width: 40rem;
 
 		display: none;
 		
-		border-top: 3px solid $green;
+		border-top: 0.3rem solid $green;
 
 		background-color: $white;
 
@@ -407,7 +419,7 @@ nav{
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			width: 100%;
-			border-top-width: 5px;
+			border-top-width: 0.5rem;
 		}
 	}
 
@@ -420,12 +432,12 @@ nav{
 	.menu-close{
 		position: relative;
 
-		padding: 5px 20px;
+		padding: 0.5rem 2rem;
 		
 		background-color: $grey;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			padding: 10px 40px;
+			padding: 1rem 4rem;
 		}
 
 		p{
@@ -435,46 +447,46 @@ nav{
 			text-transform: uppercase;
 
 			@include fontFamily('1', 'b');
-			font-size: 1.7rem;
+			font-size: calc(#{$p} * 1.21); //17px
 
 			color: $white;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				font-size: 3.4rem;
+				font-size: calc(#{$pMobile} * 1.42); //34px
 			}
 		}
 
 		svg{
 			position: absolute;
-			top: 10px;
-			right: 20px;
+			top: 1rem;
+			right: 2rem;
 
-			width: 15px;
+			width: 1.5rem;
 
 			fill: $white;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				top: 15px;
-				right: 40px;
+				top: 1.5rem;
+				right: 4rem;
 
-				width: 25px;
+				width: 2.5rem;
 
 			}
 		}
 
 		.back{
 			position: absolute;
-			left: 20px;
+			left: 2rem;
 		}
 		
 	}
 
 	.menu-link{
-		margin: 0 20px;
-		border-top: 1px solid $black;
+		margin: 0 2rem;
+		border-top: 0.1rem solid $black;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			margin: 0 40px;
+			margin: 0 4rem;
 		}
 
 		& > a{
@@ -482,17 +494,17 @@ nav{
 
 			display: block;
 			
-			padding: 10px 0;	
+			padding: 1rem 0;	
 
 			text-transform: uppercase;
 			text-decoration: none;
 
 			@include fontFamily('1');
-			font-size: 1.7rem;
+			font-size: calc(#{$p} * 1.07); //17px
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				padding: 20px 0;
-				font-size: 3.4rem;
+				padding: 2rem 0;
+				font-size: calc(#{$pMobile} * 1.42); //34px
 			}
 		}
 	}
@@ -508,27 +520,27 @@ nav{
 		a{
 			display: block;
 
-			padding: 10px 20px 10px 50px;
+			padding: 1rem 2rem 1rem 5rem;
 
 			background-color: rgba($greyDark, 0.7);
 			background-image: url(../img/user.png);
-			background-position: 20px center;
+			background-position: 2rem center;
 			background-repeat: no-repeat;
 
 			text-transform: uppercase;
 			text-decoration: none;
 
 			@include fontFamily('1', 'b');
-			font-size: 1.7rem;
+			font-size: calc(#{$p} * 1.07); //17px
 
 			color: $white;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				padding: 20px 20px 20px 80px;
+				padding: 2rem 2rem 2rem 8rem;
 
-				background-position: 40px center;
+				background-position: 4rem center;
 
-				font-size: 3.4rem;
+				font-size: calc(#{$pMobile} * 1.42); //34px
 			}
 
 			span{
@@ -538,10 +550,10 @@ nav{
 	}
 
 	.menu-contact{
-		margin: 20px;
+		margin: 2rem;
 		
 		@media screen and (max-width: $mediaq-mobile-max) {
-			margin: 60px 40px;
+			margin: 6rem 4rem;
 		}
 
 		a{
@@ -551,10 +563,10 @@ nav{
 
 	.menu-container{
 		li{
-			margin: 0 20px;
-			padding: 10px 0;
+			margin: 0 2rem;
+			padding: 1rem 0;
 
-			border-bottom: 1px solid $black;
+			border-bottom: 0.1rem solid $black;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
 				margin: 0 4rem;
@@ -572,23 +584,23 @@ nav{
 
 			&.menu-container-title{
 				margin: 0;
-				padding: 10px 20px;
+				padding: 1rem 2rem;
 
 				background-color: $greyMedium;
 
 				border-bottom: none;
 
 				@media screen and (max-width: $mediaq-mobile-max) {
-					padding: 20px 40px;
+					padding: 2rem 4rem;
 				}
 
 				p{
 					text-transform: uppercase;
 
 					@include fontFamily('1');
-					font-size: 1.7rem;
+					font-size: calc(#{$p} * 1.07); //17px
 					@media screen and (max-width: $mediaq-mobile-max) {
-						font-size: 3.4rem;
+						font-size: calc(#{$pMobile} * 1.42); //34px
 					}
 				}
 			}
@@ -602,24 +614,24 @@ nav{
 
 				@media screen and (max-width: $mediaq-mobile-max) {
 					margin-bottom: 3rem;
-					font-size: 3.4rem;
+					font-size: calc(#{$pMobile} * 1.42); //34px
 				}
 
 				.menu-link-title{
 					text-transform: uppercase;
 
 					@include fontFamily('1');
-					font-size: 1.7rem;
+					font-size: calc(#{$p} * 1.07); //17px
 
 					@media screen and (max-width: $mediaq-mobile-max) {
-						font-size: 3.4rem;
+						font-size: calc(#{$pMobile} * 1.42); //34px
 					}
 				}
 			}
 		}
 
 		.menu-contact{
-			margin: 20px;
+			margin: 2rem;
 
 			a{
 				width: 100%;
@@ -630,17 +642,17 @@ nav{
 }
 
 .nav-second{
-	padding: 15px 0;
+	padding: 1.5rem 0;
 
 	background-color: $greyLight;
 
 	ul{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	}
 
 	li{
-		border-right: 1px solid $black;
+		border-right: 0.1rem solid $black;
 		text-align: center;
 		&:last-child{
 			border-right: none;
@@ -655,7 +667,7 @@ nav{
 	}
 
 	img{
-		max-height: 30px;
+		max-height: 3rem;
 	}
 
 	a{
@@ -663,8 +675,8 @@ nav{
 
 		text-decoration: none;
 		@include fontFamily('1');
-		font-size: 16px;
-		line-height: 30px;
+		font-size: calc(#{$p} * 1.14); //16px
+		line-height: 3rem;
 
 		&.active{
 			text-decoration: underline;

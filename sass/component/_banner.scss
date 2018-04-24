@@ -16,7 +16,7 @@
 	@include inline-block();
 	max-width: $overlayMaxWidth;
 	height: 100%;
-	padding: 40px;
+	padding: 4rem;
 
 	background-color: $overlay;
 	
@@ -48,7 +48,7 @@
 		& > div{
 			position: absolute;
 			right: 0;
-			width: $overlayMaxWidth;
+			max-width: $overlayMaxWidth;
 		}
 
 		@media screen and (max-width: $mediaq-tablet-max) {
@@ -56,7 +56,7 @@
 
 			& > div{
 				width: 100%;
-				padding-left: 30px;	
+				padding-left: 3rem;	
 			}
 
 			p{

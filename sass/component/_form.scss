@@ -3,8 +3,8 @@
 }
 
 .form-title{
-	height: 60px;
-	margin-bottom: 45px;
+	height: 6rem;
+	margin-bottom: 4.5rem;
 
 	background-color: $green;
 
@@ -15,7 +15,7 @@
 		position: absolute;
 		left: 0;
 		width: 100%;
-		height: 60px;
+		height: 6rem;
 
 		background-color: $green;
 
@@ -26,81 +26,81 @@
 		position: relative;
 		text-transform: uppercase;
 		@include fontFamily('1','b');
-		font-size: 24px;
-		line-height: 60px;
+		font-size: calc(#{$p} * 1.71); //24px
+		line-height: 6rem;
 		color: $white;
 		@media screen and (max-width: $mediaq-mobile-max) {
-			font-size: 36px;
-			line-height: 44px;
+			font-size: calc(#{$pMobile} * 1.5); //36px
+			line-height: 4.4rem;
 		}
 
 		&:after{
 		  content:'';
 		  position: absolute;
-		  bottom: -40px;
-		  left: 99px;
+		  bottom: -4rem;
+		  left: 9.9rem;
 		  width: 0; 
 		  height: 0; 
 
-		  border-left: 40px solid transparent;
-		  border-right: 40px solid transparent;
-		  border-top: 25px solid $green;
+		  border-left: 4rem solid transparent;
+		  border-right: 4rem solid transparent;
+		  border-top: 2.5rem solid $green;
 
 		  @media screen and (max-width: $mediaq-tablet-max) {
-			left: 100px;
+			left: 10rem;
 		  }
 
 		  @media screen and (max-width: $mediaq-mobile-max) {
 		  	//top: 80px;
-			left: calc((100% - 80px) / 2);
+			left: calc((100% - 8rem) / 2);
 		  }
 		}
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
 		position: relative;
-		height: 80px;
+		height: 8rem;
 
-		font-size: 36px;
-		line-height: 80px;
+		font-size: calc(#{$pMobile} * 1.5); //36px
+		line-height: 8rem;
 	}	
 }
 
 .form-body{
-	padding-right: 20px;
+	padding-right: 2rem;
 
 	@media screen and (max-width: $mediaq-tablet-max) {
-		padding: 0 20px;
+		padding: 0 2rem;
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		padding: 0 40px;
+		padding: 0 4rem;
 	}
 }
 
 .phone{
-	padding-left: 50px;
-	padding-right: 20px;
+	padding-left: 5rem;
+	padding-right: 2rem;
 
 	background:transparent url('../img/phone.svg') left center no-repeat;
 
 	@include fontFamily('2','b');
-	font-size: 20px;
-	line-height: 32px;
+	font-size: calc(#{$p} * 1.43); //20px
+	line-height: 3.2rem;
 
 
 	@media screen and (max-width:$mediaq-tablet-max) {
-		margin-left: 20px;	
-		padding-left: 40px;	
+		margin-left: 2rem;	
+		padding-left: 4rem;	
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		margin-left: 40px;
-		margin-bottom: 40px;
-		padding-left: 80px;	
+		margin-left: 4rem;
+		margin-bottom: 4rem;
+		padding-left: 8rem;	
 
-		font-size: 32px;
-		line-height: 60px;
+		font-size: calc(#{$pMobile} * 1.33); //32px
+		line-height: 6rem;
 	}	
 }
 
@@ -116,7 +116,7 @@
 	z-index: 1;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -127,14 +127,14 @@
 	label{
 		@include inline-block();
 		@media screen and (max-width: $mediaq-mobile-max) {
-   			max-width: calc(100% - 110px);
+   			max-width: calc(100% - 11rem);
    		}
 
 	}
 }
 
 .form-sidebar{
-	padding-bottom: 40px;
+	padding-bottom: 4rem;
 
 	border-right: 2px solid $green;
 
@@ -155,25 +155,25 @@
 	}	
 
 	form{
-		padding-right: 20px;
+		padding-right: 2rem;
 
 			@media screen and (max-width: $mediaq-tablet-max) {
-				padding-left: 20px;		
+				padding-left: 2rem;		
 			}
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				padding: 0 40px;
+				padding: 0 4rem;
 			}	
 	}
 
 	textarea{
-		height: 115px;
+		height: 11.5rem;
 
 		resize: none;
 	}
 
 	 select{
-		padding: 6px 0 6px 10px;
+		padding: 0.6rem 0 0.6rem 1rem;
 	}
 }
 
@@ -182,7 +182,7 @@
 
 	form{
 		text-align: left;
-		max-width: 730px;
+		max-width: 73rem;
 		margin: 0 auto;
 		@media screen and (max-width: $mediaq-mobile-max) {
 			max-width: 100%;
@@ -193,10 +193,10 @@
 	fieldset{
 		& > div{
 			@include inline-block();
-			width: 350px;
+			width: 35rem;
 
 			&:nth-child(2n){
-				margin-right: 26px;
+				margin-right: 2.6rem;
 			}
 
 			@media screen and (max-width: $mediaq-mobile-max) {
@@ -211,7 +211,7 @@
 	input[type=email],
 	input[type=tel],
 	select{
-		width: 350px;
+		width: 35rem;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			width: 100%;
@@ -225,23 +225,23 @@
 	.form-checkbox,
 	.form-radio{
 		&:nth-child(2n){
-			padding-left: 40px;
+			padding-left: 4rem;
 		}
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			padding-left: 40px;
+			padding-left: 4rem;
 		}
 	}
 
 	textarea{
-		height: 115px;
+		height: 11.5rem;
 	}
 
 	input[type="submit"]{
 		display: block;
 		width: auto;
-		min-width: 260px;
-		margin: 0 auto 20px;
+		min-width: 26rem;
+		margin: 0 auto 2rem;
 
 
 		@media screen and (max-width: $mediaq-mobile-max) {
@@ -254,13 +254,13 @@
 	legend{
 		@include fontFamily('2');
 		font-size: $p;
-		line-height: 25px;
+		line-height: 2.5rem;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			text-align: left;
 			font-weight: 700;
 			font-size: $pMobile;
-			line-height: 40px;
+			line-height: 4rem;
 		}
 	}
 }

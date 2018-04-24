@@ -8,6 +8,10 @@ body{
 
 * {
 	@include box-sizing(border-box);
+
+	&:focus{
+		outline: $green 0.3rem solid;
+	}
 }
 
 h1{
@@ -154,7 +158,7 @@ select{
 
 input[type="file"]{
     position: absolute;
-    left: 2.5rem;
+    left: 4rem;
     bottom: 0;
     margin-bottom: 0;
 
@@ -166,10 +170,10 @@ input[type="submit"]{
 }
 
 select{
-    background: $greyLight url('../img/arrow_ddown.png') 330px center no-repeat;
+    background: $greyLight url('../img/arrow_ddown.png') 33rem center no-repeat;
 
     @media screen and (max-width: $mediaq-mobile-max) {
-    	background: $greyLight url('../img/arrow_ddown_mobile.png') calc(100% - 28px) center no-repeat;
+    	background: $greyLight url('../img/arrow_ddown_mobile.png') calc(100% - 2.8rem) center no-repeat;
     }
 }
 
@@ -177,7 +181,7 @@ legend{
 	margin-bottom: 1.5rem;
 
 	@include fontFamily('2','b');
-	font-size: calc(#{$p} + 0.3rem);
+	font-size: calc(#{$p} * 1.21); //17
 	line-height: 2.6rem;
 	color: $black;	
 
@@ -186,7 +190,7 @@ legend{
 
 		text-align: center;
 
-		font-size: 3.0rem;
+		font-size: calc(#{$pMobile} * 1.25); //30px
 		line-height: 3.6rem;
 	}	
 }

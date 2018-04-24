@@ -12,7 +12,7 @@
 }
 
 .space-after{
-	margin-bottom: 6.0rem;
+	margin-bottom: $spaceAfter;
 }
 
 h2{
@@ -63,34 +63,34 @@ h2{
 
 .pdf{
 	display: block;
-	margin-left: 30px;
-	margin-bottom: 30px;
-	padding-left: 45px;
+	margin-left: 3rem;
+	margin-bottom: 3rem;
+	padding-left: 4.5rem;
 
 	background:transparent url('../img/pdf_desktop.png') left center no-repeat;
 
 	@include fontFamily('1');
-	line-height: 30px;
+	line-height: 3rem;
 
 	@media screen and (max-width:$mediaq-mobile-max) {	
 		//margin-left: 0;
 		//padding: 80px 0 0;
 		//background-position: center top;
 		@include inline-block();
-		margin-bottom: 40px;
-		padding-left: 80px;
+		margin-bottom: 4rem;
+		padding-left: 8rem;
 
 		background-image: url('../img/pdf.png');
 
 		text-align: center;
-		line-height: 80px;
+		line-height: 8rem;
 	}
 }
 
 .pdf-side{
 	@include inline-block();
-	padding-left: 75px;
-	background-position: 30px center;
+	padding-left: 7.5rem;
+	background-position: 3.0rem center;
 }
 
 .center{
@@ -115,12 +115,12 @@ h2{
 
 .link-grey{
 	@include fontFamily('1');
-	font-size: calc($p + 2px);
+	font-size: calc(#{$p} * 1.14);
 	color: $grey;
 }
 
 .link-afd{
-	margin-top: 15px;
+	margin-top: 1.5rem;
 
 	color: $greyDark;
 

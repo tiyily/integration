@@ -1,27 +1,29 @@
 .btn{
 	@include inline-block();
-	height: 40px;
+	height: 4rem;
 
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	
 	@include fontFamily('1','b');
 	font-size: $button;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
 		display: block;
-		height: 80px;
+		height: 8rem;
 
-		font-size: 34px;
-		line-height: 80px!important;
+		font-size: $buttonMobile;
+		line-height: 8rem!important;
 	}
 }
 
 // Full colored button
 .btn-full{
-	padding: 0 40px;
+	padding: 0 4rem;
 
-	line-height: 40px;
+	line-height: 4rem;
+
 	color: $white;
 
 	&.cta{
@@ -62,13 +64,13 @@
 
 // Bordered button
 .btn-bordered{	
-	padding: 1px 40px 0;
-	border: solid 3px!important;
-	line-height: 36px;	
+	padding: 0.1rem 4rem 0;
+	border: solid 0.3rem!important;
+	line-height: 3.6rem;	
 
 	&:hover{
-		padding: 0 39px;
-		border: solid 4px;
+		padding: 0 3.9rem;
+		border: solid 0.4rem!important;
 	}
 
 	&.other-light{
@@ -123,7 +125,7 @@
 		width: 100%;
 		@media screen and (min-width:$mediaq-tablet-min) and (max-width:$mediaq-tablet-max) {
 			display: block;	
-			max-width: 420px;
+			max-width: 42rem;
 			margin: 0 auto;
 		}
 	}
@@ -131,6 +133,6 @@
 
 .text-btn{
 	.btn{
-		min-width: 420px;
+		min-width: 42rem;
 	}
 }

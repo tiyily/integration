@@ -1,10 +1,10 @@
 .text{
 	@media screen and (max-width: $mediaq-tablet-max){
-		padding: 0 30px;
+		padding: 0 3rem;
 	}
 
 	@media screen and (max-width:$mediaq-mobile-max) {
-		padding: 0 40px;	
+		padding: 0 4rem;	
 	}
 }
 
@@ -17,7 +17,7 @@
 
 .grid-2{
 	.text{
-		margin-left: 30px;
+		margin-left: 3rem;
 
 		@media screen and (max-width:$mediaq-tablet-max) {
 			margin-left: 0;
@@ -31,8 +31,8 @@
 
 .text-img-alt{
 	img{
-		width: 350px;
-		margin-bottom: 20px;
+		width: 35rem;
+		margin-bottom: 2rem;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
 			width: 100%;		
@@ -42,7 +42,7 @@
 	.odd{
 		img{
 			float: left;
-			margin-right: 20px;
+			margin-right: 2rem;
 			@media screen and (max-width:$mediaq-mobile-max) {
 				float: none;
 				margin-right: 0;
@@ -53,7 +53,7 @@
 	.even{
 		img{
 			float: right;
-			margin-left: 20px;
+			margin-left: 2rem;
 			@media screen and (max-width:$mediaq-mobile-max) {
 				float: none;
 				margin-left: 0;
@@ -64,10 +64,10 @@
 
 .text-img-link{
 	display: grid;
-	grid-template-columns: 1fr 530px;
-	grid-column-gap: 30px;
+	grid-template-columns: 1fr 53rem;
+	grid-column-gap: 3rem;
 
-	padding-top: 40px;
+	padding-top: 4rem;
 
 	h2{
 		grid-column: span 2;
@@ -83,7 +83,7 @@
 		grid-column: 2;
 		grid-row : 2;
 		
-		width: 530px;
+		width: 53rem;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
 			width: 100%;
@@ -99,14 +99,14 @@
 
 	.text{
 		margin-bottom: 0;
-		padding-bottom: 40px;
-		border-bottom: 1px solid $grey;
+		padding-bottom: 4rem;
+		border-bottom: 0.1rem solid $grey;
 		@media screen and (max-width:$mediaq-5) {	
 			display: block;
 			text-align: center;
 
 			img{
-				margin-bottom: 30px;
+				margin-bottom: 3rem;
 			}
 		}
 		@media screen and (max-width:$mediaq-mobile-max) {	
@@ -131,7 +131,7 @@
 
 		&:nth-child(2n){
 			.text{
-				grid-template-columns: 530px 1fr;
+				grid-template-columns: 53rem 1fr;
 				img{
 					grid-column: 1;
 				}

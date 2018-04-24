@@ -1,5 +1,5 @@
 .tag{
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 	text-align: center;
 
 	li{
@@ -9,7 +9,7 @@
 
 	a{
 		display: block;
-		padding: 0 10px;
+		padding: 0 1rem;
 		
 		background-color: $greyLight;
 
@@ -21,24 +21,24 @@
 		}
 
 		@media screen and (max-width:$mediaq-mobile-max) {
-			margin-right: 20px;
-			margin-bottom: 20px;
+			margin-right: 2rem;
+			margin-bottom: 2rem;
 		}
 	}
 
 	@media screen and (max-width:$mediaq-mobile-max) {
-			margin-bottom: 40px;
-			padding: 0 40px;
+			margin-bottom: 4rem;
+			padding: 0 4rem;
 	}
 }
 
 
 .card{
 	.tag{
-		padding: 0 15px;
+		padding: 0 1.5rem;
 		text-align: left;
 		li{
-			margin-bottom: 7px;
+			margin-bottom: 0.7rem;
 		}
 	}
 }

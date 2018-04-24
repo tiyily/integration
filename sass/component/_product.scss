@@ -1,7 +1,7 @@
 .product{
 	.grid{
-		grid-template-columns: 1fr 590px;
-		grid-column-gap: 30px;
+		grid-template-columns: 1fr 59rem;
+		grid-column-gap: 3rem;
 
 		@media screen and (max-width:$mediaq-5){	
 			display: block;
@@ -17,7 +17,7 @@
 	}
 
 	@media screen and (max-width:$mediaq-tablet-max){	
-		padding: 0 30px;
+		padding: 0 3rem;
 	}
 
 	@media screen and (max-width:$mediaq-mobile-max){
@@ -28,25 +28,25 @@
 
 .product-text{
 	@media screen and (max-width:$mediaq-5){
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 	}
 
 	@media screen and (max-width:$mediaq-mobile-max){
-		padding: 0 40px;
+		padding: 0 4rem;
 	}
 }
 
 .product-library{
 	li{
 		@include inline-block();
-		margin-right: 10px;
+		margin-right: 1rem;
 		&:first-child{
 			display: block;
-			margin-bottom: 10px;
+			margin-bottom: 1rem;
 			
 			img{
-				width: 590px;
-				height: 225px;
+				width: 59rem;
+				height: 22.5rem;
 
 				@media screen and (max-width:$mediaq-mobile-max){
 					width: 100%;
@@ -64,8 +64,8 @@
 		}
 
 		img{
-			width: 137px;
-			height: 137px;
+			width: 13.7rem;
+			height: 13.7rem;
 			@media screen and (max-width:$mediaq-mobile-max){
 				width: 100%;
 				height: auto;

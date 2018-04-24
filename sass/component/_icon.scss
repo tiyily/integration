@@ -4,46 +4,46 @@
 	}
 
 	.icon-img{
-		margin: 0 auto 30px;
+		margin: 0 auto 3rem;
 		text-align: center;
 
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			margin-bottom: 40px;
+			margin-bottom: 4rem;
 		}
 	}
 
 	img{
-		height: 100px;
+		height: 10rem;
 
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			height: 150px;
+			height: 15rem;
 		}
 	}
 
 	h3{
-		margin-bottom: 10px;
+		margin-bottom: 1rem;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: $p;
-		line-height: 25px;
+		line-height: 2.5rem;
 		color: $green;
 
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			margin-bottom: 30px;
-			font-size: 26px;
-			line-height: 30px;
+			margin-bottom: 3rem;
+			font-size: calc(#{$pMobile} * 1.08); //26px
+			line-height: 3rem;
 		}
 
 		&.icon-title-black{
 			text-transform: none;
 			@include fontFamily('1');
-			font-size: 24px;
-			line-height: 28px;
+			font-size: calc(#{$p} * 1.71);
+			line-height: 2.8rem;
 			color: $black;
 
 			@media screen and (max-width:$mediaq-mobile-max) {	
-				font-size: 36px;
-				line-height: 43px;
+				font-size: calc(#{$pMobile} * 1.5);
+				line-height: 4.3rem;
 			}
 
 		}
@@ -66,11 +66,11 @@
 		ul{
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			grid-column-gap: 20px;
+			grid-column-gap: 2rem;
 
 			@media screen and (max-width:$mediaq-4) {
 				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 60px 40px;
+				grid-gap: 6rem 4rem;
 			}
 
 			@media screen and (max-width:$mediaq-mobile-max) {
@@ -80,13 +80,13 @@
 		
 		li{
 			@media screen and (max-width:$mediaq-mobile-max) {
-				margin-bottom: 60px;
+				margin-bottom: 6rem;
 			}
 			
 		}
 
 	@media screen and (max-width:$mediaq-tablet-max) {
-		padding: 60px 30px 0;
+		padding: 6rem 3rem 0;
 	}
 }
 
@@ -94,32 +94,32 @@
 
 	.icon-img{
 		position: relative;
-		width: 80px;
-		height: 80px;
+		width: 8rem;
+		height: 8rem;
 
 		background-color: $white;
 
 		@include border-radius(50%);
-		border: 2px solid $green;
+		border: 0.2rem solid $green;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
-			width: 160px;
-			height: 160px;
+			width: 16rem;
+			height: 16rem;
 		}
 	}
 
 	img{
 		position: absolute;
 		top: 50%;
-		left: calc((100% - 40px) / 2);
+		left: calc((100% - 4rem) / 2);
 		transform: translateY(-50%);
 
-		width: 40px;
+		width: 4rem;
 		height: auto;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
-			width: 80px;
-			left: calc((100% - 80px) / 2);
+			width: 8rem;
+			left: calc((100% - 8rem) / 2);
 		}
 	}
 }
@@ -135,10 +135,10 @@
 }*/
 
 .icon-bar{
-	padding-left: 30px;
+	padding-left: 3rem;
 
 	@media screen and (max-width:$mediaq-mobile-max) {
-		padding: 0 40px;	
+		padding: 0 4rem;	
 	}
 
 	ul{
@@ -152,12 +152,12 @@
 	}
 
 	li{
-		width: 260px;
-		margin-bottom: 40px;
+		width: 26rem;
+		margin-bottom: 4rem;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
 			width: 100%;
-			margin-bottom: 60px;
+			margin-bottom: 6rem;
 		}
 	}
 }

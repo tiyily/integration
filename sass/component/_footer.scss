@@ -1,16 +1,16 @@
 footer{
-	border-top: 1px solid $grey;
+	border-top: 0.1rem solid $grey;
 }
 
 .footer-top{
 	display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-	margin-bottom: 30px;
-	padding-top: 30px;
+	margin-bottom: 3rem;
+	padding-top: 3rem;
 
 	@media all and (min-width: $mediaq-tablet-min) and (max-width: $mediaq-tablet-max){
-		padding: 30px;
+		padding: 3rem;
 	}
 
 	@media all and (max-width: $mediaq-mobile-max){
@@ -23,7 +23,7 @@ footer{
 
 		@media all and (max-width: $mediaq-mobile-max){
 			display: block;
-			margin-bottom: 60px;
+			margin-bottom: 6rem;
 
 		}
 	}
@@ -36,7 +36,7 @@ footer{
 	ul{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-column-gap: 30px;
+		grid-column-gap: 3rem;
 
 		@media all and (max-width: $mediaq-mobile-max){
 			display: block;
@@ -45,15 +45,15 @@ footer{
 	}
 
 	li{
-		padding-right: 10px;
-		padding-bottom: 20px;
-		border-right: 1px dotted #505050;
+		padding-right: 1rem;
+		padding-bottom: 2rem;
+		border-right: 0.1rem dotted #505050;
 
 		@media all and (max-width: $mediaq-mobile-max){
 			@include inline-block();
 			position: relative;
-			margin-bottom: 10px;
-			padding: 0 15px;
+			margin-bottom: 1rem;
+			padding: 0 1.5rem;
 			border-right: none;
 		}
 
@@ -62,7 +62,7 @@ footer{
 				content: '.';
 				position: absolute;
 				right: 0;
-				width: 1px;
+				width: 0.1rem;
 				font-size: $pMobile;
 				color: $greyDark
 			}
@@ -92,7 +92,7 @@ footer{
 	margin-right: 5%;
 
 	@media all and (max-width: $mediaq-mobile-max){
-		margin: 0 40px;
+		margin: 0 4rem;
 		text-align: center;
 	}
 
@@ -104,13 +104,13 @@ footer{
 
 	select{
 		display: block;	
-		width: 290px;
+		width: 29rem;
 
-		margin: 5px 0 0 20px;
+		margin: 0.5rem 0 0 2rem;
 
 		border: none;
 
-		background: $greyLight url(../img/arrow_ddown.png) 270px 8px no-repeat;
+		background: $greyLight url(../img/arrow_ddown.png) 27rem 0.8rem no-repeat;
 
 		font-weight: normal;
 		cursor: pointer;
@@ -118,11 +118,11 @@ footer{
 
 		@media all and (max-width: $mediaq-mobile-max){
 			width: 100%;
-			height: 60px;
+			height: 6rem;
 
-			margin: 20px 0 0;
+			margin: 2rem 0 0;
 
-			background: $greyLight url(../img/arrow_ddown_mobile.png) 96% 15px no-repeat;
+			background: $greyLight url(../img/arrow_ddown_mobile.png) 96% 1.5rem no-repeat;
 		}
 	}
 }
@@ -133,7 +133,7 @@ footer{
 	@media all and (min-width: $mediaq-tablet-min) and (max-width: $mediaq-4){
 		flex: 1 100%;
 
-		margin-top: 40px;
+		margin-top: 4rem;
 
 		text-align: center;
 	}
@@ -147,7 +147,7 @@ footer{
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
-			margin-bottom: 20px;
+			margin-bottom: 2rem;
 			text-align: center;
 		}
 	}
@@ -155,43 +155,83 @@ footer{
 	ul{
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-row-gap: 10px;
-		grid-column-gap: 15px;
+		grid-row-gap: 1rem;
+		grid-column-gap: 1.5rem;
 
-		margin-top: 5px;
-		margin-left: 15px;
+		margin-top: 0.5rem;
+		margin-left: 1.5rem;
 
 		@media all and (min-width: $mediaq-tablet-min) and  (max-width: $mediaq-4){
-			width: 205px;
+			width: 20.5rem;
 
-			margin: 5px auto;
+			margin: 0.5rem auto;
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
-			width: 400px;
-			margin: 5px auto;
+			width: 40rem;
+			margin: 0.5rem auto;
 		}
 	}
 
 	a {
 	    display:block;
-	    width:40px;
-	    height:40px;
+	    width: 4rem;
+	    height: 4rem;
 
-	    padding:0px;
+	    padding: 0px;
 
 	    border-right: none;
 
-	    background-image: url(../img/socials.jpg);
-	    background-repeat: no-repeat;
-
-	    text-decoration: none;
-	    text-indent: -9999px;
-
 	    @media all and (max-width: $mediaq-mobile-max){
-	    	width: 80px;
-			height: 80px;
+	    	width: 8rem;
+			height: 8rem;
 			background-image: url(../img/socials_mobile.jpg);
 	    }
+
+	    &:hover{
+
+			.linkedin{
+				fill: #0076b3;
+			}
+
+			.twitter{
+				fill: #1da1f2;
+			}
+
+			.google{
+				fill: #dc4e41;
+			}
+
+			.facebook{
+				fill: #3d5a98;
+			}
+
+			.slideshare{
+				fill: #50989a;
+			}
+
+			.instagram{
+				fill: #C81482;
+			}
+
+			.pinterest{
+				fill: #ca2027;
+			}
+
+			.youtube{
+				fill: #DD2D2F;
+			}
+	    }
 	}
+
+	.socialBg{
+		fill: $grey;
+	}
+
+	.socialFill{
+		fill: $white;
+	}
+
+
+		
 }

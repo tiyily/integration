@@ -6,15 +6,15 @@
 
 		@media screen and (max-width:$mediaq-mobile-max) {
 			display: block;
-			padding: 0 40px;
+			padding: 0 4rem;
 		}
 	}
 
 	li{
-		margin-right: 90px;
+		margin-right: 9rem;
 
 		@media screen and (max-width:$mediaq-mobile-max) {
-			margin-bottom: 40px;
+			margin-bottom: 4rem;
 			margin-right: 0;
 		}
 
@@ -25,9 +25,9 @@
 
 	a{
 		display: block;
-		padding: 5px 15px;
+		padding: 0.5rem 1.5rem;
 
-		border: 1px solid $greyDark;
+		border: 0.1rem solid $greyDark;
 		
 		@include fontFamily('2');
 		font-size: $p;
@@ -38,9 +38,9 @@
 		}
 
 		@media screen and (max-width:$mediaq-mobile-max) {
-			padding: 20px;
+			padding: 2rem;
 
-			border: 2px solid $greyDark;
+			border: 0.2rem solid $greyDark;
 
 			text-align: center;
 			font-size: $pMobile;

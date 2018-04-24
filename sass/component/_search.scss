@@ -1,21 +1,21 @@
 .search{
-	margin-bottom: 30px;
-	padding: 10px 0;
+	margin-bottom: 3rem;
+	padding: 1rem 0;
 
 	background-color: $greyLight;
 
 	text-align: center;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		padding: 20px 40px;
+		padding: 2rem 4rem;
 	}
 	
 	form{
-		grid-template-columns: 1fr 150px;
-		grid-column-gap: 20px;
+		grid-template-columns: 1fr 15rem;
+		grid-column-gap: 2rem;
 
-		padding-left: 160px;
-		padding-right: 30px;
+		padding-left: 16rem;
+		padding-right: 3rem;
 
 		@media screen and (max-width: $mediaq-5) {
 			position: relative;
@@ -30,7 +30,7 @@
 	input[type="text"]{	
 		margin-bottom: 0;
 		
-		border: 1px solid $greyMedium;
+		border: 0.1rem solid $greyMedium;
 
 		background-color: $white;
 
@@ -49,7 +49,7 @@
 
 	input[type="submit"]{
 		width: auto;
-		max-width: 150px;
+		max-width: 15rem;
 
 		margin-bottom: 0;
 
@@ -57,11 +57,11 @@
 
 		@media screen and (max-width: $mediaq-5) {
 			position: absolute;
-			top: 5px;
-			right: 40px;
+			top: 0.5rem;
+			right: 4rem;
 			
-			width: 35px;
-			height: 30px;
+			width: 3.5rem;
+			height: 3rem;
 
 			padding: 0;
 
@@ -76,11 +76,11 @@
 		}
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			top: 10px;
-			right: 15px;
+			top: 1rem;
+			right: 1.5rem;
 			
-			width: 45px;
-			height: 40px;
+			width: 4.5rem;
+			height: 4rem;
 
 			background:transparent url('../img/search-mobile.png') center center no-repeat;
 		}

@@ -1,7 +1,7 @@
 .bloc{
 	& > li{
-		grid-template-columns: 300px 1fr;
-		grid-column-gap: 20px;
+		grid-template-columns: 30rem 1fr;
+		grid-column-gap: 2rem;
 
 		@media all and (max-width: $mediaq-4){
 			display: block;
@@ -20,7 +20,7 @@
 		}
 
 		&:nth-child(2n){
-			grid-template-columns: 1fr 300px;
+			grid-template-columns: 1fr 30rem;
 
 			img{
 				grid-column: 2;
@@ -39,63 +39,63 @@
 		text-align: left;
 
 		@media all and (max-width: $mediaq-mobile-max){
-			margin-bottom: 40px;
+			margin-bottom: 4rem;
 
 			text-align: center;
 			text-decoration: underline;
 
-			font-size: 30px;
-			line-height: 42px;
+			font-size: calc(#{$pMobile} * 1.25);
+			line-height: 4.2rem;
 		}
 	}	
 }
 
 .bloc-range{
-	margin-bottom: 40px;
+	margin-bottom: 4rem;
 
 	@media all and (max-width: $mediaq-mobile-max){
-		padding-right: 40px;
+		padding-right: 4rem;
 	}
 
 	& > li{
-		padding: 40px 0;
+		padding: 4rem 0;
 
-		border-bottom: 1px solid $greyMedium;
+		border-bottom: 0.1rem solid $greyMedium;
 
 		@media all and (max-width: $mediaq-tablet-max){
-			padding: 40px 0 120px;
+			padding: 4rem 0 12rem;
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
-			padding: 40px 0 40px;
+			padding: 4rem 0 4rem;
 		}
 
 		&:first-child{
-			padding: 0 0 40px;
+			padding: 0 0 4rem;
 
 			@media all and (max-width: $mediaq-tablet-max){
-				padding: 0 0 120px;
+				padding: 0 0 12rem;
 			}
 
 			@media all and (max-width: $mediaq-mobile-max){
-				padding: 0 0 60px;
+				padding: 0 0 6rem;
 			}
 		}
 	}
 
 	img{
-		width: 300px;
-		height: 250px;
+		width: 30rem;
+		height: 25rem;
 
 		@media all and (max-width: $mediaq-4){
 			display: block;
-			margin: 0 auto 20px;
+			margin: 0 auto 2rem;
 		}
 
 		@media all and (max-width: $mediaq-mobile-max){
 			width: 100%;
 			height: auto;
-			margin: 0 auto 40px;
+			margin: 0 auto 4rem;
 		}
 	}
 
@@ -105,7 +105,7 @@
 }
 
 .bloc-btn{
-	margin-top: 40px;
+	margin-top: 4rem;
 
 	text-align: center;
 
@@ -121,11 +121,11 @@
 
 	a{
 		&:first-child{
-			margin-right: 20px;
+			margin-right: 2rem;
 
 			@media all and (max-width: $mediaq-mobile-max){
 				margin-right: 0;
-				margin-bottom: 40px;
+				margin-bottom: 4rem;
 			}
 		}
 

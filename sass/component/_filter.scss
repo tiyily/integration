@@ -1,37 +1,37 @@
 .filter-date{
 	position: relative;
-	margin: 0 105px;
-	padding: 40px 0 0;
+	margin: 0 10.5rem;
+	padding: 4rem 0 0;
 
-	border-bottom: 1px solid $greyDark;
+	border-bottom: 0.1rem solid $greyDark;
 
 	p{
 		margin-bottom: 0;
 
 		text-align: center;
 		@include fontFamily('1','b');
-		font-size: 29px;
-		line-height: 35px;
+		font-size: calc(#{$p} * 2.07); //29px
+		line-height: 3.5rem;
 		color: $greyDark;
 	}
 
 	a{
 		content: '';
 		position: absolute;
-		right: -60px;
-		bottom: -2px;
+		right: -6rem;
+		bottom: -0.2rem;
 		display: block;
-		width: 50px;
-		height: 50px;
-		padding: 12px;
+		width: 5rem;
+		height: 5rem;
+		padding: 1.2rem;
 		background-color: $white;
 
 		@include border-radius(50%);
-		border: 1px solid $greyDark;
+		border: 0.1rem solid $greyDark;
 
 		&:hover{
-			padding: 11px;
-			border: 2px solid $greyDark;
+			padding: 1.1rem;
+			border: 0.2rem solid $greyDark;
 		}
 	}
 
@@ -41,25 +41,25 @@
 }
 
 .filter-sidebar{
-	padding-right: 20px;
+	padding-right: 2rem;
 
 	background-color: $grey;
 
 	fieldset{
 		position: relative;
-		margin-top: 40px;
-		margin-bottom: 20px;
+		margin-top: 4rem;
+		margin-bottom: 2rem;
 	}
 
 	legend{
 		position: relative;
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 2rem;
 
 		text-align: center;
 		@include fontFamily('1');
 		font-size: $h2;
-		line-height: 28px;
+		line-height: 2.8rem;
 		color: $black;
 
 		& + div{
@@ -68,10 +68,10 @@
 
 		a{
 			position: absolute;
-			top: calc((100% - 20px) / 2);
+			top: calc((100% - 2rem) / 2);
 			right: 0;
-			width: 20px;
-			height: 20px;
+			width: 2rem;
+			height: 2rem;
 			background:transparent url('../img/plus.svg') right center no-repeat;
 
 			text-indent: -9999px;
@@ -92,7 +92,7 @@
 	.form-radio{
 		position: relative;
 
-		margin-bottom: 20px;
+		margin-bottom: 2rem;
 	}
 
 	input[type=radio]{

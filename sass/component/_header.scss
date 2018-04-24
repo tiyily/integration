@@ -1,25 +1,25 @@
 header{
 	position: relative;
 	& > div{
-		grid-template-columns: 135px 1fr;
-		grid-column-gap: 20px;
+		grid-template-columns: 13.5rem 1fr;
+		grid-column-gap: 2rem;
 
-		padding-top: 30px;
+		padding-top: 3rem;
 
 		@media screen and (max-width: $mediaq-tablet-max) {
-			padding-left: 30px;
+			padding-left: 3rem;
 		}	
 
 		@media screen and (max-width: $mediaq-4) {
-			grid-template-columns: 60px 135px 1fr;
+			grid-template-columns: 6rem 13.5rem 1fr;
 		}
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			grid-template-columns: 60px 1fr 200px;
+			grid-template-columns: 6rem 1fr 20rem;
 
-			padding: 0 0 0 40px;
+			padding: 0 0 0 4rem;
 
-			border-bottom: 5px solid $green;
+			border-bottom: 0.5rem solid $green;
 		}	
 	}
 
@@ -29,11 +29,11 @@ header{
 	align-self: center;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		padding-top: 20px;
+		padding-top: 2rem;
 		text-align: center;
 	}
 
 	img{
-		width: 135px;
+		width: 13.5rem;
 	}
 }

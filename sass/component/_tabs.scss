@@ -1,17 +1,17 @@
 .tabs{
 	
 	@media screen and (max-width: $mediaq-tablet-max) {
-		padding: 0 30px;
+		padding: 0 3rem;
 	}
 }
 
 .tabs-list{
 	grid-template-columns: repeat(auto-fit, minmax(25% , 1fr));
 	
-	margin-bottom: 30px;
-	padding-bottom: 5px;
+	margin-bottom: 3rem;
+	padding-bottom: 0.5rem;
 
-	border-bottom: 3px solid $greyMedium;
+	border-bottom: 0.3rem solid $greyMedium;
 
 	li{
 		text-align: center;
@@ -20,10 +20,10 @@
 			&:after{
 				content: "";
 				position: relative;
-				bottom: -9px;
+				bottom: -0.9rem;
 				display: block;
 				width: 100%;
-				border-bottom: 5px solid $green;
+				border-bottom: 0.5rem solid $green;
 			}
 		}
 	}
@@ -32,14 +32,14 @@
 		text-decoration: none;
 
 		@include fontFamily('1');
-		font-size: 20px;
-		line-height: 24px;
+		font-size: calc(#{$p} * 1.43); //20px
+		line-height: 2.4rem;
 	}
 }
 
 .tabs-bloc{
-	grid-template-columns: 550px 1fr;
-	grid-gap: 40px;
+	grid-template-columns: 55rem 1fr;
+	grid-gap: 4rem;
 
 	@media screen and (max-width: $mediaq-5) {
 		display: block;	
@@ -50,9 +50,10 @@
 	}
 
 	img{
+		width: 55rem;
 		@media screen and (max-width: $mediaq-5) {
 			display: block;
-			margin: 0 auto 30px;
+			margin: 0 auto 3rem;
 		}
 
 		@media screen and (max-width: $mediaq-mobile-max) {
@@ -61,7 +62,7 @@
 	}
 
 	&.odd{
-		grid-template-columns: 1fr 550px;
+		grid-template-columns: 1fr 55rem;
 
 		img{
 			grid-column: 2;
@@ -96,9 +97,9 @@
 .tabs-accordeon{
 	padding: 0;
 	& > h2{
-		padding: 0 40px;
+		padding: 0 4rem;
 
-		border-bottom: 3px solid $greyMedium;
+		border-bottom: 0.3rem solid $greyMedium;
 
 		text-align: left;
 
@@ -106,17 +107,17 @@
 			position: relative;
 
 			display: block;
-			margin-bottom: 15px;
+			margin-bottom: 1.5rem;
 
 			text-align: left;
 			text-decoration: none;
 			
-			font-size: 30px;
+			font-size: calc(#{$p} * 2.14); //30px
 
 			&:after{
 				content:'';
 				position: absolute;
-				top: calc((100% - 26px) / 2);
+				top: calc((100% - 2.6rem) / 2);
 				right: 0;
 				display: block;
 				width: 25px;
@@ -127,7 +128,7 @@
 		}
 
 		span{
-			padding-bottom: 14px;
+			padding-bottom: 1.4rem;
 		}
 
 		
@@ -135,20 +136,20 @@
 		&.ui-state-active{
 			a{
 				&:after{
-					top: calc((100% - 6px) / 2);
-					height: 6px;
-					background-position: 0 -28px;
+					top: calc((100% - 0.6rem) / 2);
+					height: 0.6rem;
+					background-position: 0 -2.8rem;
 
 				}
 			}
 
 			span{
-				border-bottom: 5px solid $green;
+				border-bottom: 0.5rem solid $green;
 			}
 		}
 	}
 
 	.tabs-bloc{
-		padding: 0 40px;
+		padding: 0 4rem;
 	}
 }

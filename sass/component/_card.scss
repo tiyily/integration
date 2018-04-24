@@ -5,22 +5,22 @@
 
 	& > li{
 		position: relative;
-		width: 280px;
-		padding-bottom: 60px;
+		width: 28rem;
+		padding-bottom: 6rem;
 
 		background-color: $white;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			width: 100%;
-			margin-bottom: 40px;
-			padding-bottom: 40px;
+			margin-bottom: 4rem;
+			padding-bottom: 4rem;
 		}
 	}
 
 	img{
-		width: 280px;
-		height: 280px;
-		margin-bottom: 10px;
+		width: 28rem;
+		height: 28rem;
+		margin-bottom: 1rem;
 
 
 		@media screen and (max-width: $mediaq-mobile-max) {
@@ -30,38 +30,38 @@
 	}
 
 	h2{
-		margin-bottom: 20px;
+		margin-bottom: 2rem;
 	}
 
 	p{
-		padding: 0 15px;
+		padding: 0 1.5rem;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			padding: 0 20px;
+			padding: 0 2rem;
 		}
 	}
 
 	.card-place,
 	.card-duration{
-		padding: 0 40px;
+		padding: 0 4rem;
 		@media screen and (max-width: $mediaq-mobile-max) {
-			padding: 0 80px;
+			padding: 0 8rem;
 		}
 	}
 
 	.btn{
 		position: absolute;
-		left: 40px;
-		bottom: 20px;
+		left: 4rem;
+		bottom: 2rem;
 		display: block;
-		width: 200px;
+		width: 20rem;
 		padding: 0;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			position: relative;
 			bottom: auto;
 			left: auto;
-			width: calc(100% - 40px);
+			width: calc(100% - 4rem);
 			margin: 0 auto;
 		}
 	}
@@ -71,13 +71,13 @@
 	}
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-			padding: 40px;
+			padding: 4rem;
 	}
 }
 
 .card-no-btn{
 	& > li{
-		padding-bottom: 20px;
+		padding-bottom: 2rem;
 	}
 }
 
@@ -85,16 +85,16 @@
 	padding-top: 0;
 
 	& > li{
-		width: 420px;
+		width: 42rem;
 		@media screen and (max-width: $mediaq-mobile-max) {
 			width: 100%;
 		}
 	}
 
 	img{
-		width: 420px;
-		height: 290px;
-		border-bottom: 1px solid $grey;
+		width: 42rem;
+		height: 29rem;
+		border-bottom: 0.1rem solid $grey;
 		@media screen and (max-width: $mediaq-mobile-max) {
 			width: 100%;
 			height: auto;
@@ -102,36 +102,36 @@
 	}
 
 	h3{
-		margin: 10px 0 20px;
-		padding: 0 15px;
+		margin: 1rem 0 2rem;
+		padding: 0 1rem;
 
 		font-size: $p;
-		line-height: 17px;
+		line-height: 1rem;
 		font-weight: normal;
 		color: $grey;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			font-size: $pMobile;
-			line-height: 36px;
+			line-height: 3.6rem;
 		}
 	}
 
 	h4{
-		margin-bottom: 10px;
-		padding: 0 15px;
+		margin-bottom: 1rem;
+		padding: 0 1.5rem;
 		@include fontFamily('2','b');
 		font-size: $h3;
-		line-height: 27px;
+		line-height: 2.7rem;
 		color: $black;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			font-size: $h3Mobile;
-			line-height: 36px;
+			line-height: 3.6rem;
 		}
 	}
 
 	.btn{
-		left: 110px;
+		left: 11rem;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			left: 0;
@@ -156,19 +156,19 @@
 	&:before{
 		content: '';
 		position: absolute;
-		top: calc((100% - 20px) / 2);
-		left: 10px;
+		top: calc((100% - 2rem) / 2);
+		left: 1rem;
 
-		width: 14px;
-		height: 20px;
+		width: 1.4rem;
+		height: 2rem;
 
 		background:transparent url('../img/geolocation.svg') left center no-repeat;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			top: calc((100% - 40px) / 2);
-			left: 30px;
-			width: 28px;
-			height: 40px;
+			top: calc((100% - 4rem) / 2);
+			left: 3rem;
+			width: 2.8rem;
+			height: 4rem;
 		}
 	}	
 }
@@ -180,21 +180,21 @@
 	text-align: center;
 
 	@include fontFamily('1','b');
-	font-size: 16px;
-	line-height: 25px;
+	font-size: calc(#{$p} * 1.14);
+	line-height: 2.5rem;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
 
-		font-size: 30px;
-		line-height: 40px;
+		font-size: calc(#{$pMobile} * 1.25);
+		line-height: 4rem;
 	}
 
 	span{
 		@include inline-block();
 		width: 13px;
 		height: 20px;
-		margin: 0 5px;
+		margin: 0 0.5rem;
 		
 		background:transparent url('../img/next.png') 0 0 no-repeat;
 
@@ -202,8 +202,8 @@
 		vertical-align: text-bottom;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			width: 19px;
-			height: 30px;
+			width: 1.9rem;
+			height: 3rem;
 
 			background-position: -13px 0;
 		}
@@ -212,19 +212,19 @@
 	&:before{
 		content: '';
 		position: absolute;
-		top: calc((100% - 20px) / 2);
-		left: 10px;
+		top: calc((100% - 2rem) / 2);
+		left: 1rem;
 
-		width: 22px;
-		height: 20px;
+		width: 2.2rem;
+		height: 2rem;
 
 		background:transparent url('../img/calendar.svg') left center no-repeat;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
-			top: calc((100% - 40px) / 2);
-			left: 30px;
-			width: 44px;
-			height: 40px;
+			top: calc((100% - 4rem) / 2);
+			left: 3rem;
+			width: 4.4rem;
+			height: 4rem;
 		}
 	}
 }
@@ -237,7 +237,7 @@
 	padding-left: 0;
 
 	@media screen and (max-width:$mediaq-mobile-max) {
-		padding-left: 40px;
+		padding-left: 4rem;
 	}
 }
 
@@ -246,7 +246,7 @@
 		padding-left: 0;
 
 		@media screen and (max-width: $mediaq-tablet-max) {
-			padding: 40px 30px;
+			padding: 4rem 3rem;
 		}
 	}
 

@@ -1,23 +1,23 @@
 .promotion{
 	li{
-		width: 210px;
+		width: 21rem;
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			width: 450px;
+			width: 45rem;
 		}
 	}
 
 	h3{
-		margin-bottom: 5px;
+		margin-bottom: 0.5rem;
 		@media screen and (max-width:$mediaq-mobile-max) {	
-			margin: 30px 0;
+			margin: 3rem 0;
 		}
 		a{
 			@include fontFamily('1');
-			font-size: 18px;
-			line-height: 19px;
+			font-size: calc(#{$p} * 1.29); //18px
+			line-height: 1.9rem;
 			@media screen and (max-width:$mediaq-mobile-max) {	
-				font-size: 30px;
-				line-height: 36px;
+				font-size: calc(#{$pMobile} * 1.25); //30px
+				line-height: 3.6rem;
 			}
 		}
 	}
