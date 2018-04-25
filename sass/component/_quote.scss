@@ -28,9 +28,9 @@
 	}
 }
 .quote-text{
-	padding-left: 3rem;
+	position: relative;
 
-	background:transparent url('../img/quote.png') left top no-repeat;
+	padding-left: 3rem;
 
 	text-align: center;
 
@@ -63,6 +63,22 @@
 .quote-role{
 	font-style: italic;
 	color: $grey;
+}
+
+.quote-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 14.8rem;
+	height: 11.9rem;
+
+	fill:none;
+	stroke:$green;
+	stroke-linecap:round;
+	stroke-miterlimit:10;
+	stroke-width:0.5px;
+	z-index: 0;
 }
 
 .quote-side{

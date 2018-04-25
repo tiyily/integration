@@ -67,7 +67,7 @@ h2{
 	margin-bottom: 3rem;
 	padding-left: 4.5rem;
 
-	background:transparent url('../img/pdf_desktop.png') left center no-repeat;
+	background:transparent url('../img/svg/pdf.svg') left center no-repeat;
 
 	@include fontFamily('1');
 	line-height: 3rem;
@@ -80,7 +80,8 @@ h2{
 		margin-bottom: 4rem;
 		padding-left: 8rem;
 
-		background-image: url('../img/pdf.png');
+		//background-image: url('../img/pdf.png');
+		background-size: 6rem auto;
 
 		text-align: center;
 		line-height: 8rem;

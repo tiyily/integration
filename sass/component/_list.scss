@@ -14,6 +14,12 @@
 			}
 		}
 
+		@media all and (max-width: $mediaq-mobile-max){
+			display: block;
+			margin: 0 4em;
+
+		}
+
 	}
 
 	h3{
@@ -23,25 +29,16 @@
 }
 
 .list-img{
-	/*padding: 30px 0;
-	background-color: $greyLight;*/
-
-	@media all and (max-width: $mediaq-mobile-max){
-		padding: 4rem;
-	}
 
 	ul{
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(calc(20% - 4rem) , 1fr));
 		grid-gap: 4rem;
-
-		@media all and (max-width: $mediaq-mobile-max){
-			display: block;
-		}
 	}
 
 	li{
 		@media all and (max-width: $mediaq-mobile-max){
+			padding: 0 4rem;
 			text-align: center;
 		}
 	}
@@ -51,16 +48,6 @@
 	}
 }
 
-/*.list-dark{
-	padding: 30px 0;
-
-	background-color: $greyLight;
-
-	@media screen and (max-width:$mediaq-tablet-max) {
-		padding: 30px;
-	}
-}*/
-
 .list-check{
 	
 	ul{
@@ -68,25 +55,35 @@
 
 		margin-bottom: 0;
 
-		@media all and (max-width: $mediaq-mobile-max){
-			display: block;
-
-		}
-
 	}
 
 	li{
+		position: relative;
+
 		width: calc(50% - 3rem);
 
 		padding-left: 4rem;
 
-		background:transparent url('../img/check.png') left center no-repeat;
-
 		@media all and (max-width: $mediaq-mobile-max){
 			width: 100%;
 			padding-left: 6rem;
-			background:transparent url('../img/check-mobile.png') left center no-repeat;
 
+		}
+
+		svg{
+			position: absolute;
+			top: calc((100% - 1.5rem) / 2);
+			left: 0;
+			width: 2.1rem;
+			height: 1.5rem;
+
+			fill: $green;
+
+			@media all and (max-width: $mediaq-mobile-max){
+				width: 4.2rem;
+				height: 3rem;
+
+			}
 		}
 	}
 

@@ -127,36 +127,6 @@
 		padding-top: 18rem;
 	}
 
-
-	
-	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
-		display: block;
-		width: 4.7rem;
-		height: 4.7rem;
-		padding: 2rem;
-
-		border: 0.3rem solid $green;
-		@include border-radius(50%);
-
-		background:transparent url('../img/calendar.svg') center center no-repeat;
-		background-size: 4rem 3.6rem;
-
-		@media all and (max-width: $mediaq-6){
-			left: calc((100% - 8.7rem) / 2);
-		}
-
-		@media all and (max-width: $mediaq-mobile-max){
-			left: calc((100% - 15rem) / 2);
-			width: 9rem;
-			height: 9rem;
-			padding: 3rem;
-			background-size: 7.2rem 6.5rem;
-		}
-	}
-
 	p{
 		@include inline-block();
 		@include fontFamily('1','b');
@@ -169,9 +139,8 @@
 
 		span{
 			display: block;
-			padding-left: 2rem;
 			
-			background:transparent url('../img/clock.png') left center no-repeat;
+			//background:transparent url('../img/svg/clock.svg') left center no-repeat;
 
 			font-size: $p;
 			font-weight: normal;
@@ -179,31 +148,75 @@
 
 			@media all and (max-width: $mediaq-mobile-max){
 				margin-top: 2rem;
-				padding-left: 4rem;
 
-				background-image: url('../img/clock-mobile.png');
+				//background-image: url('../img/clock-mobile.png');
 
 				font-size: calc(#{$p} * 1.71); //24px
 				line-height: 3rem;
 			}
+
+			svg{
+				width: 1.5rem;
+				height: 1.5rem;
+
+				margin-right: 0.5rem;
+				
+				vertical-align: text-top;
+				fill: $grey;
+
+				@media all and (max-width: $mediaq-mobile-max){
+					width: 3rem;
+					height: 3rem;
+				}
+			}
 		}
 
-		&:nth-child(2){
+		&:nth-child(3){
 			width: 13px;
 			height: 20px;
 			margin: 0.2rem 0.1rem;
-			background:transparent url('../img/next.png') 0 0 no-repeat;
+			//background:transparent url('../img/svg/arrow.svg') 0 0 no-repeat;
+			background-color: $grey;
+			background-size: 1.2rem 2rem;
+		    -webkit-mask: url(../img/svg/arrow.svg) left center no-repeat;
+		    mask: url(../img/svg/arrow.svg) left center no-repeat;
+
 			text-indent: -9999px;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				width: 19px;
-				height: 30px;
+				width: 1.9rem;
+				height: 3rem;
 				margin: -0.2rem 1.5rem;
-				background-position: -13px 0;
 			}
 		}
 	}
 }
+
+.event-date-bg{
+	position: absolute;
+	top: 0;
+	left: calc((100% - 8.3rem) / 2);
+
+	display: block;
+	width: 8.3rem;
+	height: 8.3rem;
+	padding: 2rem;
+
+	border: 0.3rem solid $green;
+	@include border-radius(50%);
+
+	svg{
+		fill: $green;
+	}
+
+	@media all and (max-width: $mediaq-mobile-max){
+		left: calc((100% - 15.3rem) / 2);
+		width: 15.3rem;
+		height: 15.3rem;
+		padding: 4rem;
+	}
+}
+
 
 .event-place{
 	position: relative;
@@ -219,34 +232,6 @@
 		padding-top: 17rem;
 	}
 
-	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
-		display: block;
-		width: 4.7rem;
-		height: 4.7rem;
-		padding: 2rem 1.8rem;
-
-		border: 0.3rem solid $green;
-		@include border-radius(50%);
-
-		background:transparent url('../img/geolocation.svg') center center no-repeat;
-		background-size: 2.8rem 4rem;
-
-		@media all and (max-width: $mediaq-6){
-			left: calc((100% - 8.7rem) / 2);
-		}
-
-		@media all and (max-width: $mediaq-mobile-max){
-			left: calc((100% - 15rem) / 2);
-			width: 9rem;
-			height: 9rem;
-			padding: 3rem;
-			background-size: 5rem 7.2rem;
-		}
-	}
-
 	p{
 		margin-bottom: 1rem;
 
@@ -259,6 +244,38 @@
 		@media all and (max-width: $mediaq-6){
 			text-align: center;
 		}
+	}
+}
+
+.event-place-bg{
+	position: absolute;
+	top: 0;
+	left: calc((100% - 8.3rem) / 2);
+
+	display: block;
+	width: 8.3rem;
+	height: 8.3rem;
+	padding: 2rem;
+
+	border: 0.3rem solid $green;
+	@include border-radius(50%);
+
+	text-align: center;
+
+	svg{
+		height: 4rem;
+		fill: $green;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			height: 7rem;
+		}
+	}
+
+	@media all and (max-width: $mediaq-mobile-max){
+		left: calc((100% - 15.3rem) / 2);
+		width: 15.3rem;
+		height: 15.3rem;
+		padding: 4rem;
 	}
 }
 
