@@ -82,7 +82,7 @@
 	padding-left: 5rem;
 	padding-right: 2rem;
 
-	background:transparent url('../img/phone.svg') left center no-repeat;
+	background:transparent url('../img/svg/phone.svg') left center no-repeat;
 
 	@include fontFamily('2','b');
 	font-size: calc(#{$p} * 1.43); //20px

@@ -245,13 +245,15 @@ nav{
 
 				padding: 0;
 				
-				background: $green url(../img/envelope.png) center center no-repeat;
+				background-color: $green;
+			    -webkit-mask: url(../img/svg/envelope.svg) left center no-repeat;
+			    mask: url(../img/svg/envelope.svg) left center no-repeat;
 
 				text-indent: -9999px;
 			}
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				width: 100%;
+				//width: 100%;
 			}
 
 		}
@@ -484,7 +486,7 @@ nav{
 
 		svg{
 			position: absolute;
-			top: 1rem;
+			top: 1.5rem;
 			right: 2rem;
 
 			width: 1.5rem;
@@ -492,7 +494,7 @@ nav{
 			fill: $white;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				top: 1.5rem;
+				top: 2.5rem;
 				right: 4rem;
 
 				width: 2.5rem;
@@ -501,8 +503,18 @@ nav{
 		}
 
 		.back{
-			position: absolute;
-			left: 2rem;
+			
+
+			svg{
+				top: 1rem;		
+				left: 2rem;
+				@include scaleX(-1);
+
+				@media screen and (max-width: $mediaq-mobile-max) {
+					width: 2rem;
+				}
+
+			}
 		}
 		
 	}
@@ -537,7 +549,12 @@ nav{
 
 	.menu-link-container{
 		& > a {
-			background:transparent url('../img/arrow-next.png') right center no-repeat;
+			background:transparent url('../img/svg/arrow.svg') right center no-repeat;
+			background-size: 1rem;
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				background-size: 2rem;
+			}
 		}
 	}
 

@@ -14,7 +14,7 @@
 
 .overlay{
 	@include inline-block();
-	max-width: $overlayMaxWidth;
+	width: $overlayMaxWidth;
 	height: 100%;
 	padding: 4rem;
 
@@ -25,13 +25,21 @@
 	}
 
 	@media screen and (max-width: $mediaq-tablet-max) {
-		max-width: 100%;
+		width: 100%;
 		text-align: center;
 
 		p{
 			text-align: center;
 		}
 	}	
+}
+
+.grid-2{
+	.banner{
+		@media screen and (max-width: $mediaq-tablet-max) {
+			height: auto;
+		}
+	}
 }
 
 .banner-full{
@@ -43,7 +51,7 @@
 	.overlay{
 		display: block;
 		position: relative;
-		max-width: calc(((100% - #{$contentMax}) / 2) + #{$overlayMaxWidth});
+		width: calc(((100% - #{$contentMax}) / 2) + #{$overlayMaxWidth});
 
 		& > div{
 			position: absolute;
@@ -65,7 +73,7 @@
 		}
 		
 		@media screen and (max-width: $mediaq-mobile-max) {
-			max-width: 100%;
+			width: 100%;
 			
 			text-align: center;
 
@@ -83,9 +91,5 @@
 			}
 		}
 
-	}
-
-	&.video{
-		height: $bannerHeight;
 	}
 }

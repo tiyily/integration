@@ -54,11 +54,23 @@
 			}
 
 			svg{
+				position: absolute;
+				top: calc((100% - 1.2rem) / 2);
+				left: calc((100% - 0.7rem) / 2);
+
 				width: 0.7rem;
 				height: 1.2rem;
 				
 				fill: $grey;
 				@include rotate(90deg);
+
+				@media all and (max-width: $mediaq-mobile-max){
+					width: 1.8rem;
+					height: 3rem;
+
+					top: calc((100% - 3rem) / 2);
+					left: calc((100% - 1.8rem) / 2);
+				}
 			}
 		}
 
@@ -74,9 +86,9 @@
 	a{
 		&:hover{
 			color: $greyDark;
-			span{
+			svg{
 				//background-image: url('../img/accordeon-hover.png');
-
+				fill: $black;
 				@media all and (max-width: $mediaq-mobile-max){
 					//background-image: url('../img/accordeon-mobile.png');
 				}

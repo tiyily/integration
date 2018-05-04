@@ -61,12 +61,22 @@
 		width: 100%;
 		left: 0;
 	}
-}
 
-.banner-full{
 	.full-img{
 		@media screen and (max-width: $mediaq-tablet-max) {
 			height: 100%;
+		}
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			display: none;
+		}
+	}
+
+	&.video-show{
+		.full-img{
+			@media screen and (max-width: $mediaq-tablet-max) {
+				display: none;
+			}
 		}
 	}	
 }
@@ -81,4 +91,8 @@
 			max-height: 33rem;
 		}
 	}	
+}
+
+.grid-2-full{
+	position: relative;
 }

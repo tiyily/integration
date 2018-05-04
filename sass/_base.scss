@@ -170,10 +170,13 @@ input[type="submit"]{
 }
 
 select{
-    background: $greyLight url('../img/arrow_ddown.png') 33rem center no-repeat;
+    background: $greyLight url('../img/svg/arrow-ddown.svg') 95% center no-repeat;
+    background-size: 0.9rem 1.6rem;
 
     @media screen and (max-width: $mediaq-mobile-max) {
-    	background: $greyLight url('../img/arrow_ddown_mobile.png') calc(100% - 2.8rem) center no-repeat;
+    	//background: $greyLight url('../img/arrow_ddown_mobile.png') calc(100% - 2.8rem) center no-repeat;
+    	//background-position: 45rem center;
+    	background-size: 2rem;
     }
 }
 

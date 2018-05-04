@@ -6,6 +6,7 @@
 	& > li{
 		position: relative;
 		width: 28rem;
+		margin-bottom: 3rem;
 		padding-bottom: 6rem;
 
 		background-color: $white;
@@ -198,8 +199,6 @@
 		width: 1.3rem;
 		height: 2rem;
 		margin: 0 0.5rem;
-		
-		//background:transparent url('../img/next.png') 0 0 no-repeat;
 
 		background-color: $grey;
 		background-size: 1.2rem 2rem;
@@ -262,11 +261,13 @@
 		}
 	}
 
-	.card-title{
-		//padding-top: 30px;
-	}
-
 	.card-range{
 		justify-content: space-around;
+	}
+}
+
+.grid-2{
+	.card{
+		padding: 4rem 0 1rem 4rem;
 	}
 }

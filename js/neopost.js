@@ -185,16 +185,22 @@ function isMobile(){
 
 /* Allow banner in content*/
 function content_banner(){
-  if ($('.grid-2 .full-img').length) {
-
+  if ($('.grid-2 .full').length) {
     $windowWidth = $(window).width();
 
     if($windowWidth > 1180){
       $fullWidth = $('body').width() - $('aside').width() - (($('body').width() - 1180) / 2);
-      $('.grid-2 .full-img').css('width',$fullWidth);
+      $('.grid-2 .full').css('width',$fullWidth);
     }else{
-      $('.grid-2 .full-img').css('width','100%');
+      $('.grid-2 .full').css('width','100%');
     }
+  }
+
+  if($('.grid-2 .video-iframe').length){
+      $fullVideo = $('body').width() - $('aside').width() - (($('body').width() - 1180) / 2) - $(".grid-2 .overlay").outerWidth();
+     
+      if($fullVideo <= 360){$fullVideo = "100%";}
+      $(".grid-2 .video-iframe").css('width', $fullVideo);
   }
 }
 

@@ -110,8 +110,6 @@ footer{
 
 		border: none;
 
-		background: $greyLight url(../img/arrow_ddown.png) 27rem 0.8rem no-repeat;
-
 		font-weight: normal;
 		cursor: pointer;
 		@include appearance(none);
@@ -121,8 +119,6 @@ footer{
 			height: 6rem;
 
 			margin: 2rem 0 0;
-
-			background: $greyLight url(../img/arrow_ddown_mobile.png) 96% 1.5rem no-repeat;
 		}
 	}
 }

@@ -71,17 +71,20 @@
 		width: 18px;
 		height: 31px;
 
-		background:transparent url('../img/carousel-nav.png') left center no-repeat;
+		background-color: $grey;
+	    -webkit-mask: url(../img/svg/arrow.svg) left center no-repeat;
+	    mask: url(../img/svg/arrow.svg) left center no-repeat;
+
 		font-size: 0;
 
 		&.owl-prev{
 			left: -6rem;
+
+			@include scaleX(-1);
 		}
 
 		&.owl-next{
 			right: -6rem;
-
-			@include scaleX(-1);
 		}
 	}
 }
@@ -135,12 +138,23 @@
 .banner-carousel{
 
 	&.banner-side{
-		height: 44rem;
+		height: $bannerHeight;
+
+		@media screen and (max-width:$mediaq-tablet-max) {
+			width: calc(100% - #{$sidebar});
+			height: auto;	
+		}
 
 		.owl-carousel{
 			position: absolute;
 			left: calc( ((100% - #{$contentMax}) / 2 ) + #{$sidebar} );
-			width: calc( 100% - (((100% - #{$contentMax}) / 2 ) + #{$sidebar}));	
+			width: calc( 100% - (((100% - #{$contentMax}) / 2 ) + #{$sidebar}));
+
+			@media screen and (max-width:$mediaq-tablet-max) {	
+				//position: relative;
+				left: 0;
+				//width: calc(100% - #{$sidebar});
+			}	
 		}
 	}
 

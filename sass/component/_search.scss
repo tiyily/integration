@@ -67,7 +67,10 @@
 
 			border: none!important;
 
-			background:transparent url('../img/search.png') center center no-repeat;
+			//background:transparent url('../img/svg/search.svg') center center no-repeat;
+			background-color: $grey;
+			-webkit-mask: url(../img/svg/search.svg) center center no-repeat;
+	   		mask: url(../img/svg/search.svg) center center no-repeat;
 
 			text-indent: -9999px; 
 
@@ -82,7 +85,7 @@
 			width: 4.5rem;
 			height: 4rem;
 
-			background:transparent url('../img/search-mobile.png') center center no-repeat;
+			//background:transparent url('../img/search-mobile.png') center center no-repeat;
 		}
 	}
 }
