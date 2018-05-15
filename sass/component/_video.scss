@@ -26,12 +26,25 @@ $videoPlayHeight: 133px;
 	width: $videoPlayWidth;
 	height: $videoPlayHeight;
 
-	background-image: url('../img/video-play.png');
+	@include border-radius(50%);
+	border: 0.6rem solid $white;
+
+	background-color: $overlay;
 
 	cursor: pointer;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
 		display: none;
+	}
+
+	svg{
+		fill: $white;
+
+		position: relative;
+		top: 3.5rem;
+		left: 4rem;
+
+		height: 5rem;
 	}
 }
 

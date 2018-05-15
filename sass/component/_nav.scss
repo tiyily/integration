@@ -246,14 +246,38 @@ nav{
 				padding: 0;
 				
 				background-color: $green;
-			    -webkit-mask: url(../img/svg/envelope.svg) left center no-repeat;
-			    mask: url(../img/svg/envelope.svg) left center no-repeat;
-
-				text-indent: -9999px;
 			}
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				//width: 100%;
+				width: 100%;
+			}
+
+			svg{
+				display: none;
+
+				@media screen and (max-width: $mediaq-3) {
+
+					fill: $white;
+
+					position: relative;
+					top: calc((100% - 3.2rem) / 2);
+					left: 1.5rem;
+
+					display: block;
+					width: 3rem;
+				}
+
+				@media screen and (max-width: $mediaq-mobile-max) {
+					top: 3rem;
+					left: 2.5rem;
+					width: 5rem;
+				}
+			}
+
+			span{
+				@media screen and (max-width: $mediaq-3) {
+					display: none;
+				}
 			}
 
 		}
@@ -335,18 +359,16 @@ nav{
 		svg{
 			position:absolute;
 			top: calc((100% - 2.5rem) / 2);
-			left: -3.5rem;
+			left: -3.7rem;
 
-			width: 1.5rem;
-			height: 2.5rem;
+			width: 1.7rem;
 
 			fill: $white;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
 				left: calc((100% - 13rem) / 2);
 
-				width: 2.5rem;
-				height: 4rem;
+				width: 3rem;
 			}
 		}
 
@@ -712,6 +734,13 @@ nav{
 				line-height: 0;
 			}
 		}
+
+		&.active{
+			a{
+				text-decoration: underline;
+				font-weight: 700;		
+			}
+		}
 	}
 
 	img{
@@ -725,11 +754,98 @@ nav{
 		@include fontFamily('1');
 		font-size: calc(#{$p} * 1.14); //16px
 		line-height: 3rem;
+	}
 
-		&.active{
-			text-decoration: underline;
-			font-weight: 700;
+	.nav-second-open{
+		display: none;
+	}
+}
+
+.nav-second-mobile{
+	padding: 0;
+
+	background-color: $white;
+
+	.nav-second-open{
+		position: relative;
+
+		display: block;
+		padding: 0 4rem;
+
+		background-color: $green;
+		
+		text-align: center;
+		text-transform: uppercase;
+
+		font-size: calc(#{$pMobile} * 1.08); //26px
+		font-weight: 700;
+		line-height: 8rem;
+
+		color: $white;
+
+		&:hover,
+		&:focus,
+		&:active{
+			color: $white;
+		}
+
+		svg{
+			fill: $white;
+			position: absolute;
+			top: 1.5rem;
+			right: 4rem;
+
+			height: 4.5rem;
+
+			@include rotate(90deg);
+		}
+
+		&.is-open{
+			svg{
+				@include rotate(-90deg);
+			}
+		}
+	}
+
+	ul{
+		display: none;
+		
+		li{
+			border-bottom: 0.1rem solid $white;
+
+			background-color: $greyDark;
+
+			&.nav-second-img{
+				border: 0.2rem solid $greyDark;
+				background-color: $white;
+
+				a{
+					text-align: center;
+					line-height: 8rem;
+				}
+
+				img{
+					max-height: 4rem;
+					vertical-align: middle;
+				}
+			}
+
+			&.active{
+				background-color:  rgba($greyDark, 0.7);
+				a{
+					text-decoration: none;
+				}
+			}
+		}
+
+		a{
+			font-size: calc(#{$pMobile} * 1.08); //26px
+			line-height: 8rem;
+
+			color: $white;
+
 		}
 	}
 }
+
 

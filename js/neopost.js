@@ -108,10 +108,12 @@ $(document).ready(function(){
   if(isMobile() == 'm'){
     $(".product-library > ul").addClass('owl-carousel');
     $(".list-img ul").addClass('owl-carousel');
+    $(".nav-second").addClass('nav-second-mobile');
   }
   else{
     $(".product-library > ul").removeClass('owl-carousel');
     $(".list-img ul").removeClass('owl-carousel');
+    $(".nav-second").removeClass('nav-second-mobile');
   }
 
   $(".product .owl-carousel").owlCarousel(
@@ -161,6 +163,19 @@ $(document).ready(function(){
   $('.menu-mobile .menu-back .back').click(function(e){
     e.preventDefault();
     $(this).closest('.menu-container').find('ul').toggle('slide');
+  });
+
+  $('.nav-second-mobile .nav-second-open').click(function(e){
+    e.preventDefault();
+    $this = $(this);
+    if($this.hasClass('is-open')){
+       $this.removeClass('is-open');
+       $this.prev('ul').slideUp(1000);
+    }
+    else{
+      $this.addClass('is-open');
+      $this.prev('ul').slideDown(1000);
+    }
   });
 
   bg_grid_2();
