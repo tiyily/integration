@@ -240,10 +240,6 @@
 	}
 }
 
-.card-title{
-	//margin-top: 30px;
-}
-
 .card-full{
 	padding-left: 0;
 
@@ -269,5 +265,9 @@
 .grid-2{
 	.card{
 		padding: 4rem 0 1rem 4rem;
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			padding: 4rem;
+		}
 	}
 }

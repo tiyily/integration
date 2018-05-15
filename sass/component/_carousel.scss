@@ -142,7 +142,11 @@
 
 		@media screen and (max-width:$mediaq-tablet-max) {
 			width: calc(100% - #{$sidebar});
-			height: auto;	
+			height: 30rem;	
+		}
+
+		@media screen and (max-width:$mediaq-mobile-max) {
+			
 		}
 
 		.owl-carousel{
@@ -151,9 +155,8 @@
 			width: calc( 100% - (((100% - #{$contentMax}) / 2 ) + #{$sidebar}));
 
 			@media screen and (max-width:$mediaq-tablet-max) {	
-				//position: relative;
 				left: 0;
-				//width: calc(100% - #{$sidebar});
+				width: 100%;
 			}	
 		}
 	}

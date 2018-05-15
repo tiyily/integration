@@ -59,3 +59,13 @@
 		}
 	}
 }
+
+.grid-2{
+	.array{
+		ul{
+			@media all and (max-width: $mediaq-tablet-max){
+				width: 100%;
+			}
+		}
+	}
+}

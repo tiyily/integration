@@ -68,9 +68,10 @@ h2{
 	padding-left: 4.5rem;
 
 	background:transparent url('../img/svg/pdf.svg') left center no-repeat;
+	background-size: 3rem;
 
 	@include fontFamily('1');
-	line-height: 3rem;
+	line-height: 3.1rem;
 
 	@media screen and (max-width:$mediaq-mobile-max) {	
 		//margin-left: 0;
@@ -118,6 +119,12 @@ h2{
 	@include fontFamily('1');
 	font-size: calc(#{$p} * 1.14);
 	color: $grey;
+}
+
+.grid-2{
+	.link-grey{
+		margin-left: 3rem;
+	}
 }
 
 .link-afd{

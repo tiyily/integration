@@ -28,6 +28,13 @@
 	}
 }
 
+.grid-2{
+	.list{
+		padding-left: 3rem;
+	}
+}
+
+
 .list-img{
 
 	ul{
@@ -45,6 +52,28 @@
 
 	img{
 		max-width: 100%;
+	}
+}
+
+.grid-2{
+	.list-img{
+		@media all and (max-width: $mediaq-mobile-max){
+			padding-left: 0;
+		}
+
+		ul{
+			@media all and (max-width: $mediaq-mobile-max){
+				width: 87.5vw;
+				margin: 0 auto;
+
+			}
+		}
+
+		li{
+			@media all and (max-width: $mediaq-mobile-max){
+				padding: 0;
+			}
+		}
 	}
 }
 

@@ -55,7 +55,7 @@
 		width: calc(100% - ((100% - #{$contentMax}) / 2) - #{$sidebar} - 0.6rem);
 		height: 34rem;
 
-		border: 3px solid $greyMedium;
+		border: 0.3rem solid $greyMedium;
 
 		z-index: 0;
 
@@ -172,8 +172,8 @@
 		}
 
 		&:nth-child(3){
-			width: 13px;
-			height: 20px;
+			width: 1.3rem;
+			height: 2rem;
 			margin: 0.2rem 0.1rem;
 			//background:transparent url('../img/svg/arrow.svg') 0 0 no-repeat;
 			background-color: $grey;

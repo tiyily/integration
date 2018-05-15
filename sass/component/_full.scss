@@ -20,6 +20,11 @@
 	background-color: $greyLight;
 }
 
+.full-grey-medium{
+	padding: 4rem 0;
+	background-color: $greyMedium;
+}
+
 .full-img{
 	height: $bannerHeight;
 
@@ -95,4 +100,10 @@
 
 .grid-2-full{
 	position: relative;
+}
+
+.related{
+	.full{
+		left: 0;
+	}
 }

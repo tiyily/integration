@@ -5,6 +5,12 @@
 	}
 }
 
+.grid-2{
+	.tabs{
+		padding-left: 3rem;
+	}
+}
+
 .tabs-list{
 	grid-template-columns: repeat(auto-fit, minmax(25% , 1fr));
 	
@@ -89,6 +95,22 @@
 				@media screen and (max-width: $mediaq-5) {
 					text-align: left;
 				}
+			}
+		}
+	}
+}
+
+.grid-2{
+	.tabs-bloc{
+		@media screen and (max-width: $mediaq-tablet-max) {
+			display: block;
+			text-align: center;	
+		}
+
+		img{
+			@media screen and (max-width: $mediaq-tablet-max) {
+				width: 100%;
+				margin-bottom: 3rem;
 			}
 		}
 	}

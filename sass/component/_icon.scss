@@ -49,7 +49,7 @@
 		}
 	}
 
-	a{
+	/*a{
 		display: block;
 
 		text-align: center;
@@ -58,7 +58,7 @@
 		&:hover{
 			color: $greyDark;
 		}
-	}
+	}*/
 }
 
 .icon-full{
@@ -134,7 +134,7 @@
 	}
 }*/
 
-.icon-bar{
+.icon-side{
 	padding-left: 3rem;
 
 	@media screen and (max-width:$mediaq-mobile-max) {

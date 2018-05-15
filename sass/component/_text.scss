@@ -95,6 +95,22 @@
 	}
 }
 
+.grid-2{
+	.text-img-link{
+		@media screen and (max-width:$mediaq-tablet-max) {
+			display: block;
+			text-align: center;
+		}
+
+		img{
+			@media screen and (max-width:$mediaq-tablet-max) {
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}
+
 .text-alt{
 
 	.text{

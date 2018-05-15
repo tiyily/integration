@@ -77,14 +77,31 @@
 	stroke:$green;
 	stroke-linecap:round;
 	stroke-miterlimit:10;
-	stroke-width:0.5px;
+	stroke-width:0.05rem;
 	z-index: 0;
 }
 
 .quote-side{
+	padding: 0 0 0 3rem;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		padding: 0;
+	}
 
 	.owl-carousel{
-		padding-left: 3rem;
-		width: calc(#{$contentMax} - #{$sidebar});	
+		width: calc(#{$contentMax} - #{$sidebar});
+
+		@media screen and (max-width: $mediaq-tablet-max) {
+			position: absolute;
+			width: 100%;
+		}
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			width: 87.5vw;
+			margin: 0 auto;
+			padding-left: 0;
+		}
 	}
+
+
 }

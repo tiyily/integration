@@ -45,16 +45,30 @@
 
 	background-color: $grey;
 
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin: 0 4rem;
+		padding: 0;
+		
+		border-top: 0.1rem solid $grey;
+		border-bottom: 0.1rem solid $grey;
+
+		background: none;
+	}
+
 	fieldset{
 		position: relative;
 		margin-top: 4rem;
 		margin-bottom: 2rem;
+		@media screen and (max-width: $mediaq-mobile-max) {
+			margin: 3rem 0;
+		}
 	}
 
 	legend{
 		position: relative;
 		width: 100%;
-		margin-bottom: 2rem;
+		margin-bottom: 0;
+		padding-top: 2rem;
 
 		text-align: center;
 		@include fontFamily('1');
@@ -62,29 +76,58 @@
 		line-height: 2.8rem;
 		color: $black;
 
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding-top: 0;
+
+			text-transform: uppercase;
+
+			font-size: $h2Mobile;
+
+		}
+
 		& + div{
 			display: none;
 		}
 
 		a{
 			position: absolute;
-			top: calc((100% - 2rem) / 2);
+			top: 50%;
 			right: 0;
 			width: 2rem;
 			height: 2rem;
-			background:transparent url('../img/plus.svg') right center no-repeat;
+			background:transparent url('../img/svg/plus.svg') right center no-repeat;
 
 			text-indent: -9999px;
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				top: 0;
+				right: 2rem;
+
+				width: 2rem;
+				height: 3rem;
+				background:transparent url('../img/svg/arrow.svg') right center no-repeat;
+			}
 		}
 
 		&.is-open{
 
 			a{
-				background-image: url('../img/minus.svg');
+				background-image: url('../img/svg/minus.svg');
+
+				@media screen and (max-width: $mediaq-mobile-max) {
+
+					background:transparent url('../img/svg/arrow.svg') right center no-repeat;
+
+					@include rotate(-90deg);
+				}
 			}
 
 			& + div{
-				//display: block;
+
+				padding: 2rem 0 0 2rem;
+				@media screen and (max-width: $mediaq-mobile-max) {
+					padding: 4rem 0 0 0;
+				}
 			}
 		}
 	}
