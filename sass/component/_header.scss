@@ -1,28 +1,38 @@
 header{
-	position: relative;
 	& > div{
-		grid-template-columns: 13.5rem 1fr;
-		grid-column-gap: 2rem;
+		position: relative;
+		& > div{
+			grid-template-columns: 13.5rem 1fr;
+			grid-column-gap: 2rem;
 
-		padding-top: 3rem;
+			padding-top: 3rem;
 
-		@media screen and (max-width: $mediaq-tablet-max) {
-			padding-left: 3rem;
-		}	
+			@media screen and (max-width: $mediaq-tablet-max) {
+				padding-left: 3rem;
+			}	
 
-		@media screen and (max-width: $mediaq-4) {
-			grid-template-columns: 6rem 13.5rem 1fr;
+			@media screen and (max-width: $mediaq-4) {
+				grid-template-columns: 6rem 13.5rem 1fr;
+			}
+
+			@media screen and (max-width: $mediaq-mobile-max) {
+				grid-template-columns: 6rem 1fr 20rem;
+
+				padding: 0 0 0 4rem;
+
+				border-bottom: 0.5rem solid $green;
+			}
 		}
-
-		@media screen and (max-width: $mediaq-mobile-max) {
-			grid-template-columns: 6rem 1fr 20rem;
-
-			padding: 0 0 0 4rem;
-
-			border-bottom: 0.5rem solid $green;
-		}	
+		
 	}
 
+	&.sticky{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: $white;
+		z-index: 10;
+	}
 }
 
 .logo{

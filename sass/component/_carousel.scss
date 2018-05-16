@@ -68,14 +68,19 @@
 		position: absolute;
 		top: 0;
 		display: block;
-		width: 18px;
-		height: 31px;
+		width: 1.8rem;
+		height: 3.1rem;
 
 		background-color: $grey;
 	    -webkit-mask: url(../img/svg/arrow.svg) left center no-repeat;
 	    mask: url(../img/svg/arrow.svg) left center no-repeat;
 
 		font-size: 0;
+
+		@media screen and (max-width:$mediaq-mobile-max) {	
+			width: 2.5rem;
+			height: 4rem;
+		}
 
 		&.owl-prev{
 			left: -6rem;
@@ -236,6 +241,37 @@
 	&.owl-carousel{
 		li{
 			margin-bottom: 2rem;
+		}
+	}
+}
+
+.bloc-range{
+	.owl-nav{
+		top: 21.5rem;
+		width: calc(100% - 4rem);
+
+		.owl-prev{
+			left: -4rem;
+		}
+
+		.owl-next{
+			right: 0;
+		}
+	}
+}
+
+.grid-2{
+	.bloc-range{
+		.owl-nav{
+			width: 100%;
+
+			.owl-prev{
+				left: -3.3rem;
+			}
+
+			.owl-next{
+				right: -3.3rem;
+			}
 		}
 	}
 }

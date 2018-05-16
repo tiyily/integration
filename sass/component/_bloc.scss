@@ -54,7 +54,7 @@
 	margin-bottom: 4rem;
 
 	@media all and (max-width: $mediaq-mobile-max){
-		padding-right: 4rem;
+		padding: 0 4rem;
 	}
 
 	& > li{
@@ -135,5 +135,10 @@
 .grid-2{
 	.bloc{
 		padding-left: 4rem;
+		@media all and (max-width: $mediaq-mobile-max){
+			width: 87.5vw;
+			margin: 0 auto 4rem;
+			padding: 0;
+		}
 	}
 }
