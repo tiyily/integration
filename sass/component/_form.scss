@@ -112,7 +112,8 @@
 	position: relative;
 
 	background-color: $white;
-
+	
+	cursor: pointer;
 	z-index: 1;
 
 	@media screen and (max-width: $mediaq-mobile-max) {
@@ -161,13 +162,21 @@
 	form{
 		padding-right: 2rem;
 
-			@media screen and (max-width: $mediaq-tablet-max) {
-				padding-left: 2rem;		
-			}
+		@media screen and (max-width: $mediaq-tablet-max) {
+			padding-left: 2rem;		
+		}
+
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding: 0 4rem;
+		}
+
+		div{
+			margin-bottom: 2rem;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				padding: 0 4rem;
-			}	
+				margin-bottom: 3rem;
+			}
+		}	
 	}
 
 	textarea{
@@ -198,6 +207,7 @@
 		& > div{
 			@include inline-block();
 			width: 35rem;
+			margin-bottom: 2rem;
 
 			&:nth-child(2n){
 				margin-right: 2.6rem;
@@ -216,6 +226,7 @@
 	input[type=tel],
 	select{
 		width: 35rem;
+		margin-bottom: 0;
 
 		@media screen and (max-width: $mediaq-mobile-max) {
 			width: 100%;
@@ -266,5 +277,37 @@
 			font-size: $pMobile;
 			line-height: 4rem;
 		}
+	}
+}
+
+.form-required{
+	&:after{
+		content: "*";	
+		color : $coral;
+	}
+}
+
+.form-error{
+	border: 0.2rem solid $coral;
+
+	line-height: 2.6rem;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		margin-bottom: 0;
+
+		line-height: 5.6rem;
+	}
+}
+
+.form-error-label{
+	margin-bottom: 0;
+
+	font-size: calc(#{$p} * 0.86); //12px
+	font-style: italic;
+
+	color: $coral;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		font-size: calc(#{$pMobile} * 0.86); //
 	}
 }

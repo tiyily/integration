@@ -1,0 +1,95 @@
+.sfi-container{
+	@media all and (max-width: $mediaq-mobile-max){
+		margin-bottom: 4rem;
+	}
+}
+.sfi-filename{
+	@extend .btn;
+	@extend .btn-bordered;
+	@extend .other-light;
+}
+
+.sfi-trigger{
+	display: none;
+}
+
+.sfi-valid{
+	@media all and (max-width: $mediaq-mobile-max){
+		display: grid;
+	}
+
+	.sfi-filename{
+		float: right;
+		max-width: 16rem;
+		padding: 0;
+
+		border: none!important;
+
+		text-transform: none;
+
+		font-weight: 400;
+		font-size: $p;
+		line-height: 4rem;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			grid-row : 2 / 3;
+			float: none;
+			max-width: 100%;
+
+
+			font-size: $pMobile;
+		}
+	}
+
+	.sfi-trigger{
+		@extend .btn;
+		@extend .btn-bordered;
+		@extend .other-light;
+
+		float: left;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			float: none;
+
+			grid-row : 1 / 2;
+		}
+	}
+}
+
+.form-sidebar{
+	.sfi-container{
+		margin-bottom: 2rem;
+	}
+	
+	.sfi-filename{
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.sfi-valid{
+
+		.sfi-filename{
+			@extend .btn;
+			@extend .btn-bordered;
+			@extend .other-light;
+			float: none;
+
+			padding: 0 1rem;
+
+			&:hover{
+				padding: 0 0.9rem;
+			}
+			
+			@media all and (max-width: $mediaq-mobile-max){
+			    max-width: 87.5vw;
+			}
+		}
+
+		.sfi-trigger{
+			display: none;
+		}
+	}
+}

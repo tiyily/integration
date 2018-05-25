@@ -127,7 +127,7 @@ textarea,
 select{
 	display: block;
 	width: 100%;
-	margin-bottom: 2.0rem;
+	//margin-bottom: 2.0rem;
 	padding: 0 0 0 1.0rem;
 
 	border: none;
@@ -157,12 +157,19 @@ select{
 }
 
 input[type="file"]{
-    position: absolute;
+    /*position: absolute;
     left: 4rem;
     bottom: 0;
     margin-bottom: 0;
 
-    background: none;
+    background: none;*/
+
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
 
 input[type="submit"]{
@@ -204,6 +211,8 @@ input[type=radio]{
 	@include inline-block();
 	width: 2.0rem;
 	height: 2.0rem;
+
+	margin-bottom: 0;
 	
 	border: 0.1rem solid $greyDark;
 

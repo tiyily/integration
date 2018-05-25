@@ -1,0 +1,149 @@
+.socials{
+	a {
+	    display:block;
+	    width: 4rem;
+	    height: 4rem;
+
+	    padding: 0;
+
+	    border-right: none;
+
+	    @media all and (max-width: $mediaq-mobile-max){
+	    	width: 8rem;
+			height: 8rem;
+			//background-image: url(../img/socials_mobile.jpg);
+	    }
+
+	    &:hover{
+
+			.linkedin{
+				fill: #0076b3;
+			}
+
+			.twitter{
+				fill: #1da1f2;
+			}
+
+			.google{
+				fill: #dc4e41;
+			}
+
+			.facebook{
+				fill: #3d5a98;
+			}
+
+			.slideshare{
+				fill: #50989a;
+			}
+
+			.instagram{
+				fill: #C81482;
+			}
+
+			.pinterest{
+				fill: #ca2027;
+			}
+
+			.youtube{
+				fill: #DD2D2F;
+			}
+	    }
+	}
+
+	.socialBg{
+		fill: $grey;
+	}
+
+	.socialFill{
+		fill: $white;
+	}
+}
+
+.socials-content{
+	position: fixed;
+	top: calc((100% - 16.6rem) / 2);
+	right: 0;
+	z-index: 10;
+
+	@media all and (max-width: $mediaq-mobile-max){
+		top: auto;
+		bottom: 0;
+		width: 100%;
+	}
+
+	ul{
+		@media all and (max-width: $mediaq-mobile-max){
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	li{
+		margin-bottom: 0.2rem;
+
+		@media all and (max-width: $mediaq-mobile-max){
+			margin-bottom: 0;
+		}
+	}
+
+	a{
+		@media all and (max-width: $mediaq-mobile-max){
+			width: auto;
+			height: 6rem;
+
+			text-align: center;
+		}
+	}
+
+	@media all and (max-width: $mediaq-mobile-max){
+
+		.linkedin{
+			fill: #0076b3;
+			background-color: #0076b3;
+		}
+
+		.twitter{
+			fill: #1da1f2;
+			background-color: #1da1f2;
+		}
+
+		.google{
+			fill: #dc4e41;
+			background-color: #dc4e41;
+		}
+
+		.facebook{
+			fill: #3d5a98;
+			background-color: #3d5a98;
+		}
+
+		.slideshare{
+			fill: #50989a;
+			background-color: #50989a;
+		}
+
+		.instagram{
+			fill: #C81482;
+			background-color: #C81482;
+		}
+
+		.pinterest{
+			fill: #ca2027;
+			background-color: #ca2027;
+		}
+
+		.youtube{
+			fill: #DD2D2F;
+			background-color: #DD2D2F;
+		}
+	}
+	
+
+	svg{
+		height: 4rem;
+
+		 @media all and (max-width: $mediaq-mobile-max){
+		 	height: 6rem;
+		 }
+	}
+}

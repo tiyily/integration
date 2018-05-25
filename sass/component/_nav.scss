@@ -172,9 +172,9 @@ nav{
 		display: none;
 		position: absolute;
 		left: 50%;
-		bottom: -2.1rem;
-		width: 1.6rem;
-		height: 1.6rem;
+		bottom: -1.3rem;
+		width: 1.3rem;
+		height: 1.3rem;
 
 		border-left: 0.1rem solid $black;
 		border-top: 0.1rem solid $black;
@@ -396,7 +396,7 @@ nav{
 	.menu-container{
 		display: none;
 		position: absolute;
-		top: 100%;
+		top: calc(100% - 0.5rem);
 		left: 0;
 		width: 100%;
 
@@ -516,7 +516,7 @@ nav{
 			fill: $white;
 
 			@media screen and (max-width: $mediaq-mobile-max) {
-				top: 2.5rem;
+				top: 1.5rem;
 				right: 4rem;
 
 				width: 2.5rem;

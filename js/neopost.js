@@ -8,7 +8,6 @@ $(document).ready(function(){
 
   $(window).scroll(function () {
     var iCurScrollPos = $(this).scrollTop();
-    console.log("iCurScrollPos : " + iCurScrollPos + " iScrollPos : " + iScrollPos); 
     if (iCurScrollPos > iScrollPos) {
         $('header').removeClass('sticky');
         $('.search').css('margin-top', '0');
@@ -17,7 +16,7 @@ $(document).ready(function(){
        $('.search').css('margin-top', header);
     }
     iScrollPos = iCurScrollPos;
-});
+  });
 
 
   /* Play button on banner behaviour */
@@ -36,11 +35,39 @@ $(document).ready(function(){
     $legend = $(".filter-sidebar legend");
     if($legend.hasClass("is-open")){
       $legend.removeClass("is-open");
-      $(".filter-sidebar legend + div").hide(2000);
+      $(".filter-sidebar legend + div").hide(1000);
     }
     else{
       $legend.addClass("is-open");
-      $(".filter-sidebar legend + div").show(2000);
+      $(".filter-sidebar legend + div").show(1000);
+    }
+  });
+
+  /*Filter Calendar opening animation*/
+  $(".filter-date > a").click(function(e){
+    e.preventDefault();
+    $this = $(this);
+    if($this.hasClass("is-open")){
+      $this.removeClass("is-open");
+      $(".filter-date-list").slideUp(1000);
+    }
+    else{
+      $this.addClass("is-open");
+      $(".filter-date-list").slideDown(1000);
+    }
+  });
+
+  /*Filter Calendar closing animation*/
+  $(".filter-date a.close").click(function(e){
+    e.preventDefault();
+    if($(".filter-date > a").hasClass("is-open")){
+      $(".filter-date > a").removeClass("is-open");
+
+      $(".filter-date-list").slideUp(1000);
+    }
+    else{
+      $(".filter-date > a").addClass("is-open");
+      $(".filter-date-list").slideDown(1000);
     }
   });
 
@@ -150,6 +177,7 @@ $(document).ready(function(){
       {
         items: 1,
         loop: true,
+        autoWidth: true,
       }
   );
 
@@ -208,6 +236,19 @@ $(document).ready(function(){
     }
   });
 
+  /* Form file styling*/
+  $('.form-file input').simpleFileInput({
+    placeholder : 'Choose a file',
+    buttonText : 'Choose a file',
+    width : '100%'
+  });
+
+  /* Product Img Gallery*/
+  lightbox.option({
+    'albumLabel': ""
+  });
+
+
   bg_grid_2();
 
 });
@@ -233,8 +274,11 @@ function isMobile(){
 
 /* Allow banner in content*/
 function content_banner(){
+
+  $windowWidth = $(window).width();
+  console.log("window : " + $windowWidth + " document : " + $(document).width());
+
   if ($('.grid-2 .full').length) {
-    $windowWidth = $(window).width();
 
     if($windowWidth > 1180){
       $fullWidth = $('body').width() - $('aside').width() - (($('body').width() - 1180) / 2);
@@ -249,6 +293,12 @@ function content_banner(){
      
       if($fullVideo <= 360){$fullVideo = "100%";}
       $(".grid-2 .video-iframe").css('width', $fullVideo);
+  }
+
+  if($('.grid-2 .quote-side').length){
+    if($windowWidth > 768 && $windowWidth < 1180){
+      $('.grid-2 .quote-side .owl-carousel').css('width', $('body').width() - $('aside').width() - 30);
+    }
   }
 }
 

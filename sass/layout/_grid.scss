@@ -31,6 +31,10 @@
 
 #middle{
 	position: relative;
+
+	@media screen and (max-width: $mediaq-mobile-max) {
+		position: inherit;
+	}
 }
 
 aside{

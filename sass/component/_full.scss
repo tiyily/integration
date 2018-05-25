@@ -53,6 +53,7 @@
 .grid{
 	.full{
 		width: calc(100% - ((100% - #{$contentMax}) / 2) - #{$sidebar});
+		//left: 0;
 
 		@media all and (max-width: $mediaq-tablet-max){
 			width: 100%;

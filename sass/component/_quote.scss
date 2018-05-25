@@ -88,18 +88,42 @@
 		padding: 0;
 	}
 
+	h2{
+		@media screen and (max-width: $mediaq-mobile-max) {
+			padding: 0 3rem;
+		}
+	}
+
 	.owl-carousel{
 		width: calc(#{$contentMax} - #{$sidebar});
 
 		@media screen and (max-width: $mediaq-tablet-max) {
-			position: absolute;
+			//position: absolute;
 			width: 100%;
 		}
 
 		@media screen and (max-width: $mediaq-mobile-max) {
+			position: relative;
 			width: 87.5vw;
 			margin: 0 auto;
 			padding-left: 0;
+		}
+
+		img{
+			width: 32rem;
+
+			@media screen and (max-width: $mediaq-tablet-max) {
+				margin: 0 auto 3rem;
+			}
+
+		}
+	}
+
+	li{
+		@media screen and (max-width: $mediaq-tablet-max) {
+			display: block;
+
+			padding-right: 3rem;
 		}
 	}
 

@@ -227,6 +227,14 @@
 		}
 	}
 
+	&.quote-side{
+		.owl-dots{
+			@media screen and (max-width: $mediaq-tablet-max) {
+				padding-left: 0;
+			}
+		}
+	}
+
 	.owl-carousel{
 		img{
 			@media screen and (max-width: $mediaq-mobile-max) {
@@ -266,11 +274,11 @@
 			width: 100%;
 
 			.owl-prev{
-				left: -3.3rem;
+				left: -4.6875vw;
 			}
 
 			.owl-next{
-				right: -3.3rem;
+				right: -4.6875vw;
 			}
 		}
 	}
